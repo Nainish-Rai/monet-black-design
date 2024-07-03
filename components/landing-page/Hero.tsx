@@ -42,7 +42,7 @@ function Hero({}: Props) {
           and trade points.
         </motion.p>
       </div>
-      <HeroBackground />
+      {/* <HeroBackground /> */}
     </div>
   );
 }
