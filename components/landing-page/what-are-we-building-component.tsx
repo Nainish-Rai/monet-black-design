@@ -12,11 +12,11 @@ function WhatAreWeBuildingComponent({ heading, text }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.3 }}
-      className="w-full lg:w-1/2 max-w-lg p-2"
+      className="w-full lg:w-1/2 lg:max-w-lg p-2"
     >
-      <div className="w-full">
+      <div className="w-full text-center lg:text-left">
         <h3 className=" font-medium text-2xl text-yellow-400">{heading}</h3>
-        <p className="mt-2 ">{text}</p>
+        <p className="mt-2 text-sm lg:text-base ">{text}</p>
       </div>
     </motion.div>
   );

@@ -35,7 +35,7 @@ function Hero({}: Props) {
           animate="visible"
           transition={{ duration: 0.6 }}
           variants={variants1}
-          className=" leading-[28px] text-center mt-8 text-lg  max-w-lg"
+          className=" leading-[28px] text-center mt-8 text-sm px-4 lg:px-0 lg:text-lg  max-w-lg"
         >
           Monet is a decentralized platform for businesses to manage
           blockchain-based loyalty programs, where customers can earn, redeem,

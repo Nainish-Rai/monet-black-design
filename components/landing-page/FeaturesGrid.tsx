@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export function FeatureGrid() {
   return (
-    <BentoGrid className="max-w-7xl mb-16 my-36 mx-auto md:auto-rows-[20rem]">
+    <BentoGrid className="max-w-7xl px-4 lg:px-0 mb-16 my-36 mx-auto md:auto-rows-[20rem]">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}

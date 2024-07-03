@@ -9,7 +9,10 @@ type Props = {};
 
 function WhatAreWeBuilding({}: Props) {
   return (
-    <div className="w-full min-h-screen flex-col  items-center justify-center my-4 flex  max-w-7xl mx-auto">
+    <div
+      id="building"
+      className="w-full min-h-screen flex-col mt-16 lg:mt-4  items-center justify-center my-4 flex  max-w-7xl mx-auto"
+    >
       <div className="flex flex-col items-center">
         <motion.h1
           // initial={{ opacity: 0 }}
@@ -28,14 +31,14 @@ function WhatAreWeBuilding({}: Props) {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
           // animate={{ opacity: 1 }}
-          className=" leading-[28px] text-center mt-8 text-lg  max-w-lg"
+          className=" leading-[28px] text-center mt-8 lg:text-lg px-4 lg:px-0 max-w-lg"
         >
           Monet is a decentralized platform for businesses to manage
           blockchain-based loyalty programs, where customers can earn, redeem,
           and trade points.
         </motion.p>
       </div>
-      <div className="flex w-full justify-center gap-16 flex-wrap p-4 mt-16 px-16">
+      <div className="flex w-full justify-center gap-16 flex-wrap p-4 mt-16 lg:px-16">
         <WhatAreWeBuildingComponent
           heading="Decentralized $Points"
           text="Say goodbye to limited rewards. $POINTS are the digital currency of choice, designed for seamless use across a diverse range of businesses and platforms. Whether you're shopping, dining, or exploring, your rewards travel with you, unlocking endless possibilities."

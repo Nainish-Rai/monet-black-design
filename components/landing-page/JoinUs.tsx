@@ -17,7 +17,10 @@ type Props = {};
 
 function JoinUs({}: Props) {
   return (
-    <div className="w-full min-h-screen flex-col  items-center justify-center my-4 flex mt-56  max-w-7xl mx-auto">
+    <div
+      id="community"
+      className="w-full min-h-screen flex-col px-4 lg:px-0  items-center justify-center my-4 flex mt-56  max-w-7xl mx-auto"
+    >
       <div className="flex flex-col items-center">
         <motion.h1
           // initial={{ opacity: 0 }}
@@ -36,7 +39,7 @@ function JoinUs({}: Props) {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
           // animate={{ opacity: 1 }}
-          className=" leading-[28px] text-center mt-8 text-lg  max-w-2xl"
+          className=" leading-[28px] text-center mt-8 lg:text-lg text-base max-w-2xl"
         >
           Join us for an exclusive unveiling of our revolutionary loyalty
           rewards platform. Experience the future of rewards with decentralized
@@ -44,7 +47,7 @@ function JoinUs({}: Props) {
           your spot today!
         </motion.p>
       </div>
-      <div className="flex w-full justify-center flex-wrap p-4 mt-16 px-16">
+      <div className="flex w-full justify-center flex-wrap p-4 mt-16 lg:px-16">
         <CommunityBar
           icon={<Home />}
           title="Discord"

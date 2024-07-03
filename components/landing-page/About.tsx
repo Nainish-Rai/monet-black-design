@@ -13,8 +13,11 @@ function About({}: Props) {
   };
 
   return (
-    <div className="w-full h-screen  items-center flex  max-w-7xl">
-      <div>
+    <div
+      id="about"
+      className="w-full h-screen  items-center flex-col lg:flex-row flex  max-w-7xl"
+    >
+      <div className="px-4">
         <motion.h1
           // initial={{ opacity: 0 }}
           // whileInView={{ opacity: 1 }}
@@ -37,7 +40,7 @@ function About({}: Props) {
           variants={slideIn("left", "spring", 0.06, 1)}
           initial="hidden"
           whileInView="show"
-          className=" leading-[28px] text-left mt-8 text-lg  max-w-3xl"
+          className=" leading-[28px] text-left mt-8 text-base lg:text-lg  max-w-3xl"
         >
           Welcome to the future of loyalty programs. At Monet, we&apos;re
           pioneering a new era of rewards using blockchain technology. Our
