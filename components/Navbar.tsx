@@ -78,9 +78,24 @@ function Navbar({}: Props) {
             >
               <span className="block sm:hidden">{navItem.icon}</span>
               <span className="hidden sm:block text-sm">{navItem.name}</span>
+              {navItem.isDropdown && (
+                <div className="absolute top-0  group-hover:flex text-slate-300 p-4 mt-2 space-y-2 min-w-[300px] flex-col gap-2 bg-black/90 rounded-md">
+                  {navItem.subMenu.map((subLink: any) => (
+                    <a
+                      key={subLink.name}
+                      href={subLink.url}
+                      className="hover:text-[#ffd700]"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {subLink.name}
+                    </a>
+                  ))}
+                </div>
+              )}
             </Link>
           ))}{" "}
-          <Link href={"https://web3-points.stage.monet.work/"}>
+          <Link target="_blank" href={"https://web3-points.stage.monet.work/"}>
             <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
               <span>Launch App</span>
               <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />

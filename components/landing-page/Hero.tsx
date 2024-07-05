@@ -4,6 +4,7 @@ import HeroBackground from "./HeroBackground";
 import { motion } from "framer-motion";
 import { ArrowRightIcon, ChevronRight } from "lucide-react";
 import AnimatedShinyText from "../animated/shiny-text";
+import Link from "next/link";
 
 type Props = {};
 
@@ -16,10 +17,12 @@ function Hero({}: Props) {
   return (
     <div className="w-full h-screen relative flex justify-center items-center">
       <div className="flex flex-col absolute z-10 justify-center items-center">
-        <AnimatedShinyText className="inline-flex items-center cursor-pointer justify-center  px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-          <span>✨ Introducing Monet Points</span>
-          <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-        </AnimatedShinyText>
+        <Link href="https://web3-points.stage.monet.work/" target="_blank">
+          <AnimatedShinyText className="inline-flex items-center cursor-pointer justify-center  px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+            <span>✨ Introducing Monet Points</span>
+            <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+          </AnimatedShinyText>
+        </Link>
         <motion.h1
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
