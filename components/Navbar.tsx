@@ -34,6 +34,7 @@ function Navbar({}: Props) {
     },
     {
       name: "Products",
+      newTab: true,
       link: "https://web3-points.stage.monet.work/",
       icon: <HouseIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
       isDropdown: true,
@@ -46,6 +47,7 @@ function Navbar({}: Props) {
     },
     {
       name: "Docs",
+      newTab: true,
       link: "https://monet-work.github.io/web3-points/",
       icon: <HouseIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
       isDropdown: true,
@@ -72,13 +74,14 @@ function Navbar({}: Props) {
             <Link
               key={`link=${idx}`}
               href={navItem.link}
+              {...(navItem.newTab && { target: "_blank" })}
               className={
                 "relative hidden dark:text-neutral-50 items-center lg:flex space-x-2 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
               }
             >
               <span className="block sm:hidden">{navItem.icon}</span>
               <span className="hidden sm:block text-sm">{navItem.name}</span>
-              {navItem.isDropdown && (
+              {/* {navItem.isDropdown && (
                 <div className="absolute top-0  group-hover:flex text-slate-300 p-4 mt-2 space-y-2 min-w-[300px] flex-col gap-2 bg-black/90 rounded-md">
                   {navItem.subMenu.map((subLink: any) => (
                     <a
@@ -92,7 +95,7 @@ function Navbar({}: Props) {
                     </a>
                   ))}
                 </div>
-              )}
+              )} */}
             </Link>
           ))}{" "}
           <Link target="_blank" href={"https://web3-points.stage.monet.work/"}>

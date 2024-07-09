@@ -14,6 +14,8 @@ function Hero({}: Props) {
     visible: { filter: "blur(0px)", opacity: 1 },
   };
 
+  const [showBg, setShowBg] = React.useState(false);
+
   return (
     <div className="w-full h-screen relative flex justify-center items-center">
       <div className="flex flex-col absolute z-10 justify-center items-center">

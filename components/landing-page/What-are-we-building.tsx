@@ -11,7 +11,7 @@ function WhatAreWeBuilding({}: Props) {
   return (
     <div
       id="building"
-      className="w-full min-h-screen flex-col mt-16 lg:mt-4  items-center justify-center my-4 flex  max-w-7xl mx-auto"
+      className="w-full  flex-col mt-16 lg:mt-16 lg:pt-24 items-center justify-center my-4 flex  max-w-7xl mx-auto"
     >
       <div className="flex flex-col items-center">
         <motion.h1
