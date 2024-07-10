@@ -49,28 +49,28 @@ function JoinUs({}: Props) {
       </div>
       <div className="flex w-full justify-center flex-wrap p-4 mt-16 lg:px-16">
         <CommunityBar
-          icon={<Home />}
+          svg="/icons/discord.svg"
           title="Discord"
-          description="Ask and engage questions"
+          description="Contribute to wide-ranging Monet discussions"
           link={"https://discord.gg/monet"}
         />
         <CommunityBar
           icon={<Twitter />}
           title="Twitter"
-          description="Ask and engage questions"
-          link={"https://discord.gg/monet"}
+          description="Share ideas and participate in discussions"
+          link={"https://twitter.com/monetdotwork"}
         />
         <CommunityBar
-          icon={<MessageCircleMoreIcon />}
+          svg="/icons/telegram.svg"
           title="Telegram"
           description="Ask and engage questions"
-          link={"https://discord.gg/monet"}
+          link={"https://t.me/monet_dot_work"}
         />
         <CommunityBar
           icon={<Linkedin />}
           title="Linkedin"
-          description="Ask and engage questions"
-          link={"https://discord.gg/monet"}
+          description="Stay up to date with Monet news and updates"
+          link={"https://www.linkedin.com/company/monetdotwork"}
         />
       </div>
     </div>

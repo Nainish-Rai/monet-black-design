@@ -1,16 +1,18 @@
 import { textVariant } from "@/lib/anims";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 type Props = {
-  icon: any;
+  icon?: any;
   title: string;
   description: string;
   link: string;
+  svg?: any;
 };
 
-function CommunityBar({ icon, title, description, link }: Props) {
+function CommunityBar({ icon, svg, title, description, link }: Props) {
   return (
     <div className="w-full lg:w-1/2 p-4 flex flex-wrap">
       <motion.div
@@ -22,9 +24,18 @@ function CommunityBar({ icon, title, description, link }: Props) {
         variants={textVariant(0.1)}
         className="w-full rounded-3xl p-4 hover:bg-neutral-800 px-6 cursor-pointer border bg-neutral-900"
       >
-        <div className="flex justify-between">
+        <div className="flex  justify-between">
           <div className="flex  gap-2">
-            {icon}
+            {icon && icon}
+            {svg && (
+              <Image
+                src={svg}
+                width={24}
+                height={24}
+                alt=""
+                className="text-white pb-2"
+              />
+            )}
             <h2 className="text-lg">{title}</h2>
           </div>
           <ArrowUpRight className="w-8 h-8" />
