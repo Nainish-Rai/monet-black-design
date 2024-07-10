@@ -15,7 +15,7 @@ function FooterLinkComponent({ link, newTab, icon, name }: Props) {
       href={link}
       {...(newTab && { target: "_blank" })}
       className={
-        "relative hidden dark:text-neutral-50 items-center lg:flex space-x-2 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+        " flex dark:text-neutral-50 items-center lg:flex space-x-2 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
       }
     >
       {icon && (
@@ -27,7 +27,7 @@ function FooterLinkComponent({ link, newTab, icon, name }: Props) {
           className="text-white pb-2"
         />
       )}
-      <span className="hidden sm:block text-sm">{name}</span>
+      <span className=" text-sm">{name}</span>
     </Link>
   );
 }

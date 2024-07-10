@@ -9,8 +9,8 @@ function Footer({}: Props) {
   const footerItems = [{}];
   return (
     <footer className=" border-t mt-64 w-full text-white text-center py-2">
-      <div className="w-full max-w-7xl mx-auto mt-5 mb-2">
-        <div className="flex gap-12 ">
+      <div className="w-full px-4 lg:px-0 flex flex-col max-w-7xl mx-auto mt-5 mb-2">
+        <div className="flex gap-2 lg:gap-12 flex-col lg:flex-row ">
           <FooterLinkComponent link={"#about"} name={"About"} />
           <FooterLinkComponent
             link={"#building"}
@@ -26,14 +26,14 @@ function Footer({}: Props) {
             name={"Product"}
           />
         </div>
-        <div className="text-left text-gray-300 flex justify-between text-sm mt-2">
+        <div className="text-left text-gray-300 flex-col lg:flex-row flex justify-between text-sm mt-4 lg:mt-2">
           <p>
             For any queries, please contact us at{" "}
             <span className=" font-medium text-yellow-500">
               example@monet.work
             </span>{" "}
           </p>
-          <div className="flex flex-row-reverse gap-4">
+          <div className="flex lg:flex-row-reverse  mt-4 lg:mt-0 gap-2 lg:gap-4">
             <FooterSocialComponent
               icon={<Linkedin />}
               link={"https://www.linkedin.com/company/monetdotwork"}
