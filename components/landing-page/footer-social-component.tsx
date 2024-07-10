@@ -10,7 +10,7 @@ type Props = {
 
 function FooterSocialComponent({ icon, svg, link }: Props) {
   return (
-    <Link href={link}>
+    <Link href={link} target="_blank">
       {icon && icon}
       {svg && (
         <Image

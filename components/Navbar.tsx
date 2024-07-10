@@ -98,19 +98,20 @@ function Navbar({}: Props) {
               )} */}
             </Link>
           ))}{" "}
-          <Link target="_blank" href={"https://web3-points.stage.monet.work/"}>
+          <Link target="_blank" href={"#community"}>
             <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-              <span>Launch App</span>
+              <span>Join Us</span>
               <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
             </button>
           </Link>
         </div>
-        <Link href={"#community"}>
+        <Link href={"https://web3-points.stage.monet.work/"}>
           <Button
             variant={"outline"}
-            className="hidden lg:flex rounded-full text-white"
+            className="hidden lg:flex  border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full"
           >
-            Join Community
+            Launch App
+            <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
           </Button>
         </Link>
         {!menuActive ? (
