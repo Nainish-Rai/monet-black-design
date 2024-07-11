@@ -18,7 +18,7 @@ function Navbar({}: Props) {
       icon: <House className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "What we are building",
+      name: "What are we building",
       link: "#building",
       icon: <HouseIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
@@ -105,7 +105,7 @@ function Navbar({}: Props) {
             </button>
           </Link>
         </div>
-        <Link href={"https://web3-points.stage.monet.work/"}>
+        <Link target="_blank" href={"https://web3-points.stage.monet.work/"}>
           <Button
             variant={"outline"}
             className="hidden lg:flex  border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full"

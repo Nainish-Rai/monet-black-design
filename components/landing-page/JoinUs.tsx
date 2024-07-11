@@ -52,7 +52,7 @@ function JoinUs({}: Props) {
           svg="/icons/discord.svg"
           title="Discord"
           description="Contribute to wide-ranging Monet discussions"
-          link={"https://discord.gg/monet"}
+          link={"https://discord.com/invite/abBUFJDjkQ"}
         />
         <CommunityBar
           icon={<Twitter />}

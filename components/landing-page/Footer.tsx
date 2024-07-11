@@ -2,6 +2,7 @@ import React from "react";
 import FooterLinkComponent from "./footer-link-component";
 import FooterSocialComponent from "./footer-social-component";
 import { Linkedin, Twitter } from "lucide-react";
+import Link from "next/link";
 
 type Props = {};
 
@@ -29,8 +30,14 @@ function Footer({}: Props) {
         <div className="text-left text-gray-300 flex-col lg:flex-row flex justify-between text-sm mt-4 lg:mt-2">
           <p>
             For any queries, please contact us at{" "}
-            <span className=" font-medium text-yellow-500">
-              example@monet.work
+            <span className=" ">
+              <Link
+                className="font-medium text-yellow-500"
+                href="mailto:hello@monet.work?subject=Hello"
+              >
+                {" "}
+                hello@monet.work
+              </Link>
             </span>{" "}
           </p>
           <div className="flex lg:flex-row-reverse  mt-4 lg:mt-0 gap-2 lg:gap-4">
@@ -48,7 +55,7 @@ function Footer({}: Props) {
             />
             <FooterSocialComponent
               svg="/icons/discord.svg"
-              link={"https://discord.gg/monet"}
+              link={"https://discord.com/invite/abBUFJDjkQ"}
             />
           </div>
         </div>
