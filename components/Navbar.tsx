@@ -6,10 +6,13 @@ import Link from "next/link";
 import { MonetWorkLogo } from "./monet-work-logo";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
+import { usePathname, useRouter } from "next/navigation";
 
 type Props = {};
 
 function Navbar({}: Props) {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
   const [menuActive, setMenuActive] = useState(false);
   const navItems = [
     {
@@ -98,7 +101,7 @@ function Navbar({}: Props) {
               )} */}
             </Link>
           ))}{" "}
-          <Link target="_blank" href={"#community"}>
+          <Link href={"#community"}>
             <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
               <span>Join Us</span>
               <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
