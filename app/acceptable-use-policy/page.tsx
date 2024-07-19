@@ -1,475 +1,336 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 
-const Terms = () => {
+const AcceptableUsePolicy = () => {
   return (
-    <div className="w-full bg-black">
-      <div className="container mx-auto max-w-5xl px-4 py-8 mt-28 bg-black">
-        <h1 className="text-3xl font-bold mb-4 text-yellow-500">
-          Website Terms of Use
-        </h1>
-        <p className="mb-4">
-          Please read these Website Terms of Use carefully before using the
-          site.
-        </p>
+    <div className="container mx-auto max-w-5xl px-4 py-8">
+      <h1 className="text-3xl font-bold mb-4 text-yellow-500">
+        MONET WORK INFORMATION TECHNOLOGY CONSULTANTS WEBSITE ACCEPTABLE USE
+        POLICY
+      </h1>
+      <p className="mb-4">
+        Please read the terms of this policy carefully before using the site.
+      </p>
 
-        <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
-          Introduction
-        </h2>
-        <p className="mb-4">
-          Thank you for visiting www.monet.work. In these website terms of use
-          (Terms), references to "we", "us", "our" means MONET WORK INFORMATION
-          TECHNOLOGY CONSULTANTS. References to "you" and "your" are to users of
-          our website.
-        </p>
-        <p className="mb-4">
-          By using our website you accept these Terms. These Terms, together
-          with the documents referred to in it, set out the terms and conditions
-          on which you make use of www.monet.work. Please read these Terms
-          carefully before you start to use www.monet.work. By using our
-          website, you confirm that you accept these Terms and that you agree to
-          comply with them. If you do not agree to these Terms you must not use
-          our website.
-        </p>
+      <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
+        Introduction
+      </h2>
+      <p className="mb-4">
+        Thank you for visiting www.monet.work. This Acceptable Use Policy
+        (Policy) sets out the content standards that apply when you upload
+        content to our site, make contact with other users on our site, link to
+        our site or interact with our site in any other way. In this Policy,
+        references to "we", "us", "our" means to MONET WORK INFORMATION
+        TECHNOLOGY CONSULTANTS. References to "you" and "your" are to users of
+        our website.
+      </p>
 
-        <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
-          Other Terms that may apply to you
-        </h2>
-        <p className="mb-4">
-          These Terms refer to the following additional terms, which also apply
-          to your use of our website:
-        </p>
-        <ul className="list-disc list-inside mb-4">
-          <li>
-            our Privacy Policy{" "}
-            <a
-              href="https://monet.work/privacy-policy"
-              className="text-yellow-500"
-            >
-              monet.work/privacy-policy
-            </a>
-            ;
-          </li>
-          <li>
-            our Acceptable Use Policy{" "}
-            <a
-              href="https://monet.work/acceptable-use-policy"
-              className="text-yellow-500"
-            >
-              monet.work/acceptable-use-policy
-            </a>
-            , which sets out the permitted uses and prohibited uses of our site.
-            When using our site, you must comply with this Acceptable Use
-            Policy; and
-          </li>
-          <li>
-            our Cookie Notice{" "}
-            <a
-              href="https://monet.work/cookie-notice"
-              className="text-yellow-500"
-            >
-              monet.work/cookie-notice
-            </a>
-            , which sets out information about the cookies on our site.
-          </li>
-        </ul>
+      <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
+        By using our site you accept these Terms
+      </h2>
+      <p className="mb-4">
+        When you use our website, you confirm that you accept the terms of this
+        Policy and that you agree to comply with its terms. If you do not agree
+        to the terms of this Policy, you must not use our site. We recommend
+        that you print a copy of this Policy for future reference.
+      </p>
 
-        <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
-          Who we are and how to contact us
-        </h2>
-        <p className="mb-4">
-          www.monet.work is a website operated by MONET WORK INFORMATION
-          TECHNOLOGY CONSULTANTS. We are registered as a LLC in Dubai Mainland
-          with company number 1106822 and have our registered office at C-202, C
-          Wing, Al Saaha Offices, Downtown, Dubai, United Arab Emirates.
-        </p>
-        <p className="mb-4">
-          If you have any queries or concerns regarding www.monet.work or the
-          information contained on it, please contact us at{" "}
-          <a href="mailto:hello@monet.work" className="text-yellow-500">
-            hello@monet.work
+      <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
+        Other Terms that may apply to you
+      </h2>
+      <p className="mb-4">
+        Our Website Terms and Conditions{" "}
+        <a href="https://monet.work/terms-of-use" className="text-yellow-500">
+          www.monet.work/terms-of-use
+        </a>{" "}
+        also apply to your use of our site.
+      </p>
+
+      <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
+        Who we are and how to contact us
+      </h2>
+      <p className="mb-4">
+        www.monet.work is a website operated by MONET WORK INFORMATION
+        TECHNOLOGY CONSULTANTS. We are registered as a LLC in Dubai Mainland
+        with company number 1106822 and have our registered office at C-202, C
+        Wing, Al Saaha Offices, Downtown, Dubai, United Arab Emirates.
+      </p>
+      <p className="mb-4">
+        If you have any queries or concerns regarding www.monet.work or the
+        information contained on it, please contact us at{" "}
+        <a href="mailto:hello@monet.work" className="text-yellow-500">
+          hello@monet.work
+        </a>
+        .
+      </p>
+
+      <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
+        Prohibited Uses
+      </h2>
+      <p className="mb-4">
+        You may only use our site for lawful purposes. You may not use our site:
+      </p>
+      <ul className="list-disc list-inside mb-4">
+        <li>
+          in any way that breaches any applicable local, national or
+          international law or regulation;
+        </li>
+        <li>
+          in any way that is unlawful or fraudulent or has any unlawful or
+          fraudulent purpose or effect;
+        </li>
+        <li>
+          for the purpose of harming or attempting to harm minors in any way;
+        </li>
+        <li>
+          to send, knowingly receive, upload, download, use or re-use any
+          material which does not comply with our Content Standards (see below);
+        </li>
+        <li>
+          to transmit, or procure the sending of, any unsolicited or
+          unauthorised advertising or promotional material or any other form of
+          similar solicitation (spam); or
+        </li>
+        <li>
+          to knowingly transmit any data, send or upload any material that
+          contains viruses, Trojan horses, worms, time-bombs, keystroke loggers,
+          spyware, adware or any other harmful programs or similar computer code
+          designed to adversely affect the operation of any computer software or
+          hardware.
+        </li>
+      </ul>
+      <p className="mb-4">You also agree:</p>
+      <ul className="list-disc list-inside mb-4">
+        <li>
+          not to reproduce, duplicate, copy or re-sell any part of our site in
+          contravention of the provisions of our Website Terms and Conditions{" "}
+          <a href="https://monet.work/terms-of-use" className="text-yellow-500">
+            www.monet.work/terms-of-use
           </a>
-          .
-        </p>
+          ; and
+        </li>
+        <li>
+          not to access without authority, interfere with, damage or disrupt
+          any:
+          <ul className="list-disc list-inside ml-6">
+            <li>part of our site;</li>
+            <li>equipment or network on which our site is stored;</li>
+            <li>software used in the provision of our site; or</li>
+            <li>
+              equipment or network or software owned or used by any third party.
+            </li>
+          </ul>
+        </li>
+      </ul>
 
-        <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
-          Website Content
-        </h2>
-        <p className="mb-4">
-          The content on our website is provided on an "as is" basis and all
-          information, commentary and other materials displayed on our website
-          are intended for general information purposes only. It is not intended
-          to amount to advice on which you should rely. You must obtain
-          professional or specialist advice before taking, or refraining from,
-          any action on the basis of the content on our website.
-        </p>
-        <p className="mb-4">
-          We update our website regularly and may change the content at any
-          time. Although we make reasonable efforts to update the information on
-          our website, we make no representations, warranties or guarantees,
-          whether express or implied, that the content on our site is accurate,
-          complete or up-to-date. Therefore, we disclaim all liability and
-          responsibility arising as a result of any reliance placed on such
-          information, commentary or other materials contained on www.monet.work
-          by any visitor to our website or by anyone who may be informed of any
-          of its content.
-        </p>
+      <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
+        Interactive Services
+      </h2>
+      <p className="mb-4">
+        We may from time to time provide interactive services on our site,
+        including:
+      </p>
+      <ul className="list-disc list-inside mb-4">
+        <li>Chat rooms</li>
+        <li>Bulletin boards</li>
+        <li>Other interactive services</li>
+      </ul>
+      <p className="mb-4">
+        Where we provide any Interactive Service, we will provide clear
+        information to you about the kind of service offered, if it is moderated
+        and what form of moderation is used (including whether it is human or
+        technical).
+      </p>
+      <p className="mb-4">
+        We will do our best to assess any possible risks for users (and, in
+        particular, for children) from third parties when they use any
+        Interactive Service provided on our site and we will decide in each case
+        whether it is appropriate to use moderation of the relevant service
+        (including what kind of moderation to use) in light of those risks.
+        However, we are under no obligation to oversee, monitor or moderate any
+        Interactive Service we provide on our site and we expressly exclude our
+        liability for any loss or damage arising from the use of any Interactive
+        Service by a user in contravention of our content standards, whether the
+        service is moderated or not.
+      </p>
+      <p className="mb-4">
+        The use of any of our Interactive Services by a minor is subject to the
+        consent of their parent or guardian. We advise parents who permit their
+        children to use an Interactive Service that it is important that they
+        communicate with their children about their safety online, as moderation
+        is not fool proof. Minors who are using any Interactive Service should
+        be made aware of the potential risks to them.
+      </p>
+      <p className="mb-4">
+        Where we do moderate an Interactive Service, we will normally provide
+        you with a means of contacting the moderator, should a concern or
+        difficulty arise.
+      </p>
 
-        <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
-          Restrictions on access and use
-        </h2>
-        <h3 className="text-xl font-semibold mb-2 text-yellow-500">
-          Website access
-        </h3>
-        <p className="mb-4">
-          Our site is made available free of charge. We do not guarantee that
-          our site, or any content on it, will always be available or be
-          uninterrupted. If our website is unavailable for any reason and at any
-          time (including for any period of time), we shall not be liable to you
-          for such an occurrence.
-        </p>
-        <p className="mb-4">
-          To register on our website you must be 18 years or older. Only one
-          registration is allowed per person and once registered, you must
-          ensure you keep your registration information up-to-date.
-        </p>
+      <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
+        Content Standards
+      </h2>
+      <p className="mb-4">
+        These Content Standards apply to all material which you contribute to
+        our site (Contribution) and to any Interactive Services associated with
+        it. The Content Standards must be complied with in spirit as well as to
+        the letter. The Content Standards apply to each part of any Contribution
+        as well as to its whole. Monet Work Information Technology Consultants
+        will determine, in its absolute discretion, whether a Contribution
+        breaches the Content Standards.
+      </p>
+      <p className="mb-4">A Contribution must:</p>
+      <ul className="list-disc list-inside mb-4">
+        <li>be accurate (where it states facts);</li>
+        <li>be genuinely held (where it states opinions); and</li>
+        <li>
+          comply with the law applicable in Dubai Mainland and in any country
+          from which it is posted.
+        </li>
+      </ul>
+      <p className="mb-4">A Contribution must not:</p>
+      <ul className="list-disc list-inside mb-4">
+        <li>be defamatory of any person;</li>
+        <li>be obscene, offensive, hateful or inflammatory;</li>
+        <li>promote sexually explicit material;</li>
+        <li>promote violence or racial or religious hatred;</li>
+        <li>
+          promote discrimination based on race, sex, sexual orientation,
+          religion, nationality, disability or age;
+        </li>
+        <li>
+          infringe any copyright, database right or trade mark of any other
+          person or any other intellectual property rights;
+        </li>
+        <li>be likely to deceive any person;</li>
+        <li>
+          breach any legal duty owed to a third party, such as a contractual
+          duty or a duty of confidence;
+        </li>
+        <li>promote any illegal activity;</li>
+        <li>be in contempt of court;</li>
+        <li>
+          be threatening, abusive or invade another’s privacy, or cause
+          annoyance, inconvenience or needless anxiety;
+        </li>
+        <li>
+          be likely to harass, upset, embarrass, alarm or annoy any other
+          person;
+        </li>
+        <li>
+          impersonate any person or misrepresent your identity or affiliation
+          with any person;
+        </li>
+        <li>
+          give the impression that the Contribution emanates from Monet Work
+          Information Technology Consultants, if this is not the case;
+        </li>
+        <li>
+          advocate, promote or incite any party to commit, or assist any
+          unlawful or criminal act such as copyright infringement or computer
+          misuse;
+        </li>
+        <li>
+          contain a statement which you know or believe, or have reasonable
+          grounds for believing, that members of the public to whom the
+          statement is, or is to be, published are likely to understand as a
+          direct or indirect encouragement or other inducement to the
+          commission, preparation or instigation of acts of terrorism; or
+        </li>
+        <li>
+          contain any advertising or promote any services or web links to other
+          sites.
+        </li>
+      </ul>
+      <p className="mb-4">
+        You confirm that in respect of all Contributions submitted by you, you
+        own the rights in everything you submit or if you do not, you have
+        obtained the relevant permissions from the rights owner to submit that
+        Contribution. We will not be responsible or liable to any third party,
+        for the content or accuracy of any Contribution submitted by you and if
+        we become responsible or liable in any way, you agree to fully indemnify
+        us for any costs, losses or any such other amounts which we have
+        incurred as a result of this.
+      </p>
+      <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
+        Breach of this Policy
+      </h2>
+      <p className="mb-4">
+        We will determine, in our sole discretion, whether there has been a
+        breach of this Policy through your use of our site. When we consider
+        that a breach of this Policy has occurred, we may take such action as we
+        deem appropriate.
+      </p>
+      <p className="mb-4">
+        Failure to comply with this Policy constitutes a material breach of the
+        Website Terms and Conditions{" "}
+        <a href="https://monet.work/terms-of-use" className="text-yellow-500">
+          www.monet.work/terms-of-use
+        </a>{" "}
+        upon which you are permitted to use our site, and may result in our
+        taking any of the following actions:
+      </p>
+      <ul className="list-disc list-inside mb-4">
+        <li>
+          immediate, temporary or permanent withdrawal of your right to use our
+          site;
+        </li>
+        <li>
+          immediate, temporary or permanent removal of any Contribution uploaded
+          by you to our site;
+        </li>
+        <li>issue of a warning to you;</li>
+        <li>
+          legal proceedings against you for reimbursement of all costs on an
+          indemnity basis (including reasonable administrative and legal costs)
+          resulting from the breach;
+        </li>
+        <li>further legal action against you; or</li>
+        <li>
+          disclosure of such information to law enforcement authorities as we
+          reasonably feel is necessary or as required by law.
+        </li>
+      </ul>
+      <p className="mb-4">
+        We exclude our liability for all action we may take in response to
+        breaches of this Policy. The actions we may take are not limited to
+        those described above and we may take any other action we reasonably
+        deem appropriate.
+      </p>
 
-        <h3 className="text-xl font-semibold mb-2 text-yellow-500">
-          Suspension, withdrawal and restriction of access
-        </h3>
-        <p className="mb-4">
-          We may in our absolute discretion, suspend, withdraw or restrict
-          access to all or some parts of our website to any persons, which shall
-          include, for the avoidance of doubt, users who have registered with
-          us.
-        </p>
+      <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
+        Severability
+      </h2>
+      <p className="mb-4">
+        In the event any provision or part-provision of this Policy is found by
+        any court or other authority of competent jurisdiction to be invalid,
+        unlawful or unenforceable, that provision or part-provision shall, to
+        the extent required, be deemed not to form part of this Policy and the
+        validity and enforceability of the other provisions of this Policy shall
+        not be affected.
+      </p>
 
-        <h3 className="text-xl font-semibold mb-2 text-yellow-500">
-          Termination of access
-        </h3>
-        <p className="mb-4">
-          We may in our absolute discretion, terminate your access to
-          www.monet.work at any time and without notice.
-        </p>
+      <h2 className="text-2xl font-semibold mb-2 text-yellow-500">Variation</h2>
+      <p className="mb-4">
+        Monet Work Information Technology Consultants may at its sole discretion
+        amend this Policy at any time. Every time you wish to use our website,
+        please check this Policy and the Website Terms and Conditions to ensure
+        you understand the terms that apply at that time.
+      </p>
 
-        <h3 className="text-xl font-semibold mb-2 text-yellow-500">
-          User ID and password
-        </h3>
-        <p className="mb-4">
-          If you establish an account on www.monet.work you are responsible for
-          maintaining the confidentiality of your user ID and password, and you
-          are responsible for all activities that occur under that user ID or
-          password. You agree that you will not allow anyone to use your account
-          and that you will not use anyone else's account.
-        </p>
-        <p className="mb-4">
-          We have the right to disable any user ID or password, whether chosen
-          by you or allocated by us, at any time, if in our reasonable opinion
-          you have failed to comply with any of the provisions of these Terms.
-        </p>
-        <p className="mb-4">
-          If you know or suspect that your user ID or password has been
-          unlawfully disclosed or there has been a known or possible breach of
-          security, you must promptly notify us at{" "}
-          <a href="mailto:hello@monet.work" className="text-yellow-500">
-            hello@monet.work
-          </a>
-          .
-        </p>
-
-        <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
-          How you may use material on our site
-        </h2>
-        <p className="mb-4">
-          All intellectual property rights contained in the website and all
-          materials published on the website are owned and/or licensed by us
-          with all such rights reserved.
-        </p>
-        <p className="mb-4">
-          Except as expressly provided in these Terms, no part of www.monet.work
-          may be copied, reproduced, uploaded, posted, publicly displayed,
-          encoded, translated, transmitted or distributed in any way (including
-          mirroring) to any other computer, server, website or other medium for
-          publication or distribution or for any commercial enterprise, without
-          the express written consent of Monet Work Information Technology
-          Consultants.
-        </p>
-        <p className="mb-4">
-          You may download publicly-available content on www.monet.work only for
-          your personal, non-commercial use, provided that:
-        </p>
-        <ul className="list-disc list-inside mb-4">
-          <li>
-            you keep intact all copyright and other proprietary notices; and
-          </li>
-          <li>
-            if your copying or use of copyrighted materials on www.monet.work is
-            other than "fair use" under applicable copyright laws, you must seek
-            permission directly from us.
-          </li>
-        </ul>
-        <p className="mb-4">
-          If you print off, copy or download any part of our website in breach
-          of these Terms, your right to use our website will cease immediately
-          and you must, at our option, return or destroy any copies of the
-          materials you have made.
-        </p>
-
-        <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
-          Linking to and from our site
-        </h2>
-        <p className="mb-4">
-          Where our site contains links to other sites and resources provided by
-          third parties, these links are provided for your information only.
-          Such links should not be interpreted as approval by us of those linked
-          sites or information you may obtain from them. We have no control over
-          the contents of those sites or resources. We exclude, to the fullest
-          extent permitted by law, all liability that may arise in connection
-          with or as a result of such external site material causing any damage,
-          costs, injury or financial loss of any kind.
-        </p>
-        <p className="mb-4">
-          You may link to our home page, provided you do so in a way that is
-          fair and legal and does not damage, or take advantage of, our
-          reputation. You must not establish a link in a way which suggests any
-          form of association, approval or endorsement on our part where none
-          exists. You must not establish a link to our site in any site that is
-          not owned by you.
-        </p>
-        <p className="mb-4">
-          Our site must not be framed on any other site, nor may you create a
-          link to any part of our site other than the home page. We reserve the
-          right to withdraw linking permission without notice. The site in which
-          you are linking must comply in all respects with the content standards
-          set out in our Acceptable Use Policy{" "}
-          <a
-            href="https://monet.work/acceptable-use-policy"
-            className="text-yellow-500"
-          >
-            monet.work/acceptable-use-policy
-          </a>
-          . If you wish to link to or make any use of content on our site other
-          than that set out above, please contact us at{" "}
-          <a href="mailto:hello@monet.work" className="text-yellow-500">
-            hello@monet.work
-          </a>
-          .
-        </p>
-
-        <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
-          Uploading content to our website
-        </h2>
-        <p className="mb-4">
-          Whenever you make use of a feature that allows you to upload content
-          to our website, or to make contact with other users of our website,
-          you must comply with the content standards set out in our Acceptable
-          Use Policy{" "}
-          <a
-            href="https://monet.work/acceptable-use-policy"
-            className="text-yellow-500"
-          >
-            monet.work/acceptable-use-policy
-          </a>
-          .
-        </p>
-        <p className="mb-4">
-          You warrant that any such contribution does comply with those content
-          standards, and you will be liable to us and indemnify us for any
-          breach of that warranty. This means you will be responsible for any
-          loss or damage we suffer as a result of your breach of warranty.
-        </p>
-        <p className="mb-4">
-          Any content you upload to our website will be considered
-          non-confidential and non-proprietary. You retain all of your ownership
-          rights in your content, but you are required to grant us and other
-          users of our site a limited licence to use, store and copy that
-          content and to distribute and make it available to third parties.
-        </p>
-        <p className="mb-4">
-          We also have the right to disclose your identity to any third party
-          who is claiming that any content posted or uploaded by you to our
-          website constitutes a violation of their intellectual property rights,
-          or of their right to privacy.
-        </p>
-        <p className="mb-4">
-          We have the right to remove any posting you make on our website if, in
-          our opinion, your post does not comply with the content standards set
-          out in our Acceptable Use Policy{" "}
-          <a
-            href="https://monet.work/acceptable-use-policy"
-            className="text-yellow-500"
-          >
-            monet.work/acceptable-use-policy
-          </a>
-          .
-        </p>
-        <p className="mb-4">
-          You are solely responsible for securing and backing up your content.
-        </p>
-
-        <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
-          User-generated content is not approved by us
-        </h2>
-        <p className="mb-4">
-          This site may include information and materials uploaded by other
-          users of the site, including to bulletin boards and chat rooms. This
-          information and these materials have not been verified or approved by
-          us. The views expressed by other users on our site do not represent
-          our views or values.
-        </p>
-        <p className="mb-4">
-          If you wish to complain about information and materials uploaded by
-          other users please contact us at{" "}
-          <a href="mailto:hello@monet.work" className="text-yellow-500">
-            hello@monet.work
-          </a>
-          .
-        </p>
-
-        <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
-          We are not responsible for viruses and you must not introduce them
-        </h2>
-        <p className="mb-4">
-          We do not guarantee that our site will be secure or free from bugs or
-          viruses.
-        </p>
-        <p className="mb-4">
-          You are responsible for configuring your information technology,
-          computer programs and platform to access our site. You should use your
-          own virus protection software.
-        </p>
-        <p className="mb-4">
-          You must not misuse our site by knowingly introducing viruses,
-          trojans, worms, logic bombs or other material that is malicious or
-          technologically harmful. You must not attempt to gain unauthorised
-          access to our site, the server on which our site is stored or any
-          server, computer or database connected to our website. You must not
-          attack our site via a denial-of-service attack or a distributed
-          denial-of service attack. We will report any such breach to the
-          relevant law enforcement authorities and we will co-operate with those
-          authorities by disclosing your identity to them. In the event of such
-          a breach, your right to use our site will cease immediately.
-        </p>
-
-        <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
-          Data Protection and Privacy
-        </h2>
-        <p className="mb-4">
-          We shall comply with all applicable data protection legislation,
-          including the General Data Protection Regulation ((EU) 2016/679), and
-          any other national implementing laws, regulations and secondary
-          legislation relating to data protection or privacy, as each of the
-          foregoing may be amended, updated, consolidated, replaced and/or
-          re-enacted from time to time.
-        </p>
-        <p className="mb-4">
-          We shall use and process your personal information in accordance with
-          our Cookie Notice{" "}
-          <a
-            href="https://monet.work/cookie-notice"
-            className="text-yellow-500"
-          >
-            monet.work/cookie-notice
-          </a>{" "}
-          and Privacy Policy{" "}
-          <a
-            href="https://monet.work/privacy-policy"
-            className="text-yellow-500"
-          >
-            monet.work/privacy-policy
-          </a>
-          .
-        </p>
-
-        <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
-          Our Liability
-        </h2>
-        <p className="mb-4">
-          Whilst we try to ensure that all information on www.monet.work is
-          accurate, no guarantees, representations or warranties are given that
-          the content of our website is accurate, complete, up-to-date or error
-          free. Use of www.monet.work is entirely at your own risk. To the
-          fullest extent permitted by law, we hereby expressly exclude:
-        </p>
-        <ul className="list-disc list-inside mb-4">
-          <li>
-            all conditions, warranties and other terms which might otherwise be
-            implied by statute, common law or the law of equity; and
-          </li>
-          <li>
-            any liability for any direct, indirect or consequential loss or
-            damage incurred by any user in connection with our website or in
-            connection with the access, use, inability to use, or results of the
-            use of our website, any websites linked to it and any materials
-            posted on it, including liability for:
-            <ul className="list-disc list-inside ml-6">
-              <li>loss of business;</li>
-              <li>loss of income or revenue;</li>
-              <li>loss of profits or contracts;</li>
-              <li>loss of anticipated savings;</li>
-              <li>loss of data;</li>
-              <li>loss of goodwill;</li>
-              <li>wasted management or office time;</li>
-              <li>loss or damage caused to any equipment or software; or</li>
-              <li>
-                any other loss or damage of any kind, however arising and
-                whether caused by tort (including negligence), breach of
-                contract or otherwise, even if foreseeable.
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <p className="mb-4">
-          We will not be liable for any loss or damage caused by a distributed
-          denial-of-service attack, viruses, malicious code or other
-          technologically harmful material that may infect your computer
-          equipment, computer programs, data or other proprietary material due
-          to your use of www.monet.work or to your downloading of any material
-          posted on it, or on any website linked to it.
-        </p>
-        <p className="mb-4">
-          This does not affect our liability for death or personal injury
-          arising from our negligence, nor our liability for fraud or fraudulent
-          misrepresentation, or any other liability which cannot be excluded or
-          limited under applicable law.
-        </p>
-
-        <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
-          Severability
-        </h2>
-        <p className="mb-4">
-          In the event any provision or part-provision of these Terms is found
-          by any court or other authority of competent jurisdiction to be
-          invalid, unlawful or unenforceable, that provision or part-provision
-          shall, to the extent required, be deemed not to form part of these
-          Terms and the validity and enforceability of the other provisions of
-          these Terms shall not be affected.
-        </p>
-
-        <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
-          Variation
-        </h2>
-        <p className="mb-4">
-          Monet Work Information Technology Consultants may at its sole
-          discretion amend these Terms at any time. Every time you wish to use
-          our website, please check these Terms to ensure you understand the
-          terms that apply at that time.
-        </p>
-
-        <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
-          Governing Law and Jurisdiction
-        </h2>
-        <p className="mb-4">
-          These Terms shall be governed by, and construed in accordance with,
-          the laws of England and Wales. Any dispute arising out of or in
-          connection with these Terms, including any question regarding their
-          existence, validity or termination, or arising from or related to use
-          of our website, shall be subject to the exclusive jurisdiction of the
-          Courts of Dubai Mainland.
-        </p>
-      </div>
+      <h2 className="text-2xl font-semibold mb-2 text-yellow-500">
+        Governing Law and Jurisdiction
+      </h2>
+      <p className="mb-4">
+        This Policy shall be governed by, and construed in accordance with, the
+        laws of England and Wales. Any dispute arising out of or in connection
+        with this Policy, including any question regarding its existence,
+        validity or termination, or arising from or related to use of our
+        website, shall be subject to the exclusive jurisdiction of the Courts of
+        Dubai Mainland.
+      </p>
     </div>
   );
 };
 
-export default Terms;
+export default AcceptableUsePolicy;

@@ -30,6 +30,7 @@ function Footer({}: Props) {
             link={"/privacy-policy"}
             name={"Privacy Policy"}
           />
+          <FooterLinkComponent link={"/terms-of-use"} name={"Terms of use"} />
           <FooterLinkComponent
             link={"/acceptable-use-policy"}
             name={"Acceptable use policy"}
