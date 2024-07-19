@@ -12,13 +12,13 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center overflow-hidden bg-black justify-between  w-full">
       <Hero />
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <FeatureGrid /> */}
       <About />
       <WhatAreWeBuilding />
       <JoinUs />
       {/* <MediumArticles /> */}
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }
