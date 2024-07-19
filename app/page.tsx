@@ -11,14 +11,12 @@ import Navbar from "@/components/Navbar";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center overflow-hidden bg-black justify-between  w-full">
-      <Navbar />
       <Hero />
       {/* <FeatureGrid /> */}
       <About />
       <WhatAreWeBuilding />
       <JoinUs />
       {/* <MediumArticles /> */}
-      <Footer />
     </main>
   );
 }

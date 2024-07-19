@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
         <meta name="description" content="Monet Work Privacy Policy" />
       </Head>
 
-      <main className="container mx-auto max-w-6xl  px-4 py-8">
+      <main className="container mx-auto max-w-5xl mt-24  px-4 py-8">
         <h1 className="text-4xl font-bold text-yellow-400 mb-8">
           Monet Work Information Technology Consultants
         </h1>

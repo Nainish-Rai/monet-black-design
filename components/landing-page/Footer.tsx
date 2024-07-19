@@ -10,8 +10,8 @@ function Footer({}: Props) {
   const footerItems = [{}];
   return (
     <footer className=" border-t mt-64 w-full text-white text-center py-2">
-      <div className="w-full px-4 lg:px-0 flex flex-col max-w-7xl mx-auto mt-5 mb-2">
-        <div className="flex gap-2 lg:gap-12 flex-col lg:flex-row ">
+      <div className="w-full px-4 lg:px-0 flex flex-col max-w-7xl mx-auto mt-5 mb-4">
+        <div className="flex gap-2 lg:gap-6 flex-col lg:flex-row mb-4 ">
           <FooterLinkComponent link={"#about"} name={"About"} />
           <FooterLinkComponent
             link={"#building"}
@@ -26,6 +26,15 @@ function Footer({}: Props) {
             link={"https://web3-points.stage.monet.work/"}
             name={"Product"}
           />
+          <FooterLinkComponent
+            link={"/privacy-policy"}
+            name={"Privacy Policy"}
+          />
+          <FooterLinkComponent
+            link={"/acceptable-use-policy"}
+            name={"Acceptable use policy"}
+          />
+          <FooterLinkComponent link={"/cookie-notice"} name={"Cookie notice"} />
         </div>
         <div className="text-left text-gray-300 flex-col lg:flex-row flex justify-between text-sm mt-4 lg:mt-2">
           <p>
