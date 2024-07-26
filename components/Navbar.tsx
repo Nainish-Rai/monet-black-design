@@ -22,11 +22,11 @@ function Navbar({}: Props) {
       link: "/#building",
       icon: <HouseIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
-    {
-      name: "Tokenomics",
-      link: "/#tokenomics",
-      icon: <HouseIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
-    },
+    // {
+    //   name: "Tokenomics",
+    //   link: "/#tokenomics",
+    //   icon: <HouseIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    // },
     {
       name: "Community",
       link: "/#community",
