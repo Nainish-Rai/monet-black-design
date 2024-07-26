@@ -3,7 +3,7 @@ import React from "react";
 
 const AcceptableUsePolicy = () => {
   return (
-    <div className="container mx-auto max-w-5xl px-4 py-8">
+    <div className="container mx-auto max-w-5xl pt-32 px-4 py-8">
       <h1 className="text-3xl font-bold mb-4 text-yellow-500">
         MONET WORK INFORMATION TECHNOLOGY CONSULTANTS WEBSITE ACCEPTABLE USE
         POLICY

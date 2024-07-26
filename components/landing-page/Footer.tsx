@@ -21,21 +21,23 @@ function Footer({}: Props) {
           <FooterLinkComponent
             link={"https://monet-work.github.io/web3-points/"}
             name={"Docs"}
+            newTab
           />
           <FooterLinkComponent
             link={"https://web3-points.stage.monet.work/"}
             name={"Product"}
+            newTab
           />
           <FooterLinkComponent
             link={"/privacy-policy"}
             name={"Privacy Policy"}
           />
-          <FooterLinkComponent link={"/terms-of-use"} name={"Terms of use"} />
+          <FooterLinkComponent link={"/terms-of-use"} name={"Terms of Use"} />
           <FooterLinkComponent
             link={"/acceptable-use-policy"}
-            name={"Acceptable use policy"}
+            name={"Acceptable Use Policy"}
           />
-          <FooterLinkComponent link={"/cookie-notice"} name={"Cookie notice"} />
+          <FooterLinkComponent link={"/cookie-notice"} name={"Cookie Notice"} />
         </div>
         <div className="text-left text-gray-300 flex-col lg:flex-row flex justify-between text-sm mt-4 lg:mt-2">
           <p>

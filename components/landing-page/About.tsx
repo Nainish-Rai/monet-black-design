@@ -1,8 +1,8 @@
-"use client";
 import React from "react";
 import Spline from "@splinetool/react-spline/next";
 import { motion } from "framer-motion";
 import { slideIn, textVariant } from "@/lib/anims";
+import AboutSpline from "./About-Spline";
 
 type Props = {};
 
@@ -61,10 +61,7 @@ function About({}: Props) {
         whileInView="show"
       >
         {" "}
-        <Spline
-          className="w-full "
-          scene="https://prod.spline.design/Q4nPk1qtUkqoOFAj/scene.splinecode"
-        />
+        <AboutSpline />
       </motion.div>
     </div>
   );
