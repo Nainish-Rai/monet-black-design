@@ -1,7 +1,6 @@
 import React from "react";
-import Spline from "@splinetool/react-spline/next";
 import { motion } from "framer-motion";
-import { slideIn, textVariant } from "@/lib/anims";
+import { slideIn } from "@/lib/anims";
 import AboutSpline from "./About-Spline";
 
 type Props = {};
@@ -19,10 +18,6 @@ function About({}: Props) {
     >
       <div className="px-4">
         <motion.h1
-          // initial={{ opacity: 0 }}
-          // whileInView={{ opacity: 1 }}
-          // transition={{ duration: 0.5 }}
-          // variants={textVariant(0.1)}
           variants={slideIn("left", "spring", 0.14, 1)}
           initial="hidden"
           whileInView="show"
@@ -32,11 +27,6 @@ function About({}: Props) {
           <span className=" text-yellow-400"> Monet</span>
         </motion.h1>
         <motion.p
-          // initial="hidden"
-          // whileInView="visible"
-          // transition={{ duration: 0.4, delay: 0.1 }}
-          // variants={variants1}
-          // variants={textVariant(0.15)}
           variants={slideIn("left", "spring", 0.06, 1)}
           initial="hidden"
           whileInView="show"
