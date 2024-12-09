@@ -87,6 +87,10 @@ const config = {
         gradient: "gradient 8s linear infinite",
         shimmer: "shimmer 8s infinite",
       },
+      fontFamily: {
+        neueMontral: ["Neue Montreal", "sans-serif"],
+        manrope: ["Manrope", "sans-serif"],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
