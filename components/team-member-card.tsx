@@ -7,8 +7,8 @@ interface TeamMemberCardProps {
 
 export function TeamMemberCard({ member }: TeamMemberCardProps) {
   return (
-    <div className="group relative overflow-hidden rounded-2xl bg-zinc-900">
-      <div className="aspect-square">
+    <div className="group ">
+      <div className="aspect-square overflow-hidden rounded-2xl bg-zinc-900">
         <Image
           src={member.image}
           alt={member.name}
@@ -17,7 +17,7 @@ export function TeamMemberCard({ member }: TeamMemberCardProps) {
           className="h-full w-full object-cover grayscale"
         />
       </div>
-      <div className="absolute bottom-0 w-full p-4">
+      <div className="w-full p-4">
         <h3 className="font-medium text-white">{member.name}</h3>
         <p className="text-sm text-yellow-500">{member.role}</p>
       </div>

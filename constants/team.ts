@@ -4,57 +4,57 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Abhay Mishra",
     role: "Co-founder & CEO",
-    image: "/team/abhay-mishra.jpg",
+    image: "/images/team/abhay-mishra.jpg",
   },
   {
     name: "Abhay Tandon",
     role: "Co-founder & CBO",
-    image: "/team/abhay-tandon.jpg",
+    image: "/images/team/abhay-tandon.jpg",
   },
   {
     name: "Anuj Kumar",
     role: "Co-founder & CTO",
-    image: "/team/anuj-kumar.jpg",
+    image: "/images/team/anuj-kumar.jpg",
   },
   {
     name: "Arindam Dawn",
     role: "Development",
-    image: "/team/arindam-dawn.jpg",
+    image: "/images/team/arindam-dawn.jpg",
   },
   {
     name: "Ankit Kumar Sharma",
     role: "Business Development",
-    image: "/team/ankit-kumar-sharma.jpg",
+    image: "/images/team/ankit-kumar-sharma.jpg",
   },
   {
     name: "Tanay Gandhi",
     role: "Growth & Marketing",
-    image: "/team/tanay-gandhi.jpg",
+    image: "/images/team/tanay-gandhi.jpg",
   },
   {
     name: "Tanuj Malhotra",
     role: "Product Manager",
-    image: "/team/tanuj-malhotra.jpg",
+    image: "/images/team/tanuj-malhotra.jpg",
   },
   {
     name: "Ritika Garud",
     role: "UX Designer",
-    image: "/team/ritika-garud.jpg",
+    image: "/images/team/ritika-garud.jpg",
   },
   {
     name: "Saumya Singh",
     role: "Social Media",
-    image: "/team/saumya-singh.jpg",
+    image: "/images/team/saumya-singh.jpg",
   },
   {
     name: "Haederah Ali",
     role: "Development",
-    image: "/team/haederah-ali.jpg",
+    image: "/images/team/haederah-ali.jpg",
   },
   {
     name: "Nainish Rai",
     role: "Development",
-    image: "/team/nainish-rai.jpg",
+    image: "/images/team/nainish-rai.jpg",
   },
 ];
 
