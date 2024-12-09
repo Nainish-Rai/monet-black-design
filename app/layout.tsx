@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/landing-page/Footer";
-import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,8 +8,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://monet.work"),
   title: "Monet",
   alternates: {
-    canonical: '/',
-  }, 
+    canonical: "/",
+  },
   description:
     "Monet is a new era of loyalty programs. We're pioneering a new era of rewards using blockchain technology. Our innovative solution empowers businesses and delights customers with decentralized $POINTS - the currency of interoperable rewards.",
   openGraph: {
@@ -51,11 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark bg-black">
-      <body className={inter.className}>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
