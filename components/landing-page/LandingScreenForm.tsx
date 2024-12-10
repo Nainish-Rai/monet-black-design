@@ -1,7 +1,9 @@
 "use client";
 import { textVariant } from "@/lib/anims";
-import { motion, useTransform } from "framer-motion";
+import { AnimatePresence, motion, useTransform } from "framer-motion";
 import React from "react";
+import LandingFormComponent from "./LandingFormComponent";
+import LandingFormSubmittedComponent from "./LandingFormSubmittedComponent";
 
 type Props = {
   scrollYProgress: any;
@@ -9,6 +11,14 @@ type Props = {
 
 function LandingScreenForm({ scrollYProgress }: Props) {
   const opacityTransform = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
+  const [view, setView] = React.useState("form");
+
+  // Preload the submitted component
+  React.useEffect(() => {
+    const preloadComponent = new Image();
+    preloadComponent.src = "/images/background/landingFormLeft.svg";
+  }, []);
 
   return (
     <motion.div
@@ -36,7 +46,20 @@ function LandingScreenForm({ scrollYProgress }: Props) {
         </motion.p>
       </div>
       {/* right part */}
-      <div className="w-1/2 h-full">HEllo</div>
+      <div className="w-1/2 h-full flex flex-col justify-center items-center overflow-hidden">
+        <AnimatePresence mode="wait">
+          {view === "form" ? (
+            <LandingFormComponent
+              key="form"
+              onSubmit={() => {
+                setView("submitted");
+              }}
+            />
+          ) : (
+            <LandingFormSubmittedComponent key="submitted" />
+          )}
+        </AnimatePresence>
+      </div>
     </motion.div>
   );
 }
