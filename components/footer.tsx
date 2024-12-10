@@ -30,7 +30,7 @@ export function Footer() {
         <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-start">
           <MonetWorkLogo className="w-28" />
 
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {Object.entries(footerLinks).map(([category, links]) => (
               <div key={category}>
                 <h3 className="mb-4 text-base font-medium text-white">
@@ -53,14 +53,14 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-zinc-800 pt-8">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <p className="mt-4 text-sm text-gray-400 max-w-md">
               Disclaimer: Brand names and logos are for illustrative purposes
               only and do not imply partnerships.
             </p>
-            <div className="flex items-center">
+            <div className="flex mt-4 md:mt-0 md:items-center">
               <div className="flex flex-col">
-                <div className="flex justify-between gap-4">
+                <div className="flex md:justify-between gap-4">
                   <Link
                     href="#"
                     className="text-sm text-gray-400 hover:text-white"

@@ -1,13 +1,13 @@
 import { AdvisorCard } from "@/components/advisor-card";
 import { Footer } from "@/components/footer";
-import { Header } from "@/components/header";
+import { Navbar } from "@/components/navbar";
 import { TeamMemberCard } from "@/components/team-member-card";
 import { advisors, teamMembers } from "@/constants/team";
 
 export default function TeamPage() {
   return (
     <div className="min-h-screen bg-black">
-      <Header />
+      <Navbar />
       <main className="container px-4 pt-24">
         <section className="mb-20">
           <div className="mb-16 grid gap-8 md:grid-cols-2">
