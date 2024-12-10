@@ -1,41 +1,23 @@
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Monet",
-  description:
-    "Monet is a new era of loyalty programs. We're pioneering a new era of rewards using blockchain technology. Our innovative solution empowers businesses and delights customers with decentralized $POINTS - the currency of interoperable rewards.",
-  openGraph: {
-    title: "Monet",
-    description:
-      "Monet is a new era of loyalty programs. We're pioneering a new era of rewards using blockchain technology. Our innovative solution empowers businesses and delights customers with decentralized $POINTS - the currency of interoperable rewards.",
-    images: [
-      {
-        url: "https://pbs.twimg.com/profile_banners/1640700298644824068/1723583013/1500x500",
-        width: 1200,
-        height: 630,
-        alt: "Monet",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Monet",
-    description:
-      "Monet is a new era of loyalty programs. We're pioneering a new era of rewards using blockchain technology. Our innovative solution empowers businesses and delights customers with decentralized $POINTS - the currency of interoperable rewards.",
-    images: [
-      {
-        url: "https://pbs.twimg.com/profile_banners/1640700298644824068/1723583013/1500x500",
-        width: 1200,
-        height: 630,
-        alt: "Monet",
-      },
-    ],
-    creator: "@monetdotwork",
-  },
-};
+"use client";
+import LandingScreenForm from "@/components/landing-page/LandingScreenForm";
+import SplashScreen from "@/components/landing-page/SplashScreen";
+import { useScroll } from "framer-motion";
+import { useRef, useEffect } from "react";
 
 export default function Home() {
+  const { scrollYProgress } = useScroll({});
+  const containerRef = useRef(null);
+
   return (
-    <main className="flex min-h-screen flex-col items-center overflow-hidden bg-black justify-between  w-full"></main>
+    <main ref={containerRef}>
+      <div className="relative h-[200vh]">
+        <div className="z-10">
+          <LandingScreenForm scrollYProgress={scrollYProgress} />
+        </div>
+        <div className="z-20">
+          <SplashScreen scrollYProgress={scrollYProgress} />
+        </div>
+      </div>
+    </main>
   );
 }
