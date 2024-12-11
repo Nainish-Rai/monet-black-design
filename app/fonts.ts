@@ -12,7 +12,17 @@ export const inter = Inter({
 });
 
 export const neueMontreal = localFont({
-  src: "./fonts/NeueMontreal.woff",
+  src: [
+    {
+      path: "./fonts/neue-montreal/neue-montreal-regular.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/neue-montreal/neue-montreal-bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
   variable: "--font-neue-montreal",
-  weight: "100 900",
 });
