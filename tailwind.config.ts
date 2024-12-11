@@ -88,8 +88,8 @@ const config = {
         shimmer: "shimmer 8s infinite",
       },
       fontFamily: {
-        neueMontral: ["Neue Montreal", "sans-serif"],
         manrope: ["Manrope", "sans-serif"],
+        neue: ["var(--font-neue-montreal)"],
       },
     },
   },
