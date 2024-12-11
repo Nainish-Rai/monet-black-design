@@ -1,6 +1,6 @@
 import { AdvisorCard } from "@/components/advisor-card";
 import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/Navbar";
+import { Navbar } from "@/components/navbar";
 import { TeamMemberCard } from "@/components/team-member-card";
 import { advisors, teamMembers } from "@/constants/team";
 

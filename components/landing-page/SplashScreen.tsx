@@ -3,7 +3,6 @@ import { textVariant } from "@/lib/anims";
 import { motion, useTransform } from "framer-motion";
 import React from "react";
 import { MonetWorkLogo } from "../monet-work-logo";
-import Link from "next/link";
 
 function SplashScreen({
   scrollYProgress,
@@ -37,7 +36,7 @@ function SplashScreen({
             variants={textVariant(0.3)}
             initial="hidden"
             animate="show"
-            className="text-[8.5rem] w-full pr-20 tracking-[-0.175rem]  text-right font-medium -mb-4 text-white"
+            className="text-[8.5rem] w-full pr-20 tracking-[-0.175rem]  text-right font-neue font-bold -mb-4 text-white"
           >
             All-In-One
           </motion.h2>
@@ -46,7 +45,7 @@ function SplashScreen({
             variants={textVariant(0.4)}
             initial="hidden"
             animate="show"
-            className="text-[8.5rem] pb-8 w-full tracking-[-0.175rem] pl-20 leading-0 font-medium mb-4 text-white"
+            className="text-[8.5rem] pb-8 w-full tracking-[-0.175rem] pl-20 leading-0 font-neue font-bold mb-4 text-white"
           >
             Points Ecosystem
           </motion.h2>

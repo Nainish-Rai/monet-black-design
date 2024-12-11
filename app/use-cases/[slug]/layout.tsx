@@ -1,10 +1,12 @@
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { ReactNode } from "react";
 
 type Props = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
-export default function CareersLayout({ children }: Props) {
+
+export default function CaseStudyLayout({ children }: Props) {
   return (
     <main>
       <Navbar />

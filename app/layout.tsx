@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ViewTransitions } from "next-view-transitions";
+import { neueMontreal } from "@/app/fonts";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -51,7 +52,9 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" className="dark bg-black">
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className + neueMontreal.className}>
+          {children}
+        </body>
       </html>
     </ViewTransitions>
   );

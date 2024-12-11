@@ -4,7 +4,8 @@ import { Navbar } from "@/components/navbar";
 type Props = {
   children: React.ReactNode;
 };
-export default function CareersLayout({ children }: Props) {
+
+export default function TeamLayout({ children }: Props) {
   return (
     <main>
       <Navbar />
