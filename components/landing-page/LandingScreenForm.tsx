@@ -4,12 +4,15 @@ import { AnimatePresence, motion, useTransform } from "framer-motion";
 import React from "react";
 import LandingFormComponent from "./LandingFormComponent";
 import LandingFormSubmittedComponent from "./LandingFormSubmittedComponent";
+import { ArrowDownIcon } from "lucide-react";
+import { Link } from "next-view-transitions";
 
 type Props = {
   scrollYProgress: any;
+  setShowForm: (show: boolean) => void;
 };
 
-function LandingScreenForm({ scrollYProgress }: Props) {
+function LandingScreenForm({ scrollYProgress, setShowForm }: Props) {
   const opacityTransform = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   const [view, setView] = React.useState("form");
@@ -29,6 +32,8 @@ function LandingScreenForm({ scrollYProgress }: Props) {
       {/* left part */}
       <div className="w-1/2 bg-[url('/images/background/landingFormLeft.svg')] bg-cover bg-center bg-no-repeat h-full flex flex-col justify-center items-center">
         <motion.h2
+          id="text1"
+          style={{ viewTransitionName: "text1" }}
           variants={textVariant(0.3)}
           initial="hidden"
           whileInView={"show"}
@@ -37,6 +42,8 @@ function LandingScreenForm({ scrollYProgress }: Props) {
           Loyalty Made Fluid
         </motion.h2>
         <motion.p
+          id="text2"
+          style={{ viewTransitionName: "text2" }}
           variants={textVariant(0.4)}
           initial="hidden"
           animate="show"
@@ -44,6 +51,14 @@ function LandingScreenForm({ scrollYProgress }: Props) {
         >
           Stop Collecting, Start Converting
         </motion.p>
+        <Link href="/landing">
+          <div
+            // onClick={() => setShowForm(false)}
+            className="rounded-full absolute bottom-8 w-10 h-10 flex items-center justify-center cursor-pointer bg-[#4D4D4D] left-10 aspect-square"
+          >
+            <ArrowDownIcon className=" " />
+          </div>
+        </Link>
       </div>
       {/* right part */}
       <div className="w-1/2 h-full flex flex-col justify-center items-center overflow-hidden">
