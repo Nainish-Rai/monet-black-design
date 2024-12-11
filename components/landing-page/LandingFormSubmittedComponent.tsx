@@ -1,6 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
+import { Link } from "next-view-transitions";
 import React from "react";
+import { Button } from "../ui/button";
 
 type Props = {};
 
@@ -41,22 +43,28 @@ function LandingFormSubmittedComponent({}: Props) {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="w-full max-w-[37rem] flex flex-col gap-10"
+      className="w-full   lg:max-w-[37rem] flex flex-col gap-10"
     >
       <motion.h2
         variants={itemVariants}
-        className="text-[#FBC926] leading-[120%] text-[4rem] font-medium"
+        className="text-[#FBC926]   leading-normal lg:leading-[120%] text-5xl lg:text-[4rem] font-medium"
       >
         No limits. <br /> No expiry.
         <br /> No nonsense.
       </motion.h2>
       <motion.p
         variants={itemVariants}
-        className="mt-[3rem] text-4xl font-medium leading-[120%]"
+        className="lg:mt-[3rem]  text-3xl lg:text-4xl font-medium leading-normal lg:leading-[120%]"
       >
         Well here at Monet, we&apos;re building a platform that lets you do all
         that and more!
       </motion.p>
+
+      <Link className="w-full flex lg:hidden " href="/landing">
+        <Button className=" h-12 flex w-full items-center justify-center">
+          Continue
+        </Button>
+      </Link>
     </motion.div>
   );
 }

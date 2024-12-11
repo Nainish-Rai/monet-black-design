@@ -52,9 +52,7 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" className="dark bg-black">
-        <body className={inter.className + neueMontreal.className}>
-          {children}
-        </body>
+        <body className={neueMontreal.variable}>{children}</body>
       </html>
     </ViewTransitions>
   );

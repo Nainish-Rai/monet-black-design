@@ -57,11 +57,11 @@ function LandingFormComponent({ onSubmit }: Props) {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="w-full max-w-[37rem] flex flex-col gap-10"
+      className="w-full lg:max-w-[37rem] flex flex-col gap-10"
     >
       <motion.h2
         variants={itemVariants}
-        className="text-4xl font-medium leading-[120%]"
+        className="text-3xl lg:text-4xl font-medium leading-[120%]"
       >
         What would make you love your loyalty points even more?
       </motion.h2>
@@ -91,7 +91,7 @@ function LandingFormComponent({ onSubmit }: Props) {
           onToggle={handleOptionToggle}
         />
         <ButtonWithIcon
-          className=" self-end mt-2 text-lg "
+          className="max-sm:w-full text-md self-end mt-2 lg:text-lg "
           icon={<ArrowUpRight className="h-6 w-6" />}
           onClick={onSubmit}
         >
@@ -122,7 +122,7 @@ function FormOptions({
         backgroundColor: isSelected ? "rgba(161, 128, 0, 0.3)" : "#3F3F3F",
       }}
       transition={{ duration: 0.2 }}
-      className={`flex items-center space-x-2 p-5 rounded-[1rem] cursor-pointer ${
+      className={`flex items-center gap-2 space-x-2 p-5 rounded-[1rem] cursor-pointer ${
         isSelected ? "border-[#FFDB1A] border" : ""
       }`}
       onClick={() => onToggle(text)}
@@ -139,7 +139,7 @@ function FormOptions({
         animate={{
           color: isSelected ? "#FFDB1A" : "#FFFFFF",
         }}
-        className="text-lg cursor-pointer font-normal peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        className="text-md lg:text-lg cursor-pointer font-normal peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
       >
         {text}
       </motion.label>

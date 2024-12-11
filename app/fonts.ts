@@ -15,13 +15,23 @@ export const neueMontreal = localFont({
   src: [
     {
       path: "./fonts/neue-montreal/neue-montreal-regular.otf",
-      weight: "500",
+      weight: "400",
       style: "normal",
     },
     {
       path: "./fonts/neue-montreal/neue-montreal-bold.otf",
       weight: "700",
-      style: "normal",
+      style: "bold",
+    },
+    {
+      path: "./fonts/neue-montreal/neue-montreal-medium.otf",
+      weight: "500",
+      style: "medium",
+    },
+    {
+      path: "./fonts/neue-montreal/neue-montreal-light.otf",
+      weight: "300",
+      style: "light",
     },
   ],
   variable: "--font-neue-montreal",
