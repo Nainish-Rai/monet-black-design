@@ -45,12 +45,12 @@ const menuItems: MenuItem[] = [
       },
       {
         title: "Our Roadmap",
-        href: "/product/roadmap",
+        href: "/roadmap",
         image: "/placeholder.svg?height=200&width=400",
       },
       {
         title: "Work with Us",
-        href: "/product/work-with-us",
+        href: "/careers",
         image: "/placeholder.svg?height=200&width=400",
       },
     ],
@@ -65,7 +65,7 @@ const menuItems: MenuItem[] = [
       },
       {
         title: "Meet the Team",
-        href: "/company/team",
+        href: "/team",
       },
       {
         title: "Backed By",
@@ -79,7 +79,7 @@ const menuItems: MenuItem[] = [
     items: [
       {
         title: "Current Openings",
-        href: "/careers/openings",
+        href: "/careers",
       },
     ],
   },
