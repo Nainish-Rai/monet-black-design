@@ -10,7 +10,7 @@ type Props = {};
 
 function HeroSection({}: Props) {
   return (
-    <section className="lg:h-screen max-sm:px-1 w-full lg:flex-row items-center justify-between flex-col flex pb-24 ">
+    <section className="lg:h-screen max-sm:px-1 w-full lg:flex-row items-center lg:items-end justify-between flex-col flex pb-20 ">
       {/* left */}
       <div className=" max-w-[22rem]">
         <motion.h2
@@ -38,6 +38,7 @@ function HeroSection({}: Props) {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.7, delay: 0.7 }}
         className="-mb-2 max-lg:mt-8 justify-self-end"
       >

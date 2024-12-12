@@ -61,7 +61,7 @@ function LandingFormSubmittedComponent({}: Props) {
       </motion.p>
 
       <Link className="w-full flex lg:hidden " href="/landing">
-        <Button className=" h-12 flex w-full items-center justify-center">
+        <Button className="bg-white text-black h-12 flex w-full items-center justify-center">
           Continue
         </Button>
       </Link>
