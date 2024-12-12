@@ -52,6 +52,19 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        neutral: {
+          50: "hsl(var(--neutral-50))",
+          100: "hsl(var(--neutral-100))",
+          200: "hsl(var(--neutral-200))",
+          300: "hsl(var(--neutral-300))",
+          400: "hsl(var(--neutral-400))",
+          500: "hsl(var(--neutral-500))",
+          600: "hsl(var(--neutral-600))",
+          700: "hsl(var(--neutral-700))",
+          800: "hsl(var(--neutral-800))",
+          900: "hsl(var(--neutral-900))",
+          950: "hsl(var(--neutral-950))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -93,8 +106,30 @@ const config = {
         shimmer: "shimmer 8s infinite",
       },
       fontFamily: {
-        manrope: ["Manrope", "sans-serif"],
+        inter: ["var(--font-inter)", "Inter", "sans-serif"],
         neue: ["var(--font-neue-montreal)"],
+      },
+      fontSize: {
+        "heading-1": ["72px", { lineHeight: "120%", letterSpacing: "-1%" }],
+        "heading-2": ["64px", { lineHeight: "120%", letterSpacing: "0%" }],
+        "heading-3": ["56px", { lineHeight: "120%", letterSpacing: "0%" }],
+        "subheading-1": ["48px", { lineHeight: "120%", letterSpacing: "0%" }],
+        "subheading-2": ["40px", { lineHeight: "120%", letterSpacing: "0%" }],
+        "subheading-3": ["32px", { lineHeight: "120%", letterSpacing: "0%" }],
+        "body-1": ["24px", { lineHeight: "120%", letterSpacing: "0%" }],
+        "body-2": ["24px", { lineHeight: "120%", letterSpacing: "0%" }],
+        "body-3": ["24px", { lineHeight: "120%", letterSpacing: "0%" }],
+      },
+      backgroundImage: {
+        "gradient-primary":
+          "linear-gradient(to right bottom, #FFD700, #0000FF)",
+        "gradient-radial":
+          "radial-gradient(circle at center, #FFD700, transparent)",
+        "gradient-radial-blue":
+          "radial-gradient(circle at center, #0000FF, transparent)",
+      },
+      spacing: {
+        grid: "24px",
       },
     },
   },

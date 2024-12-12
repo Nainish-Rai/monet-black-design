@@ -125,7 +125,7 @@ export function NavbarMenu() {
           <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent className="fixed inset-0 w-full border-0 bg-black overflow-x-hidden min-w-full p-4">
+      <SheetContent className="fixed inset-0 w-full border-0 bg-black overflow-x-hidden min-w-full p-4 font-neue">
         <SheetTitle className="sr-only">Main menu</SheetTitle>
         <div className="flex h-14 items-center">
           <Link

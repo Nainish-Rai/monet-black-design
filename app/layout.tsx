@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ViewTransitions } from "next-view-transitions";
-import { neueMontreal } from "@/app/fonts";
-
-const inter = Inter({ subsets: ["latin"] });
+import { inter, neueMontreal } from "@/app/fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://monet.work"),
@@ -52,7 +50,9 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" className="dark bg-black">
-        <body className={neueMontreal.variable}>{children}</body>
+        <body className={`${neueMontreal.variable} ${inter.variable}`}>
+          {children}
+        </body>
       </html>
     </ViewTransitions>
   );
