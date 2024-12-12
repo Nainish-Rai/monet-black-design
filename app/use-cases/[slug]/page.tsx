@@ -1,10 +1,7 @@
-"use client";
-
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { TableOfContents } from "@/components/table-of-contents";
 import { MarketCard } from "@/components/market-card";
-import { useRouter } from "next/navigation";
 
 const caseStudies = {
   starbucks: {
@@ -62,7 +59,6 @@ export default async function CaseStudyPage({
 }: {
   params: Promise<Params>;
 }) {
-  const router = useRouter();
   const slug = (await params).slug as keyof typeof caseStudies;
   const caseStudy = caseStudies[slug];
 

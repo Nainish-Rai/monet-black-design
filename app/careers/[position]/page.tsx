@@ -35,7 +35,7 @@ const positions = {
 };
 
 interface Params {
-  slug: string;
+  position: string;
 }
 
 export default async function CareerPositionPage({
@@ -43,7 +43,7 @@ export default async function CareerPositionPage({
 }: {
   params: Promise<Params>;
 }) {
-  const slug = (await params).slug as keyof typeof positions;
+  const slug = (await params).position as keyof typeof positions;
   const position = positions[slug];
 
   if (!position) {
