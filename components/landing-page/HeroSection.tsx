@@ -3,8 +3,7 @@ import React from "react";
 import ButtonWithIcon from "../ui/button-with-icon";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import { Link } from "next-view-transitions";
-import { fadeIn, textVariant } from "@/lib/anims";
+import { textVariant } from "@/lib/anims";
 
 type Props = {};
 
