@@ -163,8 +163,12 @@ export function NavbarMenu() {
                     <h3 className="text-2xl">Loyalty Made Fluid</h3>
 
                     <div className="flex gap-4">
-                      <Button>For Consumers</Button>
-                      <Button>For Business</Button>
+                      <Link href={"/features?active=customers"}>
+                        <Button>For Consumers</Button>
+                      </Link>
+                      <Link href={"/features?active=merchants"}>
+                        <Button>For Business</Button>
+                      </Link>
                     </div>
                   </div>
                 </CardContent>
