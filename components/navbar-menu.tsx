@@ -32,7 +32,7 @@ interface MenuItem {
 const menuItems: MenuItem[] = [
   {
     title: "Our Product",
-    href: "/product",
+    href: "/features",
     items: [
       {
         title: "Loyalty Made Fluid",
@@ -62,7 +62,7 @@ const menuItems: MenuItem[] = [
     items: [
       {
         title: "Our Vision",
-        href: "/our-vision",
+        href: "/company/vision",
       },
       {
         title: "Meet the Team",
