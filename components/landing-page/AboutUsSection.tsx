@@ -12,7 +12,7 @@ function AboutUsSection() {
 
   return (
     <div
-      className={`transition-all lg:mt-20 duration-300 ${!isTextRevealed ? "h-full   w-full overflow-hidden" : ""} flex flex-col  justify-center items-center`}
+      className={`transition-all lg:mt-20 duration-300 ${!isTextRevealed ? "h-full   w-full overflow-hidden" : ""} flex flex-col  justify-center items-center font-neue`}
     >
       <motion.h2
         initial={{ opacity: 0 }}

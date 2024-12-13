@@ -7,7 +7,6 @@ import AboutUsSection from "./AboutUsSection";
 import SponsorSection from "./SponsorSection";
 import HighlightsSection from "./HighlightsSection";
 import JoinUsSection from "./JoinUsSection";
-import { Footer } from "../footer";
 import FaqSection from "./FaqSection";
 
 type Props = {};
@@ -22,7 +21,6 @@ function LandingPageRoot({}: Props) {
         <HighlightsSection />
         <JoinUsSection />
         <FaqSection />
-        <Footer />
       </div>
     </div>
   );

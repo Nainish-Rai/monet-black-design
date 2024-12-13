@@ -122,11 +122,11 @@ const config = {
       },
       backgroundImage: {
         "gradient-primary":
-          "linear-gradient(to right bottom, #FFD700, #0000FF)",
+          "linear-gradient(to right bottom, hsl(51, 100%, 50%), hsl(240, 100%, 50%))",
         "gradient-radial":
-          "radial-gradient(circle at center, #FFD700, transparent)",
+          "radial-gradient(circle at center, hsl(51, 100%, 50%), transparent)",
         "gradient-radial-blue":
-          "radial-gradient(circle at center, #0000FF, transparent)",
+          "radial-gradient(circle at center, hsl(240, 100%, 50%), transparent)",
       },
       spacing: {
         grid: "24px",

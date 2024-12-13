@@ -62,7 +62,7 @@ const menuItems: MenuItem[] = [
     items: [
       {
         title: "Our Vision",
-        href: "/company/vision",
+        href: "/our-vision",
       },
       {
         title: "Meet the Team",

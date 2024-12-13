@@ -53,7 +53,7 @@ const TextRevealByWord: FC<Props> = ({ paragraph, className, onComplete }) => {
       <div className="sticky top-0 mx-auto flex h-[50vh] md:h-[75vh] lg:h-screen w-full items-start justify-center bg-transparent px-[1rem]">
         <p
           ref={targetRef}
-          className="flex flex-wrap justify-center items-center p-3 text-lg font-medium text-black/20 leading-[120%] tracking-[-0.025rem] dark:text-white/20 text-center md:p-6 md:text-2xl lg:p-10 lg:text-4xl"
+          className="flex flex-wrap justify-center items-center p-3 text-lg font-medium text-black/20 leading-[120%] tracking-[-0.025rem] dark:text-white/20 text-center md:p-6 md:text-2xl lg:p-10 lg:text-subheading-2"
         >
           {words.map((word, i) => {
             const start = i / words.length;
