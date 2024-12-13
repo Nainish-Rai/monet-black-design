@@ -16,7 +16,7 @@ function SplashScreen({
   return (
     <motion.main
       // style={{ opacity: opacityTransform }}
-      className={`sticky shadow-2xl top-0 z-50 flex flex-col lg:flex-row min-h-screen bg-black bg-opacity-100 bg-[url('/images/background/splash-screen.svg')] animate-fadeIn h-screen bg-cover bg-center bg-no-repeat overflow-hidden justify-center w-full`}
+      className={`sticky shadow-2xl top-0 z-50 flex flex-col lg:flex-row min-h-screen bg-black bg-opacity-100 bg-[url('/images/background/splash-screen.svg')] animate-fadeIn h-dvh lg:h-screen bg-cover bg-center bg-no-repeat overflow-hidden justify-center w-full`}
     >
       <div className="w-full h-screen flex flex-col justify-between max-w-screen-2xl">
         <motion.div
