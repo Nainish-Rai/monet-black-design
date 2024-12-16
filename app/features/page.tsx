@@ -1,45 +1,9 @@
 "use client";
 import * as React from "react";
-
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import Image from "next/image";
 import ButtonWithIcon from "@/components/ui/button-with-icon";
 import { ArrowUpRight } from "lucide-react";
-
-export function CarouselComponent() {
-  return (
-    <Carousel className="w-full relative">
-      <CarouselContent>
-        {Array.from({ length: 24 }).map((_, index) => (
-          <CarouselItem key={index}>
-            <Card className="border-none bg-transparent">
-              <CardContent className="p-0">
-                <div className="relative aspect-[778/474] w-full">
-                  <Image
-                    src={`/images/assets/featurescreen${(index % 2) + 1}.png`}
-                    alt={`Screenshot ${index + 1}`}
-                    fill
-                    className="object-cover"
-                    priority={index === 0}
-                  />
-                </div>
-              </CardContent>
-            </Card>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious className="absolute lg:-left-24 top-1/2 -translate-y-1/2 z-30" />
-      <CarouselNext className="absolute lg:-right-24 top-1/2 -translate-y-1/2 z-30" />
-    </Carousel>
-  );
-}
+import FeatureCarousel from "@/components/feature-carousel";
 
 export default function FeaturesPage() {
   return (
@@ -55,7 +19,7 @@ export default function FeaturesPage() {
               className="relative z-10 w-full h-auto"
             />
             <div className="absolute top-[6%] left-[11.3%] right-[11.3%] z-20">
-              <CarouselComponent />
+              <FeatureCarousel />
             </div>
           </div>
           <div className="flex flex-col  lg:max-w-[26%] gap-6">
