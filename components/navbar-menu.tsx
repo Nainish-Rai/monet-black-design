@@ -90,16 +90,16 @@ const menuItems: MenuItem[] = [
     items: [
       {
         title: "Starbucks Rewards : Coffee & Beyond",
-        href: "/use-cases/starbucks",
+        href: "/case-studies/starbucks",
         description: "A timely nudge before they expire",
       },
       {
         title: "Zomato",
-        href: "/use-cases/zomato",
+        href: "/case-studies/zomato",
       },
       {
         title: "Swiggy",
-        href: "/use-cases/swiggy",
+        href: "/case-studies/swiggy",
       },
     ],
   },
