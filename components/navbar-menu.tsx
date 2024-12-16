@@ -220,7 +220,7 @@ export function NavbarMenu() {
                       onClick={() => setOpen(false)}
                     >
                       <div className="space-y-1">
-                        <span className="text-2xl text-white">
+                        <span className="text-subheading-2 text-white">
                           {subItem.title}
                         </span>
                         {subItem.description && (
@@ -234,7 +234,7 @@ export function NavbarMenu() {
                     {j <
                       (menuItems.find((item) => item.name === activeMenu)?.items
                         ?.length || 0) -
-                        1 && <hr className="my-4 border-neutral-800" />}
+                        1 && <hr className="my-8 border-neutral-800" />}
                   </div>
                 ))}
             </div>
