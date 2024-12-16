@@ -16,7 +16,7 @@ import { Card, CardContent } from "./ui/card";
 
 interface MenuItem {
   title: string;
-  href: string;
+  name: string;
   items?: {
     title: string;
     href: string;
@@ -32,7 +32,7 @@ interface MenuItem {
 const menuItems: MenuItem[] = [
   {
     title: "Our Product",
-    href: "/features",
+    name: "product",
     items: [
       {
         title: "Loyalty Made Fluid",
@@ -58,7 +58,7 @@ const menuItems: MenuItem[] = [
   },
   {
     title: "Company",
-    href: "/company",
+    name: "company",
     items: [
       {
         title: "Our Vision",
@@ -76,7 +76,7 @@ const menuItems: MenuItem[] = [
   },
   {
     title: "Careers",
-    href: "/careers",
+    name: "careers",
     items: [
       {
         title: "Current Openings",
@@ -86,7 +86,7 @@ const menuItems: MenuItem[] = [
   },
   {
     title: "Use Cases",
-    href: "/case-studies",
+    name: "case-studies",
     items: [
       {
         title: "Starbucks Rewards : Coffee & Beyond",
@@ -107,10 +107,10 @@ const menuItems: MenuItem[] = [
 
 export function NavbarMenu() {
   const [open, setOpen] = React.useState(false);
-  const [activeMenu, setActiveMenu] = React.useState<string | null>("/product");
+  const [activeMenu, setActiveMenu] = React.useState<string | null>("product");
 
-  const handleMenuClick = (href: string) => {
-    setActiveMenu(href);
+  const handleMenuClick = (name: string) => {
+    setActiveMenu(name);
   };
 
   return (
@@ -137,37 +137,47 @@ export function NavbarMenu() {
           </Link>
         </div>
         <div className="grid h-[calc(100vh-3.5rem)] grid-cols-1 items-center overflow-auto lg:grid-cols-2">
-          <nav className="flex flex-col gap-8 p-6">
+          <nav className="flex flex-col gap-8 p- px-16">
             {menuItems.map((item, i) => (
               <div key={i}>
                 {/* add hover style and active style */}
                 <button
-                  className={`flex items-center gap-4 text-2xl ${
-                    activeMenu === item.href
-                      ? "text-white"
-                      : "text-neutral-500 hover:text-white"
+                  className={`flex items-center gap-4 text-subheading-1 ${
+                    activeMenu === item.name
+                      ? "text-white hover:text-primary"
+                      : "text-neutral-500 hover:text-primary"
                   }`}
-                  onClick={() => handleMenuClick(item.href)}
+                  onClick={() => handleMenuClick(item.name)}
                 >
                   {item.title}
                 </button>
               </div>
             ))}
           </nav>
-          {activeMenu === "/product" ? (
+          {activeMenu === "product" ? (
             <div className="flex flex-col gap-4">
               <Card>
                 <CardContent className="h-[200px] flex items-center">
                   <div className="w-40"></div>
                   <div className="flex flex-col gap-4">
-                    <h3 className="text-2xl">Loyalty Made Fluid</h3>
+                    <h3 className="text-subheading-2">Loyalty Made Fluid</h3>
 
-                    <div className="flex gap-4">
-                      <Link href={"/features?active=customers"}>
-                        <Button>For Consumers</Button>
+                    <div className="flex gap-4 w-full">
+                      <Link
+                        href={"/features?active=customers"}
+                        className="w-full"
+                      >
+                        <Button className="text-neutral-950 w-full">
+                          For Consumers
+                        </Button>
                       </Link>
-                      <Link href={"/features?active=merchants"}>
-                        <Button>For Business</Button>
+                      <Link
+                        href={"/features?active=merchants"}
+                        className="w-full"
+                      >
+                        <Button className="bg-white text-neutral-950 w-full">
+                          For Business
+                        </Button>
                       </Link>
                     </div>
                   </div>
@@ -201,7 +211,7 @@ export function NavbarMenu() {
           ) : (
             <div>
               {menuItems
-                .find((item) => item.href === activeMenu)
+                .find((item) => item.name === activeMenu)
                 ?.items?.map((subItem, j) => (
                   <div key={j}>
                     <Link
@@ -222,7 +232,7 @@ export function NavbarMenu() {
                       <ArrowUpRight className="h-5 w-5 text-neutral-600 transition-colors group-hover:text-white" />
                     </Link>
                     {j <
-                      (menuItems.find((item) => item.href === activeMenu)?.items
+                      (menuItems.find((item) => item.name === activeMenu)?.items
                         ?.length || 0) -
                         1 && <hr className="my-4 border-neutral-800" />}
                   </div>
