@@ -127,6 +127,8 @@ const config = {
           "radial-gradient(circle at center, hsl(51, 100%, 50%), transparent)",
         "gradient-radial-blue":
           "radial-gradient(circle at center, hsl(240, 100%, 50%), transparent)",
+        "loyalty-background":
+          "url('/images/background/product-in-macbook.jpg')",
       },
       spacing: {
         grid: "24px",

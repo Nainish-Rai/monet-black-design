@@ -10,13 +10,15 @@ interface Props {
   onComplete?: () => void;
 }
 
+const threshold = 0.8;
+
 const TextRevealByWord: FC<Props> = ({ paragraph, className, onComplete }) => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const [isInView, setIsInView] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["start 80%", "end 20%"],
+    offset: ["start 60%", "end 40%"],
   });
 
   useEffect(() => {
@@ -24,7 +26,7 @@ const TextRevealByWord: FC<Props> = ({ paragraph, className, onComplete }) => {
       ([entry]) => {
         setIsInView(entry.isIntersecting);
       },
-      { threshold: 0.8 },
+      { threshold },
     );
 
     if (targetRef.current) {
@@ -36,7 +38,7 @@ const TextRevealByWord: FC<Props> = ({ paragraph, className, onComplete }) => {
 
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (value) => {
-      if (value >= 0.8 && isInView && onComplete) {
+      if (value >= threshold && isInView && onComplete) {
         onComplete();
       }
     });

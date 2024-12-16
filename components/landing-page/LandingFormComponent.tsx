@@ -127,22 +127,16 @@ function FormOptions({
       }`}
       onClick={() => onToggle(text)}
     >
-      <Checkbox
-        className="pb-1"
-        id={text}
-        checked={isSelected}
-        onCheckedChange={() => onToggle(text)}
-      />
-
-      <motion.label
+      <Checkbox className="pb-1" id={text} checked={isSelected} />
+      <label
         htmlFor={text}
-        animate={{
-          color: isSelected ? "#FFDB1A" : "#FFFFFF",
-        }}
-        className="text-md lg:text-lg cursor-pointer font-normal peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        className={`text-md lg:text-lg cursor-pointer font-normal peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
+          isSelected ? "text-[#FFDB1A]" : "text-white"
+        }`}
+        onClick={() => onToggle(text)}
       >
         {text}
-      </motion.label>
+      </label>
     </motion.div>
   );
 }

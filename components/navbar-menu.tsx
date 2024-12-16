@@ -86,7 +86,7 @@ const menuItems: MenuItem[] = [
   },
   {
     title: "Use Cases",
-    href: "/use-cases",
+    href: "/case-studies",
     items: [
       {
         title: "Starbucks Rewards : Coffee & Beyond",
