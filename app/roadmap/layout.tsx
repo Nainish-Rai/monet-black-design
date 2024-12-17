@@ -9,7 +9,7 @@ export default function RoadmapLayout({ children }: Props) {
   return (
     <main>
       <Navbar />
-      {children}
+      <div className="pt-16">{children}</div>
       <Footer />
     </main>
   );
