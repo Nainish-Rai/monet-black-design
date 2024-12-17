@@ -2,22 +2,32 @@ import Image from "next/image";
 import Link from "next/link";
 import { MonetWorkLogo } from "./monet-work-logo";
 
-const footerLinks = {
+type FooterLink = {
+  name: string;
+  href: string;
+  target?: string;
+};
+
+const footerLinks: Record<string, FooterLink[]> = {
   "Our Product": [
-    { name: "Loyalty", href: "#" },
-    { name: "Roadmap", href: "#" },
-    { name: "Points Marketplace", href: "#" },
-    { name: "Shopify App", href: "#" },
+    { name: "Loyalty", href: "https://loyalty.monet.work", target: "_blank" },
+    { name: "Roadmap", href: "/roadmap" },
+    {
+      name: "Points Marketplace",
+      href: "https://web3-points.stage.monet.work/",
+      target: "_blank",
+    },
+    { name: "Shopify App", href: "https://apps.shopify.com", target: "_blank" },
   ],
   Company: [
-    { name: "Our Vision", href: "#" },
-    { name: "Meet the Team", href: "#" },
+    { name: "Our Vision", href: "/company/vision" },
+    { name: "Meet the Team", href: "/team" },
     { name: "Docs", href: "#" },
   ],
-  Careers: [{ name: "Job Openings", href: "#" }],
+  Careers: [{ name: "Job Openings", href: "/careers" }],
   "Use Cases": [
-    { name: "Starbucks", href: "#" },
-    { name: "Zomato", href: "#" },
+    { name: "Starbucks", href: "/case-studies/starbucks" },
+    { name: "Zomato", href: "/case-studies/zomato" },
   ],
 };
 
@@ -41,6 +51,7 @@ export function Footer() {
                     <li key={link.name}>
                       <Link
                         href={link.href}
+                        target={link.target ? link.target : undefined}
                         className="text-sm text-gray-400 hover:text-white transition-colors"
                       >
                         {link.name}
@@ -62,13 +73,13 @@ export function Footer() {
               <div className="flex flex-col">
                 <div className="flex md:justify-between gap-4">
                   <Link
-                    href="#"
+                    href="/terms-of-use"
                     className="text-sm text-gray-400 hover:text-white"
                   >
                     Terms & Conditions
                   </Link>
                   <Link
-                    href="#"
+                    href="/privacy-policy"
                     className="text-sm text-gray-400 hover:text-white"
                   >
                     Privacy Policy
