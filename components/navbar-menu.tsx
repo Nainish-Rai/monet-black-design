@@ -133,16 +133,15 @@ export function NavbarMenu() {
             className="flex items-center"
             onClick={() => setOpen(false)}
           >
-            <MonetWorkLogo className="h-8" />
+            <MonetWorkLogo className="h-6 sm:h-8" />
           </Link>
         </div>
-        <div className="grid h-[calc(100vh-3.5rem)] grid-cols-1 items-center overflow-auto lg:grid-cols-2">
-          <nav className="flex flex-col gap-8 p- px-16">
+        <div className="grid h-[calc(100vh-3.5rem)] grid-cols-1 items-start lg:items-center overflow-auto lg:grid-cols-2 gap-8 lg:gap-4">
+          <nav className="flex flex-col gap-6 lg:gap-8 p-2 lg:px-16 mt-4 lg:mt-0">
             {menuItems.map((item, i) => (
               <div key={i}>
-                {/* add hover style and active style */}
                 <button
-                  className={`flex items-center gap-4 text-subheading-1 ${
+                  className={`flex items-center gap-4 text-lg lg:text-subheading-1 ${
                     activeMenu === item.name
                       ? "text-white hover:text-primary"
                       : "text-neutral-500 hover:text-primary"
@@ -155,14 +154,15 @@ export function NavbarMenu() {
             ))}
           </nav>
           {activeMenu === "product" ? (
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 px-2 lg:px-0">
               <Card>
-                <CardContent className="h-[200px] flex items-center">
-                  <div className="w-40"></div>
-                  <div className="flex flex-col gap-4">
-                    <h3 className="text-subheading-2">Loyalty Made Fluid</h3>
-
-                    <div className="flex gap-4 w-full">
+                <CardContent className="h-auto lg:h-[200px] flex flex-col lg:flex-row items-start lg:items-center p-4 lg:p-6">
+                  <div className="w-full lg:w-40 mb-4 lg:mb-0"></div>
+                  <div className="flex flex-col gap-4 w-full">
+                    <h3 className="text-xl lg:text-subheading-2">
+                      Loyalty Made Fluid
+                    </h3>
+                    <div className="flex flex-col sm:flex-row gap-4 w-full">
                       <Link
                         href={"/features?active=customers"}
                         className="w-full"
@@ -184,12 +184,12 @@ export function NavbarMenu() {
                 </CardContent>
               </Card>
 
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Link href={"/roadmap"} className="w-full">
                   <Card>
-                    <CardContent className="h-[100px] flex items-end w-full">
-                      <div className="flex flex-col gap-4">
-                        <h3 className="text-xl">Our Roadmap</h3>
+                    <CardContent className="h-[80px] lg:h-[100px] flex items-end w-full p-4 lg:p-6">
+                      <div className="flex flex-col gap-2 lg:gap-4">
+                        <h3 className="text-lg lg:text-xl">Our Roadmap</h3>
                       </div>
                       <div className="w-20"></div>
                     </CardContent>
@@ -198,9 +198,9 @@ export function NavbarMenu() {
 
                 <Link href={"/careers"} className="w-full">
                   <Card>
-                    <CardContent className="h-[100px] flex items-end w-full">
-                      <div className="flex flex-col gap-4">
-                        <h3 className="text-xl">Work with Us</h3>
+                    <CardContent className="h-[80px] lg:h-[100px] flex items-end w-full p-4 lg:p-6">
+                      <div className="flex flex-col gap-2 lg:gap-4">
+                        <h3 className="text-lg lg:text-xl">Work with Us</h3>
                       </div>
                       <div className="w-20"></div>
                     </CardContent>
@@ -209,7 +209,7 @@ export function NavbarMenu() {
               </div>
             </div>
           ) : (
-            <div>
+            <div className="px-2 lg:px-0">
               {menuItems
                 .find((item) => item.name === activeMenu)
                 ?.items?.map((subItem, j) => (
@@ -220,7 +220,7 @@ export function NavbarMenu() {
                       onClick={() => setOpen(false)}
                     >
                       <div className="space-y-1">
-                        <span className="text-subheading-2 text-white">
+                        <span className="text-lg lg:text-subheading-2 text-white">
                           {subItem.title}
                         </span>
                         {subItem.description && (
@@ -234,7 +234,7 @@ export function NavbarMenu() {
                     {j <
                       (menuItems.find((item) => item.name === activeMenu)?.items
                         ?.length || 0) -
-                        1 && <hr className="my-8 border-neutral-800" />}
+                        1 && <hr className="my-6 lg:my-8 border-neutral-800" />}
                   </div>
                 ))}
             </div>
