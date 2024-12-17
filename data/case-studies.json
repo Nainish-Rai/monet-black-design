@@ -1,0 +1,113 @@
+{
+  "starbucks": {
+    "logo": "/images/assets/starbucksLogo.png",
+    "title": "Starbucks Rewards",
+    "subtitle": "Coffee & Beyond",
+    "appImage": "/images/assets/starbucksApp.png",
+    "introduction": {
+      "text": "Starbucks, a pioneer in the premium coffee experience since 1971, has become synonymous with coffee culture. Known for its high-quality coffees, teas, handcrafted beverages, and fresh food items, it's safe to say Starbucks has an abundance of loyal customers. The iconic brand has revolutionized the coffee industry and changed the way everyone consumes coffee. Starbucks took something that had been done the same way for decades and turned it upside down with effective partnerships, beautiful branding, and a variety of types of coffee drinks. They have been doing things differently ever since, including customer loyalty.",
+      "stats": "28.7 million active Starbucks reward members",
+      "conclusion": "Giving Starbucks a 16% year-over-year growth in its loyalty program."
+    },
+    "marketStats": [
+      {
+        "title": "Market Size & Growth",
+        "description": "Valued at $552.8 million, the Indian coffee market is projected to grow at a 9.97% CAGR, reaching $1.23 billion by 2032."
+      },
+      {
+        "title": "Revenue Surge",
+        "description": "Tata Starbucks earned ₹1,087 crore ($130 million) in FY 2023, up 71% YoY, fueled by 71 new stores and rising demand."
+      },
+      {
+        "title": "Consumer Shift",
+        "description": "Millennials and Gen Z are driving demand for specialty options like Indian Arabica and Monsooned Malabar at Starbucks Reserve."
+      },
+      {
+        "title": "Market Drivers",
+        "description": "Urbanization (35% of the population) and evolving preferences are boosting café culture and coffee consumption over traditional tea."
+      },
+      {
+        "title": "Growth Rate",
+        "description": "Growing at 8-9% annually, fueled by rising incomes, urbanization, and a post-pandemic boom in coffee culture among young consumers."
+      },
+      {
+        "title": "Market Dynamics",
+        "description": "Nescafe dominates with 40% market share, Bru follows at 32.45%. Starbucks, a rising player, holds 20-24%, competing closely with local favorites like Blue Tokai and Third Wave Coffee."
+      }
+    ]
+  },
+  "zomato": {
+    "logo": "/images/assets/starbucksLogo.png",
+    "title": "Zomato Pro",
+    "subtitle": "Dining & Delivery Rewards",
+    "appImage": "/images/assets/starbucksApp.png",
+    "introduction": {
+      "text": "Zomato, founded in 2008, has transformed into India's leading food discovery and delivery platform. Through innovative technology and strategic partnerships, Zomato has revolutionized how India dines and orders food. Their loyalty program, Zomato Pro, has been a game-changer in customer retention and engagement.",
+      "stats": "15.7 million Pro members across India",
+      "conclusion": "Resulting in 40% higher order frequency from Pro members compared to non-members."
+    },
+    "marketStats": [
+      {
+        "title": "Market Presence",
+        "description": "Present in 1000+ cities across India, serving 70 million active users monthly."
+      },
+      {
+        "title": "Revenue Growth",
+        "description": "Achieved ₹4,192 crore revenue in FY23, marking a 70% YoY growth."
+      },
+      {
+        "title": "User Engagement",
+        "description": "Average user orders 3.2 times monthly, with Pro members ordering 5.8 times."
+      },
+      {
+        "title": "Market Share",
+        "description": "Commands 55% of India's food delivery market share as of 2023."
+      },
+      {
+        "title": "Partnership Network",
+        "description": "Partners with 148,000+ restaurants, with 40% exclusive to Zomato."
+      },
+      {
+        "title": "Customer Retention",
+        "description": "Pro members show 85% higher retention rate compared to regular users."
+      }
+    ]
+  },
+  "swiggy": {
+    "logo": "/images/assets/starbucksLogo.png",
+    "title": "Swiggy One",
+    "subtitle": "Unified Delivery Benefits",
+    "appImage": "/images/assets/starbucksApp.png",
+    "introduction": {
+      "text": "Swiggy, launched in 2014, has evolved from a food delivery startup to a comprehensive delivery platform. The company's subscription service, Swiggy One, offers benefits across food, groceries, and pickup-drop services, creating a unique value proposition in the Indian market.",
+      "stats": "2.5 million Swiggy One subscribers",
+      "conclusion": "Contributing to 30% of Swiggy's overall order volume."
+    },
+    "marketStats": [
+      {
+        "title": "Platform Scale",
+        "description": "Operating in 500+ cities with 2.5 lakh+ restaurant partners."
+      },
+      {
+        "title": "Financial Performance",
+        "description": "Recorded ₹8,625 crore revenue in FY23, with 45% YoY growth."
+      },
+      {
+        "title": "Market Position",
+        "description": "Holds 45% market share in food delivery, competing closely with Zomato."
+      },
+      {
+        "title": "User Base",
+        "description": "Serves 50 million+ active users monthly across all services."
+      },
+      {
+        "title": "Delivery Network",
+        "description": "Manages 5.5 million+ monthly deliveries through 300,000+ delivery partners."
+      },
+      {
+        "title": "Customer Loyalty",
+        "description": "One members spend 2.5x more than non-members across all services."
+      }
+    ]
+  }
+}
