@@ -27,7 +27,7 @@ const tabs = [
 
 export default function RoadmapPage() {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-black via-black to-blue-950">
+    <div className="relative min-h-screen bg-[url('/images/background/roadmap-bg.webp')]  bg-cover bg-center bg-no-repeat">
       <div className="container relative mx-auto px-4 py-16">
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="space-y-4">

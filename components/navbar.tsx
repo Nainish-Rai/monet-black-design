@@ -12,7 +12,10 @@ type Props = {
 export function Navbar({ className }: Props) {
   return (
     <header
-      className={cn("fixed top-0 z-50 w-full bg-transparent pt-8", className)}
+      className={cn(
+        "fixed top-0 z-50 w-full bg-transparent pt-4 lg:pt-8",
+        className,
+      )}
     >
       <div className="container flex h-16 items-center justify-between px-4">
         <Link href={"/"}>

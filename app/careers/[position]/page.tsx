@@ -52,7 +52,7 @@ export default async function CareerPositionPage({
   }
 
   return (
-    <div className="bg-[url('/images/background/careers-bg.webp')] bg-cover bg-center bg-no-repeat pt-32">
+    <div className="min-h-screen bg-[url('/images/background/careers-bg.webp')]  bg-cover bg-center bg-no-repeat pt-16 lg:pt-32">
       <div className="container mx-auto px-4 py-0">
         <div className="mb-16">
           <div className="mb-8 flex items-start justify-between">

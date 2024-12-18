@@ -61,7 +61,7 @@ export default function CareersPage() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="bg-[url('/images/background/careers-bg.webp')] bg-cover bg-center bg-no-repeat pt-32 lg:pt-64"
+      className="bg-[url('/images/background/careers-bg.webp')] bg-cover bg-center  bg-no-repeat pt-32 lg:pt-64"
     >
       <div className="container mx-auto px-4 pb-32">
         <div className="relative -mt-16">
