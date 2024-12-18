@@ -10,7 +10,7 @@ export default function TeamLayout({ children }: Props) {
     <main>
       <Navbar />
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

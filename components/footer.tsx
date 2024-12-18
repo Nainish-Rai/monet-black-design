@@ -35,7 +35,7 @@ const currentYear = new Date().getFullYear();
 
 export function Footer() {
   return (
-    <footer className="border-t border-zinc-800 bg-black">
+    <footer className="border-t border-zinc-800 ">
       <div className="container px-4 py-12">
         <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-start">
           <MonetWorkLogo className="w-28" />

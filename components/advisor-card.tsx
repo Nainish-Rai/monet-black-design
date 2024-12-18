@@ -7,22 +7,19 @@ interface AdvisorCardProps {
 
 export function AdvisorCard({ advisor }: AdvisorCardProps) {
   return (
-    <div className="group relative overflow-hidden rounded-2xl bg-zinc-900">
-      <div className="aspect-square">
+    <div className="group cursor-crosshair ">
+      <div className="aspect-square overflow-hidden rounded-2xl bg-zinc-900">
         <Image
           src={advisor.image}
           alt={advisor.name}
-          width={400}
-          height={400}
+          width={600}
+          height={600}
           className="h-full w-full object-cover grayscale"
         />
       </div>
-      <div className="absolute bottom-0 w-full p-4">
-        <h3 className="font-medium text-white">{advisor.name}</h3>
-        <p className="text-sm text-yellow-500">{advisor.role}</p>
-        {advisor.description && (
-          <p className="mt-1 text-xs text-gray-400">{advisor.description}</p>
-        )}
+      <div className="w-full p-4">
+        <h3 className="font-medium text-[2rem] text-white">{advisor.name}</h3>
+        <p className="text-base text-gray-200">{advisor.role}</p>
       </div>
     </div>
   );

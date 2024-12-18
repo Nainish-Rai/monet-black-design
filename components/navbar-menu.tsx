@@ -34,7 +34,7 @@ const ProductSection = () => (
     <Card className="border-none">
       <CardContent className="h-auto rounded-2xl sm:border-none bg-[url('/images/background/loyalty-made-fluid-bg.webp')] lg:flex lg:items-center lg:justify-end lg:h-[280px] bg-cover bg-center p-3 sm:p-4 lg:p-8 lg:pr-32">
         {/* <div className="w-full bg-white lg:w-[50%] mb-4 lg:mb-0"></div> */}
-        <div className="flex lg:w-[40%]  flex-col gap-4 ">
+        <div className="flex lg:w-[50%]  flex-col gap-4 ">
           <h3 className="text-xl lg:text-subheading-2">Loyalty Made Fluid</h3>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
             <Link href={"/features?active=customers"} className="w-full">
@@ -213,7 +213,7 @@ export function NavbarMenu() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.3 }}
-              className="px-2 lg:px-0 col-span-1 lg:col-span-2 overflow-y-auto h-[60vh] lg:h-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
+              className="px-2 lg:px-0 col-span-1 lg:col-span-2 lg:pr-16 overflow-y-auto h-[60vh] lg:h-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
             >
               {activeMenu === "product" ? (
                 <ProductSection />

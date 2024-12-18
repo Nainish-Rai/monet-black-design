@@ -8,8 +8,7 @@ export default function CareersLayout({ children }: Props) {
   return (
     <main>
       <Navbar />
-      <div className="pt-16">{children}</div>
-      <Footer />
+      <div className="max-sm:pt-16">{children}</div>
     </main>
   );
 }

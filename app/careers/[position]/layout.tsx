@@ -11,7 +11,6 @@ export default function PositionLayout({ children }: Props) {
     <main>
       <Navbar />
       {children}
-      <Footer />
     </main>
   );
 }

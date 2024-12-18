@@ -148,40 +148,51 @@
 
 @layer utilities {
   .animated-radial-gradient {
-    background: radial-gradient(
-      circle at center,
-      hsl(var(--primary)),
-      hsl(var(--neutral-950)),
-      hsl(var(--secondary))
-    );
-    background-size: 400% 400%;
-    animation: gradientAnimation 30s ease-in-out infinite;
+    position: relative;
+    isolation: isolate;
+    background: black;
+  }
+
+  .animated-radial-gradient::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: radial-gradient(
+        circle at 30% 30%,
+        hsl(var(--secondary) / 0.8) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        circle at 70% 70%,
+        hsl(var(--primary) / 0.8) 0%,
+        transparent 60%
+      );
+    background-size: 150% 150%;
+    filter: blur(60px);
+    animation: blobAnimation 20s ease-in-out infinite alternate;
   }
 }
 
-@keyframes gradientAnimation {
+@keyframes blobAnimation {
   0% {
-    background-position: 50% 50%;
+    background-position: 0% 0%;
+    background-size: 150% 150%;
   }
-  15% {
-    background-position: 30% 70%;
+  25% {
+    background-position: 100% 0%;
+    background-size: 170% 130%;
   }
-  30% {
-    background-position: 70% 30%;
-  }
-  45% {
-    background-position: 80% 80%;
-  }
-  60% {
-    background-position: 20% 20%;
+  50% {
+    background-position: 50% 100%;
+    background-size: 130% 170%;
   }
   75% {
-    background-position: 60% 40%;
-  }
-  90% {
-    background-position: 40% 60%;
+    background-position: 0% 50%;
+    background-size: 170% 150%;
   }
   100% {
-    background-position: 50% 50%;
+    background-position: 100% 100%;
+    background-size: 150% 150%;
   }
 }

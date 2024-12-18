@@ -18,18 +18,21 @@ import ButtonWithIcon from "./ui/button-with-icon";
 export default function LoyaltyPopup() {
   return (
     <Sheet>
-      <SheetTrigger asChild>
-        <div className="flex items-center gap-2 bg-black rounded-lg p-2 sm:p-4 group group-hover:bg-neutral-800">
-          <span className="font-neue text-sm sm:text-body-1 font-bold group-hover:text-primary">
+      <SheetTrigger className="rounded-2xl relative" asChild>
+        <div className="flex items-center gap-2 bg-black rounded-2xl p-2 sm:p-4 group duration-300 group-hover:bg-neutral-800">
+          <span className="font-neue text-sm sm:text-xl font-semibold group-hover:text-primary">
             LOYALTY
           </span>
           <Image
             src={"/images/assets/loyalty-coins.svg"}
             width={8}
             height={8}
-            className="h-6 w-6 sm:h-8 sm:w-8"
+            className="h-6 w-6 sm:h-8 sm:w-10 pb-0.5"
             alt="loyalty-coins-image"
           />
+          <div className="absolute bottom-2 left-24 pl-0.5 -translate-x-1/2 opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0 w-full translate-y-1 text-xs text-gray-400">
+            Click to Expand
+          </div>
         </div>
       </SheetTrigger>
       <SheetContent
