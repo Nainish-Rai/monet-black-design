@@ -1,4 +1,8 @@
+"use client";
+import { Footer } from "@/components/footer";
 import { JobCard } from "@/components/job-card";
+import { textVariant } from "@/lib/anims";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const jobs = [
@@ -6,81 +10,121 @@ const jobs = [
     title: "Product Designer",
     experience: "0-2 years of experience",
     location: "Bengaluru",
-    href: "#",
+    href: "careers/product-designer",
   },
   {
     title: "Product Designer",
     experience: "0-2 years of experience",
     location: "Bengaluru",
-    href: "#",
+    href: "careers/product-designer",
   },
   {
     title: "Product Designer",
     experience: "0-2 years of experience",
     location: "Bengaluru",
-    href: "#",
+    href: "careers/product-designer",
   },
   {
     title: "Product Designer",
     experience: "0-2 years of experience",
     location: "Bengaluru",
-    href: "#",
+    href: "careers/product-designer",
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
 export default function CareersPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-black to-yellow-950/20">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="relative">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-              Join Our Team to Shape the Future of Loyalty
-            </h1>
-          </div>
-          <div className="absolute -right-4 top-0 h-32 w-32 animate-pulse lg:h-48 lg:w-48">
-            <Image
-              src="/placeholder.svg?height=192&width=192"
-              alt="Monet Coin"
-              width={192}
-              height={192}
-              className="rotate-12"
-            />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      className="bg-[url('/images/background/careers-bg.webp')] bg-cover bg-center bg-no-repeat pt-32 lg:pt-64"
+    >
+      <div className="container mx-auto px-4 pb-32">
+        <div className="relative -mt-16">
+          <div className="max-w-5xl">
+            <motion.h1
+              variants={textVariant(0.2)}
+              initial="hidden"
+              whileInView="show"
+              className="text-4xl font-medium text-white sm:text-5xl lg:text-6xl"
+            >
+              Join Our Team to <br /> Shape the Future of Loyalty
+            </motion.h1>
           </div>
         </div>
 
-        {/* Team Image */}
-        <div className="mt-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mt-12"
+        >
           <div className="overflow-hidden rounded-2xl">
             <Image
-              src="/images/team/monet-team.jpeg"
+              src="/images/team/monet-team.png"
               alt="Monet Team"
               width={1200}
-              height={400}
+              height={1200}
               className="w-full object-cover"
             />
           </div>
-        </div>
+        </motion.div>
 
-        {/* Current Openings */}
-        <div className="mt-24">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          // viewport={{ once: true }}
+          className="mt-12 lg:mt-24"
+        >
+          <motion.h2
+            variants={itemVariants}
+            className="text-3xl font-medium text-white sm:text-5xl"
+          >
             Current Openings
-          </h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          </motion.h2>
+          <motion.div
+            variants={containerVariants}
+            className="mt-8 grid gap-4 sm:grid-cols-2"
+          >
             {jobs.map((job, index) => (
-              <JobCard
-                key={index}
-                title={job.title}
-                experience={job.experience}
-                location={job.location}
-                href={job.href}
-              />
+              <motion.div key={index} variants={itemVariants}>
+                <JobCard
+                  title={job.title}
+                  experience={job.experience}
+                  location={job.location}
+                  href={job.href}
+                />
+              </motion.div>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    </div>
+      <Footer />
+    </motion.div>
   );
 }

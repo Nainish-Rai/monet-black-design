@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { JobApplicationForm } from "@/components/job-application-form";
 import { Card } from "@/components/ui/card";
+import { Footer } from "@/components/footer";
 
 const positions = {
   "product-designer": {
@@ -51,8 +52,8 @@ export default async function CareerPositionPage({
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-blue-950 to-yellow-950/20">
-      <div className="container mx-auto px-4 py-16">
+    <div className="bg-[url('/images/background/careers-bg.webp')] bg-cover bg-center bg-no-repeat pt-32">
+      <div className="container mx-auto px-4 py-0">
         <div className="mb-16">
           <div className="mb-8 flex items-start justify-between">
             <div>
@@ -104,6 +105,7 @@ export default async function CareerPositionPage({
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
