@@ -196,3 +196,32 @@
     background-size: 150% 150%;
   }
 }
+
+@keyframes slide-from-right {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-to-left {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* ::view-transition-old(text1) {
+  animation: 0.5s cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+} */
+
+::view-transition-new(text1) {
+  animation: 0.5s cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+}
+
+/* Add similar animations for text2 */
+/* ::view-transition-old(text2) {
+  animation: 0.5s cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+} */
+
+::view-transition-new(text2) {
+  animation: 0.5s cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+}

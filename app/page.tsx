@@ -1,4 +1,5 @@
 "use client";
+import { ScrollProvider } from "@/components/context/ScrollContext";
 import LandingPageRoot from "@/components/landing-page/LandingPageRoot";
 import LandingScreenForm from "@/components/landing-page/LandingScreenForm";
 import SplashScreen from "@/components/landing-page/SplashScreen";
@@ -12,23 +13,41 @@ export default function Home() {
 
   const [showForm, setShowForm] = React.useState(true);
 
+  React.useEffect(() => {
+    if (!showForm) {
+      window.scrollTo(0, 0);
+    }
+  }, [showForm]);
+
+  const startViewTransition = () => {
+    if ((document as any).startViewTransition) {
+      (document as any).startViewTransition(() => {
+        setShowForm(false);
+      });
+    } else {
+      setShowForm(false);
+    }
+  };
+
   return (
-    <main ref={containerRef}>
-      {showForm ? (
-        <div className="relative h-[200vh]">
-          <div className="z-10">
-            <LandingScreenForm
-              setShowForm={setShowForm}
-              scrollYProgress={scrollYProgress}
-            />
+    <ScrollProvider>
+      <main ref={containerRef}>
+        {showForm ? (
+          <div className="relative h-[200vh]">
+            <div className="z-10">
+              <LandingScreenForm
+                setShowForm={startViewTransition}
+                scrollYProgress={scrollYProgress}
+              />
+            </div>
+            <div className="z-20">
+              <SplashScreen scrollYProgress={scrollYProgress} />
+            </div>
           </div>
-          <div className="z-20">
-            <SplashScreen scrollYProgress={scrollYProgress} />
-          </div>
-        </div>
-      ) : (
-        <LandingPageRoot />
-      )}
-    </main>
+        ) : (
+          <LandingPageRoot />
+        )}
+      </main>
+    </ScrollProvider>
   );
 }

@@ -5,8 +5,6 @@ import React from "react";
 import LandingFormComponent from "./LandingFormComponent";
 import LandingFormSubmittedComponent from "./LandingFormSubmittedComponent";
 import { ArrowDownIcon } from "lucide-react";
-import { Link } from "next-view-transitions";
-import { useTransitionRouter } from "next-view-transitions";
 
 type Props = {
   scrollYProgress: any;
@@ -16,7 +14,6 @@ type Props = {
 function LandingScreenForm({ scrollYProgress, setShowForm }: Props) {
   const opacityTransform = useTransform(scrollYProgress, [0, 1], [0, 1]);
   const [view, setView] = React.useState("form");
-  const router = useTransitionRouter();
 
   // Preload the submitted component
   React.useEffect(() => {
@@ -30,14 +27,14 @@ function LandingScreenForm({ scrollYProgress, setShowForm }: Props) {
       const handleWheel = (e: WheelEvent) => {
         // Detect upward scroll attempt (negative deltaY)
         if (e.deltaY > 0) {
-          router.push("/landing");
+          setShowForm(false);
         }
       };
 
       window.addEventListener("wheel", handleWheel);
       return () => window.removeEventListener("wheel", handleWheel);
     }
-  }, [view, router]);
+  }, [view, setShowForm]);
 
   return (
     <motion.div
@@ -67,14 +64,12 @@ function LandingScreenForm({ scrollYProgress, setShowForm }: Props) {
         >
           Stop Collecting, Start Converting
         </motion.p>
-        <Link href="/landing">
-          <div
-            // onClick={() => setShowForm(false)}
-            className="rounded-full absolute bottom-8 w-10 h-10 flex items-center justify-center cursor-pointer bg-[#4D4D4D] left-10 aspect-square"
-          >
-            <ArrowDownIcon className=" " />
-          </div>
-        </Link>
+        <div
+          onClick={() => setShowForm(false)}
+          className="rounded-full absolute bottom-8 w-10 h-10 flex items-center justify-center cursor-pointer bg-[#4D4D4D] left-10 aspect-square"
+        >
+          <ArrowDownIcon className=" " />
+        </div>
       </div>
       {/* right part */}
       <div className="w-full px-4 lg:w-1/2 h-full flex flex-col justify-center items-center overflow-hidden">
