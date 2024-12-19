@@ -6,6 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 import ButtonWithIcon from "../ui/button-with-icon";
 import { motion } from "framer-motion";
 import { textVariant } from "@/lib/anims";
+import Link from "next/link";
 
 function AboutUsSection() {
   const { isTextRevealed, setTextRevealed } = useScroll();
@@ -38,7 +39,7 @@ function AboutUsSection() {
           className="w-full max-w-[21rem] font-medium text-lg"
           icon={<ArrowUpRight className="h-6 w-6" />}
         >
-          Learn More About Us
+          <Link href="/company/vision">Learn More</Link>
         </ButtonWithIcon>
       </motion.div>
     </div>

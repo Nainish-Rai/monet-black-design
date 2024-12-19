@@ -11,13 +11,13 @@ type FooterLink = {
 const footerLinks: Record<string, FooterLink[]> = {
   "Our Product": [
     { name: "Loyalty", href: "https://loyalty.monet.work", target: "_blank" },
-    { name: "Roadmap", href: "/roadmap" },
     {
       name: "Points Marketplace",
       href: "https://web3-points.stage.monet.work/",
       target: "_blank",
     },
-    { name: "Shopify App", href: "https://apps.shopify.com", target: "_blank" },
+    { name: "Roadmap", href: "/roadmap" },
+    // { name: "Shopify App", href: "https://apps.shopify.com", target: "_blank" },
   ],
   Company: [
     { name: "Our Vision", href: "/company/vision" },

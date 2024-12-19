@@ -74,6 +74,7 @@ export default function TeamPage() {
           initial="hidden"
           whileInView="show"
           // viewport={{ once: true }}
+          id="advisors"
           className="mb-20"
         >
           <motion.div className="mb-16 grid gap-8 md:grid-cols-2">

@@ -41,7 +41,7 @@ export const menuItems: MenuItem[] = [
       },
       {
         title: "Backed By",
-        href: "/company/investors",
+        href: "/team#investors",
       },
     ],
   },
