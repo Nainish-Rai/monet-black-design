@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { Link } from "next-view-transitions";
 import React from "react";
 import { Button } from "../ui/button";
 
@@ -60,11 +59,9 @@ function LandingFormSubmittedComponent({}: Props) {
         that and more!
       </motion.p>
 
-      <Link className="w-full flex lg:hidden " href="/landing">
-        <Button className="bg-white text-black h-12 flex w-full items-center justify-center">
-          Continue
-        </Button>
-      </Link>
+      <Button className="bg-white text-black h-12 flex w-full lg:hidden items-center justify-center">
+        Continue
+      </Button>
     </motion.div>
   );
 }

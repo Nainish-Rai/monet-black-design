@@ -23,6 +23,8 @@ function SplashScreen({
     >
       <div className="w-full h-screen flex flex-col justify-between max-w-screen-2xl">
         <motion.div
+          layout
+          layoutId="monetLogo"
           variants={textVariant(0.2)}
           transition={{
             duration: 0.5,
@@ -35,6 +37,8 @@ function SplashScreen({
         </motion.div>
         <div className="flex flex-col justify-end flex-1">
           <motion.h2
+            layout
+            layoutId="loyaltyText"
             style={{ x: rightTextX }}
             variants={textVariant(0.3)}
             initial="hidden"
