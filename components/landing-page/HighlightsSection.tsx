@@ -49,7 +49,7 @@ function HighlightsSection({}: Props) {
           />
         </motion.div>
         <motion.div
-          variants={textVariant(0.3)}
+          variants={textVariant(0.2)}
           initial="hidden"
           whileInView="show"
           className="md:row-span-5 rounded-2xl  border col-span-1 row-span-5 overflow-hidden   relative"
@@ -63,7 +63,7 @@ function HighlightsSection({}: Props) {
           />
         </motion.div>
         <motion.div
-          variants={textVariant(0.5)}
+          variants={textVariant(0.4)}
           initial="hidden"
           whileInView="show"
           className="md:row-span-7  rounded-2xl  border col-span-1  row-span-5   overflow-hidden relative"
@@ -75,7 +75,7 @@ function HighlightsSection({}: Props) {
           />
         </motion.div>
         <motion.div
-          variants={textVariant(0.4)}
+          variants={textVariant(0.2)}
           initial="hidden"
           whileInView="show"
           className="md:row-span-5 rounded-2xl  border col-span-1  row-span-5 overflow-hidden   relative"
