@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 import React from "react";
 import { Button } from "../ui/button";
 
-type Props = {};
+type Props = {
+  setShowForm: (show: boolean) => void;
+};
 
 const containerVariants = {
   hidden: { opacity: 0, x: 50 },
@@ -35,7 +37,7 @@ const itemVariants = {
   },
 };
 
-function LandingFormSubmittedComponent({}: Props) {
+function LandingFormSubmittedComponent({ setShowForm }: Props) {
   return (
     <motion.div
       variants={containerVariants}
@@ -59,7 +61,10 @@ function LandingFormSubmittedComponent({}: Props) {
         that and more!
       </motion.p>
 
-      <Button className="bg-white text-black h-12 flex w-full lg:hidden items-center justify-center">
+      <Button
+        onClick={() => setShowForm(false)}
+        className="bg-white text-black h-12 flex w-full lg:hidden items-center justify-center"
+      >
         Continue
       </Button>
     </motion.div>

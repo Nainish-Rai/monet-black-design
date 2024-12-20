@@ -9,9 +9,9 @@ type Props = {};
 function JoinUsSection({}: Props) {
   return (
     <motion.div
-      variants={fadeIn("up", "spring", 0.5, 1)}
-      initial="hidden"
-      whileInView="show"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
       className=" rounded-2xl border lg:mx-10 bg-[url('/images/background/joinus-bg.svg')] mt-24  bg-cover bg-center flex justify-between bg-no-repeat p-8  lg:p-20  "
     >
       <div className="flex items-start flex-col">

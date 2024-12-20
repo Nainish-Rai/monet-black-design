@@ -4,6 +4,7 @@ import ButtonWithIcon from "../ui/button-with-icon";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { textVariant } from "@/lib/anims";
+import Link from "next/link";
 
 type Props = {};
 
@@ -15,6 +16,9 @@ function HeroSection({}: Props) {
         <motion.h2
           id="text1"
           style={{ viewTransitionName: "text1" }}
+          initial={{ opacity: 1, y: -50, x: 50, textAlign: "center" }}
+          whileInView={{ opacity: 1, y: 0, x: 0, textAlign: "left" }}
+          transition={{ duration: 0.3 }}
           className="max-lg:mt-16 text-6xl lg:text-[4rem] font-medium leading-[120%] max-w-sm tracking-[-0.04rem] text-left"
         >
           Loyalty Made Fluid
@@ -22,12 +26,17 @@ function HeroSection({}: Props) {
         <motion.p
           id="text2"
           style={{ viewTransitionName: "text2" }}
+          initial={{ opacity: 1, y: -50, x: 50, textAlign: "center" }}
+          whileInView={{ opacity: 1, y: 0, x: 0, textAlign: "left" }}
+          transition={{ duration: 0.3 }}
           className="text-[1.125rem] mt-[0.5rem] font-medium leading-[120%] max-w-md text-left"
         >
           Stop Collecting, Start Converting
         </motion.p>
         <ButtonWithIcon
-          className="max-w-[21rem] max-lg:hidden py-6 font-medium w-full text-md self-end mt-[2.5rem] lg:text-lg "
+          as={Link}
+          href="/features?active=customers"
+          className="max-w-[21rem] max-lg:hidden py-6 font-medium w-full text-md self-end mt-[2.5rem] lg:text-lg"
           icon={<ArrowUpRight className="h-6 w-6" />}
         >
           Start Exploring
@@ -46,6 +55,7 @@ function HeroSection({}: Props) {
           alt="hero"
           width={600}
           height={600}
+          className="cursor-crosshair"
         />
       </motion.div>
       {/* right */}
@@ -80,7 +90,8 @@ function HeroSection({}: Props) {
         className="lg:hidden  w-full"
       >
         <ButtonWithIcon
-          className="max-w-[21rem] lg:py-6 font-medium text-base w-full text-md self-end mt-[2.5rem] lg:text-lg "
+          as={Link}
+          href="/features?active=customers"
           icon={<ArrowUpRight className="h-6 w-6" />}
         >
           Start Exploring

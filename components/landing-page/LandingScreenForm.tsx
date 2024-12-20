@@ -1,17 +1,19 @@
 "use client";
 import { textVariant } from "@/lib/anims";
 import { AnimatePresence, motion, useTransform } from "framer-motion";
-import React from "react";
+import React, { useCallback } from "react";
 import LandingFormComponent from "./LandingFormComponent";
 import LandingFormSubmittedComponent from "./LandingFormSubmittedComponent";
 import { ArrowDownIcon } from "lucide-react";
+import type Lenis from "@studio-freight/lenis";
 
 type Props = {
   scrollYProgress: any;
   setShowForm: (show: boolean) => void;
+  lenis: Lenis | null;
 };
 
-function LandingScreenForm({ scrollYProgress, setShowForm }: Props) {
+function LandingScreenForm({ scrollYProgress, setShowForm, lenis }: Props) {
   const opacityTransform = useTransform(scrollYProgress, [0, 1], [0, 1]);
   const [view, setView] = React.useState("form");
 
@@ -21,20 +23,26 @@ function LandingScreenForm({ scrollYProgress, setShowForm }: Props) {
     preloadComponent.src = "/images/background/landingFormLeft.svg";
   }, []);
 
+  // Memoize the wheel handler
+  const handleWheel = useCallback(
+    (e: WheelEvent) => {
+      if (e.deltaY > 0) {
+        if (lenis) {
+          lenis.scrollTo(0, { immediate: true });
+        }
+        setShowForm(false);
+      }
+    },
+    [lenis, setShowForm],
+  );
+
   // Replace scroll handler with wheel event handler
   React.useEffect(() => {
     if (view === "submitted") {
-      const handleWheel = (e: WheelEvent) => {
-        // Detect upward scroll attempt (negative deltaY)
-        if (e.deltaY > 0) {
-          setShowForm(false);
-        }
-      };
-
       window.addEventListener("wheel", handleWheel);
       return () => window.removeEventListener("wheel", handleWheel);
     }
-  }, [view, setShowForm]);
+  }, [view, handleWheel]);
 
   return (
     <motion.div
@@ -82,7 +90,10 @@ function LandingScreenForm({ scrollYProgress, setShowForm }: Props) {
               }}
             />
           ) : (
-            <LandingFormSubmittedComponent key="submitted" />
+            <LandingFormSubmittedComponent
+              setShowForm={setShowForm}
+              key="submitted"
+            />
           )}
         </AnimatePresence>
       </div>

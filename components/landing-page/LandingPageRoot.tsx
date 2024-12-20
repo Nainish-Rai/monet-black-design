@@ -9,6 +9,7 @@ import HighlightsSection from "./HighlightsSection";
 import JoinUsSection from "./JoinUsSection";
 import FaqSection from "./FaqSection";
 import { Navbar } from "../navbar";
+import { Footer } from "../footer";
 
 type Props = {};
 
@@ -18,10 +19,10 @@ function LandingPageRoot({}: Props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="w-full h-[540vh] bg-[url('/images/background/landing-bg.svg')] bg-cover bg-center bg-no-repeat"
+      className="w-full h-[540vh] bg-[url('/images/background/landing-bg.svg')] bg-cover bg-center overflow-hidden bg-no-repeat"
     >
       <Navbar />
-      <div className="flex px-4 flex-col gap-16 w-full mx-auto max-w-[1400px]">
+      <div className="flex px-4 flex-col pb-16 gap-16 w-full mx-auto max-w-[1400px]">
         <HeroSection />
         <AboutUsSection />
         <SponsorSection />
@@ -29,6 +30,7 @@ function LandingPageRoot({}: Props) {
         <JoinUsSection />
         <FaqSection />
       </div>
+      <Footer />
     </motion.div>
   );
 }

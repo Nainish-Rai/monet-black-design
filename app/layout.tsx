@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ViewTransitions } from "next-view-transitions";
 import { inter, neueMontreal } from "@/app/fonts";
+import LenisScrollProvider from "@/components/context/LenisProvider";
+import { PageTransition } from "@/components/page-transition";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://monet.work"),
@@ -48,12 +50,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
-      <html lang="en" className="dark bg-black">
-        <body className={`${neueMontreal.variable} ${inter.variable}`}>
-          {children}
-        </body>
-      </html>
-    </ViewTransitions>
+    <html lang="en" className="dark bg-black">
+      <body className={`${neueMontreal.variable} ${inter.variable}`}>
+        <ViewTransitions>
+          <LenisScrollProvider>
+            <PageTransition>{children}</PageTransition>
+          </LenisScrollProvider>
+        </ViewTransitions>
+      </body>
+    </html>
   );
 }

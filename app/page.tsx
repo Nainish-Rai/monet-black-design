@@ -6,16 +6,29 @@ import SplashScreen from "@/components/landing-page/SplashScreen";
 import { useScroll } from "framer-motion";
 import React from "react";
 import { useRef, useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
 
 export default function Home() {
   const { scrollYProgress } = useScroll({});
   const containerRef = useRef(null);
-
   const [showForm, setShowForm] = React.useState(true);
+  const lenisRef = useRef<Lenis | null>(null);
+
+  // Initialize Lenis
+  useEffect(() => {
+    lenisRef.current = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+
+    return () => {
+      lenisRef.current?.destroy();
+    };
+  }, []);
 
   React.useEffect(() => {
-    if (!showForm) {
-      window.scrollTo(0, 0);
+    if (!showForm && lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
     }
   }, [showForm]);
 
@@ -29,6 +42,15 @@ export default function Home() {
     }
   };
 
+  // Add RAF for Lenis
+  useEffect(() => {
+    function raf(time: number) {
+      lenisRef.current?.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
     <ScrollProvider>
       <main ref={containerRef}>
@@ -38,6 +60,7 @@ export default function Home() {
               <LandingScreenForm
                 setShowForm={startViewTransition}
                 scrollYProgress={scrollYProgress}
+                lenis={lenisRef.current}
               />
             </div>
             <div className="z-20">
