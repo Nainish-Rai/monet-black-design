@@ -42,7 +42,7 @@ const ProductSection = () => (
                 For Consumers
               </Button>
             </Link>
-            <Link href={"/features?active=merchants"} className="w-full">
+            <Link href={"/features?active=brands"} className="w-full">
               <Button className="bg-white  p-6 rounded-2xl text-neutral-950 w-full">
                 For Business
               </Button>
