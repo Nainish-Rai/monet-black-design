@@ -38,12 +38,12 @@ const ProductSection = () => (
           <h3 className="text-xl lg:text-subheading-2">Loyalty Made Fluid</h3>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
             <Link href={"/features?active=customers"} className="w-full">
-              <Button className="text-neutral-950 bg-[#FFDB1A] p-6 rounded-2xl  w-full">
+              <Button className="text-neutral-950 lg:text-lg bg-[#FFDB1A] p-6 px-8 rounded-2xl  w-full">
                 For Consumers
               </Button>
             </Link>
             <Link href={"/features?active=brands"} className="w-full">
-              <Button className="bg-white  p-6 rounded-2xl text-neutral-950 w-full">
+              <Button className="bg-white hover:bg-white/80  p-6 rounded-2xl text-base lg:text-lg px-8 text-neutral-950 w-full">
                 For Business
               </Button>
             </Link>
@@ -134,6 +134,38 @@ const SubMenuItems = ({
 export function NavbarMenu() {
   const [open, setOpen] = React.useState(false);
   const [activeMenu, setActiveMenu] = React.useState<string>("product");
+  const timeoutRef = React.useRef<NodeJS.Timeout>();
+  const currentHoverRef = React.useRef<string>();
+
+  React.useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
+  const handleMenuHover = React.useCallback((menuName: string) => {
+    // Store the current hover target
+    currentHoverRef.current = menuName;
+
+    // Clear any existing timeout
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    timeoutRef.current = setTimeout(() => {
+      // Only update if the current hover target matches the one we started with
+      if (currentHoverRef.current === menuName) {
+        setActiveMenu(menuName);
+      }
+    }, 150); // Reduced delay for better responsiveness
+  }, []);
+
+  const handleMouseLeave = React.useCallback(() => {
+    // Clear the current hover target
+    currentHoverRef.current = undefined;
+  }, []);
 
   const activeItems = React.useMemo(
     () => menuItems.find((item) => item.name === activeMenu)?.items,
@@ -145,7 +177,7 @@ export function NavbarMenu() {
       <SheetTrigger asChild>
         <MenuButton onClick={() => setOpen(true)} />
       </SheetTrigger>
-      <SheetContent className="fixed inset-0 w-full border-0 bg-black min-w-full p-2 sm:p-4 font-neue [&>button]:hidden">
+      <SheetContent className="fixed inset-0 w-full border-0 bg-black min-w-full p-2 container sm:p-4 font-neue [&>button]:hidden">
         <SheetTitle className="sr-only">Main menu</SheetTitle>
 
         {/* Header */}
@@ -175,13 +207,16 @@ export function NavbarMenu() {
 
         {/* Content */}
         <motion.div
-          className="grid h-[calc(100vh-5.5rem)] grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 items-start lg:items-center overflow-y-auto lg:overflow-hidden pt-4 lg:pt-0"
+          className="grid h-[calc(100vh-5.5rem)] grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 items-start pt-4 lg:pt-16 lg:-ml-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
           {/* Navigation */}
-          <nav className="flex flex-col gap-3 lg:gap-6 px-2 lg:px-16 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+          <nav
+            className="flex flex-col gap-3 lg:gap-6 px-2 lg:px-16 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
+            onMouseLeave={handleMouseLeave}
+          >
             {menuItems.map((item, i) => (
               <motion.div
                 key={i}
@@ -196,7 +231,7 @@ export function NavbarMenu() {
                       ? "text-white hover:text-primary"
                       : "text-neutral-500 hover:text-primary"
                   }`}
-                  onMouseEnter={() => setActiveMenu(item.name)}
+                  onMouseEnter={() => handleMenuHover(item.name)}
                   onClick={() => setActiveMenu(item.name)}
                 >
                   {item.title}
@@ -213,7 +248,7 @@ export function NavbarMenu() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.3 }}
-              className="px-2 lg:px-0 col-span-1 lg:col-span-2 lg:pr-16 overflow-y-auto h-[60vh] lg:h-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
+              className="px-2 lg:px-0 col-span-1 lg:col-span-2 lg:pr-16 overflow-y-auto h-[60vh] lg:h-[calc(100vh-10rem)] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
             >
               {activeMenu === "product" ? (
                 <ProductSection />
