@@ -1,0 +1,36 @@
+{
+  "customers": [
+    {
+      "title": "Monet Dashboard: Simplify Your Loyalty Experience",
+      "description": "Effortlessly track, exchange, and redeem your loyalty points from multiple brands in one place.",
+      "image": "/images/assets/customerf3.png"
+    },
+    {
+      "title": "Seamless Points Conversion",
+      "description": "Easily exchange your loyalty points between partnered brands. Maximize value across platforms with transparent conversion rates and minimal fees.",
+      "image": "/images/assets/customerf1.png"
+    },
+    {
+      "title": "Points Tracker",
+      "description": "Keep an eye on your spending across different categories and discover personalized offers recommended just for you by our AI.",
+      "image": "/images/assets/customerf2.png"
+    }
+  ],
+  "brands": [
+    {
+      "title": "Customer Insights",
+      "description": "Understand how users are converting points across various categories. This knowledge helps you engage customers across brands.",
+      "image": "/images/assets/brandf1.png"
+    },
+    {
+      "title": "Analytics",
+      "description": "Enhance customer retention and engagement with targeted analytics and personalized recommendations powered by AI.",
+      "image": "/images/assets/brandf2.png"
+    },
+    {
+      "title": "Transaction History",
+      "description": "View, search, and sort user transactions by date, inflow, or outflow. Download or email detailed reports for analysis.",
+      "image": "/images/assets/brandf3.png"
+    }
+  ]
+}

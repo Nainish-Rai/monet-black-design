@@ -18,7 +18,7 @@ import ButtonWithIcon from "./ui/button-with-icon";
 export default function LoyaltyPopup() {
   return (
     <Sheet>
-      <SheetTrigger className="rounded-2xl relative" asChild>
+      <SheetTrigger className="rounded-2xl overflow-hidden relative" asChild>
         <div className="flex items-center gap-2 bg-black rounded-2xl p-2 sm:p-4 group duration-300 group-hover:bg-neutral-800">
           <span className="font-neue text-sm sm:text-xl font-semibold group-hover:text-primary">
             LOYALTY
