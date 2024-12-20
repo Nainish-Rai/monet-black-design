@@ -52,6 +52,7 @@ function HeroSection({}: Props) {
           alt="hero"
           width={600}
           height={600}
+          className="cursor-crosshair"
         />
       </motion.div>
       {/* right */}

@@ -21,7 +21,7 @@ export function Navbar({ className }: Props) {
       <div className="container flex h-16 items-center max-sm:gap-1 justify-between px-4">
         <div className="flex flex-col lg:flex-row lg:gap-8  lg:items-center">
           <Link href={"/"}>
-            <MonetWorkLogo className="w-32  rounded-full bg-black/30 p-2" />
+            <MonetWorkLogo className="w-40  rounded-full bg-black/30 p-2" />
           </Link>
           <FeatureSwitcher />
         </div>
