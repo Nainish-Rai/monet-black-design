@@ -15,6 +15,9 @@ function HeroSection({}: Props) {
         <motion.h2
           id="text1"
           style={{ viewTransitionName: "text1" }}
+          initial={{ opacity: 1, y: -50, x: 50, textAlign: "center" }}
+          whileInView={{ opacity: 1, y: 0, x: 0, textAlign: "left" }}
+          transition={{ duration: 0.3 }}
           className="max-lg:mt-16 text-6xl lg:text-[4rem] font-medium leading-[120%] max-w-sm tracking-[-0.04rem] text-left"
         >
           Loyalty Made Fluid
@@ -22,6 +25,9 @@ function HeroSection({}: Props) {
         <motion.p
           id="text2"
           style={{ viewTransitionName: "text2" }}
+          initial={{ opacity: 1, y: -50, x: 50, textAlign: "center" }}
+          whileInView={{ opacity: 1, y: 0, x: 0, textAlign: "left" }}
+          transition={{ duration: 0.3 }}
           className="text-[1.125rem] mt-[0.5rem] font-medium leading-[120%] max-w-md text-left"
         >
           Stop Collecting, Start Converting
