@@ -1,11 +1,19 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
 import { Button } from "./ui/button";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 type Props = {};
 
 function FeatureSwitcher({}: Props) {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <FeatureSwitcherContent />
+    </Suspense>
+  );
+}
+
+function FeatureSwitcherContent() {
   const activePathname = usePathname();
   const searchParams = useSearchParams();
   const activeParam = searchParams.get("active");

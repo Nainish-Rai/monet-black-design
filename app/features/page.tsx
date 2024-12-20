@@ -7,8 +7,17 @@ import FeatureCarousel from "@/components/feature-carousel";
 import { useSearchParams } from "next/navigation";
 import featuresData from "@/data/features.json";
 import { motion, AnimatePresence } from "framer-motion"; // Add this import
+import { Suspense } from "react";
 
 export default function FeaturesPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <FeaturesContent />
+    </Suspense>
+  );
+}
+
+function FeaturesContent() {
   const searchParams = useSearchParams();
   const activeParam = searchParams.get("active") || "customers";
   const [currentFeatureIndex, setCurrentFeatureIndex] =
