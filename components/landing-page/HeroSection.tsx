@@ -4,6 +4,7 @@ import ButtonWithIcon from "../ui/button-with-icon";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { textVariant } from "@/lib/anims";
+import Link from "next/link";
 
 type Props = {};
 
@@ -33,7 +34,9 @@ function HeroSection({}: Props) {
           Stop Collecting, Start Converting
         </motion.p>
         <ButtonWithIcon
-          className="max-w-[21rem] max-lg:hidden py-6 font-medium w-full text-md self-end mt-[2.5rem] lg:text-lg "
+          as={Link}
+          href="/features?active=customers"
+          className="max-w-[21rem] max-lg:hidden py-6 font-medium w-full text-md self-end mt-[2.5rem] lg:text-lg"
           icon={<ArrowUpRight className="h-6 w-6" />}
         >
           Start Exploring
@@ -87,7 +90,8 @@ function HeroSection({}: Props) {
         className="lg:hidden  w-full"
       >
         <ButtonWithIcon
-          className="max-w-[21rem] lg:py-6 font-medium text-base w-full text-md self-end mt-[2.5rem] lg:text-lg "
+          as={Link}
+          href="/features?active=customers"
           icon={<ArrowUpRight className="h-6 w-6" />}
         >
           Start Exploring

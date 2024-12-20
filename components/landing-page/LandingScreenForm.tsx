@@ -90,7 +90,10 @@ function LandingScreenForm({ scrollYProgress, setShowForm, lenis }: Props) {
               }}
             />
           ) : (
-            <LandingFormSubmittedComponent key="submitted" />
+            <LandingFormSubmittedComponent
+              setShowForm={setShowForm}
+              key="submitted"
+            />
           )}
         </AnimatePresence>
       </div>
