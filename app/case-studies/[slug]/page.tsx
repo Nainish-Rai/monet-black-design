@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { notFound } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 import { TableOfContents } from "@/components/table-of-contents";
 import { MarketCard } from "@/components/market-card";
 import caseStudies from "@/data/case-studies.json";
@@ -28,11 +28,8 @@ const staggerContainer = {
   },
 };
 
-export default function CaseStudyPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default function CaseStudyPage() {
+  const params = useParams();
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
