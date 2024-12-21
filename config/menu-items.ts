@@ -68,10 +68,10 @@ export const menuItems: MenuItem[] = [
         title: "Zomato",
         href: "/case-studies/zomato",
       },
-      {
-        title: "Swiggy",
-        href: "/case-studies/swiggy",
-      },
+      // {
+      //   title: "Swiggy",
+      //   href: "/case-studies/swiggy",
+      // },
     ],
   },
 ];
