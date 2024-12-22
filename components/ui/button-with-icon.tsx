@@ -9,24 +9,31 @@ interface ButtonWithIconProps
   children?: React.ReactNode;
   as?: React.ElementType;
   href?: string;
+  openInNewTab?: boolean;
 }
 
 const ButtonWithIcon = forwardRef<HTMLButtonElement, ButtonWithIconProps>(
   (
-    {
-      icon,
-      className,
-      children = "Button",
-      as: Component = "button",
-      ...props
-    },
+    { icon, className, children = "Button", as, openInNewTab, href, ...props },
     ref,
   ) => {
+    // Use provided 'as' component, or if href is provided use 'a', otherwise use 'button'
+    const Component = as || (href ? "a" : "button");
     const MotionComponent = motion(Component);
+
+    // Add linkProps only if href is provided or Component is 'a'
+    const linkProps = href
+      ? {
+          href,
+          target: openInNewTab ? "_blank" : undefined,
+          rel: openInNewTab ? "noopener noreferrer" : undefined,
+        }
+      : {};
 
     return (
       <MotionComponent
         ref={ref}
+        {...linkProps}
         {...props}
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}

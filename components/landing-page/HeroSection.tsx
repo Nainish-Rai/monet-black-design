@@ -35,7 +35,8 @@ function HeroSection({}: Props) {
         </motion.p>
         <ButtonWithIcon
           as={Link}
-          href="/features?active=customers"
+          openInNewTab
+          href="https://loyalty-rewards.alpha.monet.work/"
           className="max-w-[21rem] max-lg:hidden py-6 font-medium w-full text-md self-end mt-[2.5rem] lg:text-lg"
           icon={<ArrowUpRight className="h-6 w-6" />}
         >
@@ -91,7 +92,8 @@ function HeroSection({}: Props) {
       >
         <ButtonWithIcon
           as={Link}
-          href="/features?active=customers"
+          openInNewTab
+          href="https://loyalty-rewards.alpha.monet.work/"
           icon={<ArrowUpRight className="h-6 w-6" />}
         >
           Start Exploring
