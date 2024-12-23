@@ -8,6 +8,7 @@ import { useSearchParams } from "next/navigation";
 import featuresData from "@/data/features.json";
 import { motion, AnimatePresence } from "framer-motion"; // Add this import
 import { Suspense } from "react";
+import Link from "next/link";
 
 export default function FeaturesPage() {
   return (
@@ -105,6 +106,9 @@ function FeaturesContent() {
               }}
             >
               <ButtonWithIcon
+                as={Link}
+                openInNewTab
+                href="https://loyalty.monet.work/"
                 className="w-full self-end lg:w-fit font-medium text-lg"
                 icon={<ArrowUpRight className="h-6 w-6" />}
               >

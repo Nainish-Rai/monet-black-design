@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import React from "react";
 import ButtonWithIcon from "../ui/button-with-icon";
 import { fadeIn } from "@/lib/anims";
+import Link from "next/link";
 
 type Props = {};
 
@@ -32,6 +33,9 @@ function JoinUsSection({}: Props) {
           Revive Your Unused Points With Monet
         </motion.h3>
         <ButtonWithIcon
+          as={Link}
+          openInNewTab
+          href="https://loyalty.monet.work/"
           className="max-w-[21rem]  max-sm:py-3 py-6 font-medium w-full text-md  mt-[8rem] lg:mt-[2.5rem] lg:text-lg "
           icon={<ArrowUpRight className="h-6 w-6" />}
         >

@@ -160,17 +160,17 @@
     z-index: -1;
     background-image: radial-gradient(
         circle at 30% 30%,
-        hsl(var(--secondary) / 0.8) 0%,
+        hsl(var(--secondary) / 1) 0%,
         transparent 60%
       ),
       radial-gradient(
         circle at 70% 70%,
-        hsl(var(--primary) / 0.8) 0%,
+        hsl(var(--primary) / 1) 0%,
         transparent 60%
       );
     background-size: 150% 150%;
-    filter: blur(60px);
-    animation: blobAnimation 20s ease-in-out infinite alternate;
+    filter: blur(25px);
+    animation: blobAnimation 15s ease-in-out infinite alternate;
   }
 }
 

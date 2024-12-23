@@ -35,7 +35,7 @@ function SplashScreen({
         >
           <MonetWorkLogo className="ml-6 mt-6 lg:mt-20 lg:ml-20 w-[10rem] lg:w-[20.5rem]" />
         </motion.div>
-        <div className="flex flex-col justify-end flex-1">
+        <div className="flex flex-col justify-center lg:justify-end flex-1">
           <motion.h2
             layout
             layoutId="loyaltyText"
@@ -43,7 +43,7 @@ function SplashScreen({
             variants={textVariant(0.3)}
             initial="hidden"
             animate="show"
-            className="text-7xl lg:text-[8.5rem] w-full pr-4 lg:pr-20 tracking-[-0.175rem] text-right font-neue font-medium mb-6 lg:-mb-4 text-white"
+            className="text-7xl lg:text-[8.5rem] w-full pr-4 lg:pr-20 tracking-[-0.175rem] text-right font-neue font-medium mb-6 lg:mb-6 text-white"
           >
             All-In-One
           </motion.h2>
