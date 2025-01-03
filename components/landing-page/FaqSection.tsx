@@ -1,12 +1,13 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { motion } from "framer-motion";
 
 type FaqItem = {
   question: string;
@@ -88,40 +89,67 @@ const faqData: FaqItem[] = [
 ];
 
 function FaqSection() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <section className="w-full flex flex-col items-center py-12">
       <div className="w-full max-w-5xl mx-auto px-4">
-        <motion.h3
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mt-2 text-center text-2xl lg:text-5xl font-medium text-white lg:leading-[65px]"
+        <div
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="flex items-center justify-center cursor-pointer group"
         >
-          FAQs
-        </motion.h3>
-        <Accordion type="single" collapsible className="w-full mt-16 space-y-6">
-          {faqData.map((faq, index) => (
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="mt-2 text-center text-2xl lg:text-5xl font-medium text-white lg:leading-[65px] group-hover:text-neutral-300"
+          >
+            FAQs
+          </motion.h3>
+          <motion.div className="ml-4 flex items-center pt-4 justify-center">
+            <ChevronDown className="w-6 h-6 text-white group-hover:text-neutral-300" />
+          </motion.div>
+        </div>
+
+        <AnimatePresence>
+          {isExpanded && (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              key={index}
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
             >
-              <AccordionItem
-                value={`item-${index}`}
-                className=" [&[data-state=open]]:bg-neutral-900/50 [&[data-state=open]]:rounded-xl px-6 transition-all duration-300 border-b-2  "
+              <Accordion
+                type="single"
+                collapsible
+                className="w-full mt-16 space-y-6"
               >
-                <AccordionTrigger className="text-left text-lg lg:text-2xl font-medium hover:no-underline py-4 [&[data-state=open]]:text-white transition-colors ">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-neutral-400 text-sm lg:text-lg pb-6">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
+                {faqData.map((faq, index) => (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    key={index}
+                  >
+                    <AccordionItem
+                      value={`item-${index}`}
+                      className=" [&[data-state=open]]:bg-neutral-900/50 [&[data-state=open]]:rounded-xl px-6 transition-all duration-300 border-b-2  "
+                    >
+                      <AccordionTrigger className="text-left text-lg lg:text-2xl font-medium hover:no-underline py-4 [&[data-state=open]]:text-white transition-colors ">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-neutral-400 text-sm lg:text-lg pb-6">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  </motion.div>
+                ))}
+              </Accordion>
             </motion.div>
-          ))}
-        </Accordion>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
