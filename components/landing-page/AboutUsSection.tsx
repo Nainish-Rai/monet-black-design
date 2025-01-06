@@ -36,8 +36,9 @@ function AboutUsSection() {
           <ButtonWithIcon
             className="w-full max-w-[21rem] font-medium text-lg"
             icon={<ArrowUpRight className="h-6 w-6" />}
+            href="/company/vision"
           >
-            <Link href="/company/vision">Learn More</Link>
+            Learn More
           </ButtonWithIcon>
         </motion.div>
       </div>

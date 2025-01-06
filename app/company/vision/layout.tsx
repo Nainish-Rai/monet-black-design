@@ -9,8 +9,7 @@ export default function OurVisionLayout({ children }: Props) {
   return (
     <main>
       <Navbar />
-      <div className="py-16">{children}</div>
-      <Footer />
+      <div className="">{children}</div>
     </main>
   );
 }
