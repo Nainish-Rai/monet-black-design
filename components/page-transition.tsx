@@ -63,8 +63,8 @@ export const PageTransition = ({ children }: { children: React.ReactNode }) => {
             exit={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.1 }}
           >
-            <h2 className="text-white capitalize font-neue text-heading-2">
-              {displayName}
+            <h2 className="text-white capitalize font-neue text-4xl">
+              Loyalty Made Fluid
             </h2>
           </motion.div>
         </motion.div>
