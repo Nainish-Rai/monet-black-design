@@ -20,7 +20,7 @@ export default function FeaturesPage() {
 
 function FeaturesContent() {
   const searchParams = useSearchParams();
-  const activeParam = searchParams.get("active") || "customers";
+  const activeParam = searchParams?.get("active") || "customers";
   const [currentFeatureIndex, setCurrentFeatureIndex] =
     React.useState<number>(0);
   console.log(currentFeatureIndex);

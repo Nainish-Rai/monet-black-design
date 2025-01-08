@@ -43,7 +43,7 @@ function FeatureCarouselContent({
   currentFeatureIndex,
 }: FeatureCarouselProps) {
   const searchParams = useSearchParams();
-  const activeParam = searchParams.get("active") || "customers";
+  const activeParam = searchParams?.get("active") || "customers";
 
   const features = React.useMemo(
     () =>

@@ -16,7 +16,7 @@ function FeatureSwitcher({}: Props) {
 function FeatureSwitcherContent() {
   const activePathname = usePathname();
   const searchParams = useSearchParams();
-  const activeParam = searchParams.get("active");
+  const activeParam = searchParams?.get("active");
 
   const isVisible = activePathname === "/features";
   const isCustomer = activeParam === "customers";

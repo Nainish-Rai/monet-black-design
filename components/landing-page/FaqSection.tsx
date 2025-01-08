@@ -89,7 +89,7 @@ const faqData: FaqItem[] = [
 ];
 
 function FaqSection() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
 
   return (
     <section className="w-full flex flex-col items-center py-12">

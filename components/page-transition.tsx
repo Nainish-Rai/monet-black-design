@@ -31,7 +31,7 @@ export const PageTransition = ({ children }: { children: React.ReactNode }) => {
   const currentPath = usePathname();
   console.log(currentPath);
 
-  const displayName = currentPath.substring(1) || "Monet";
+  const displayName = currentPath?.substring(1) || "Monet";
 
   return (
     <AnimatePresence mode="wait">

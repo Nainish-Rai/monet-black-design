@@ -34,7 +34,7 @@ function AboutUsSection() {
           className="mt-10 z-10"
         >
           <ButtonWithIcon
-            className="w-full max-w-[21rem] font-medium text-lg"
+            className="w-full max-w-[21rem] font-medium text-lg mt-6"
             icon={<ArrowUpRight className="h-6 w-6" />}
             href="/company/vision"
           >

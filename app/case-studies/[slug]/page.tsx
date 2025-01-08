@@ -39,6 +39,9 @@ export default function CaseStudyPage() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
+  if (!params) {
+    return notFound();
+  }
   const slug = params.slug as keyof typeof caseStudies;
   const caseStudy = caseStudies[slug];
 
