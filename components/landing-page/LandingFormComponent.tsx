@@ -51,6 +51,16 @@ function LandingFormComponent({ onSubmit }: Props) {
     }));
   };
 
+  const handleSubmit = async (data: FormData) => {
+    try {
+      // ...existing submission code...
+      localStorage.setItem("formSubmitted", "true");
+      onSubmit?.();
+    } catch (error) {
+      // ...error handling...
+    }
+  };
+
   return (
     <motion.div
       variants={containerVariants}
@@ -93,7 +103,7 @@ function LandingFormComponent({ onSubmit }: Props) {
         <ButtonWithIcon
           className="max-sm:w-full text-md self-end mt-2 lg:text-lg "
           icon={<ArrowUpRight className="h-6 w-6" />}
-          onClick={onSubmit}
+          onClick={() => handleSubmit(new FormData())}
         >
           Continue
         </ButtonWithIcon>

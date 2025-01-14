@@ -33,7 +33,7 @@ function SplashScreen({
           initial="hidden"
           animate="show"
         >
-          <MonetWorkLogo className="ml-6 mt-6 lg:mt-20 lg:ml-20 w-[10rem] lg:w-[20.5rem]" />
+          <MonetWorkLogo className="mx-6 mt-6 lg:mt-20 lg:mx-20 w-[12rem] lg:w-[23rem]" />
         </motion.div>
         <div className="flex flex-col justify-center lg:justify-end flex-1">
           <motion.h2

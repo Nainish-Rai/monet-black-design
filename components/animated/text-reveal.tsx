@@ -10,7 +10,7 @@ interface Props {
   onComplete?: () => void;
 }
 
-const threshold = 0.8;
+const threshold = 0.5; // Reduced threshold for earlier trigger
 
 const TextRevealByWord: FC<Props> = ({ paragraph, className, onComplete }) => {
   const targetRef = useRef<HTMLDivElement | null>(null);
@@ -18,7 +18,7 @@ const TextRevealByWord: FC<Props> = ({ paragraph, className, onComplete }) => {
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["start 60%", "end 40%"],
+    offset: ["start 70%", "end 30%"], // Adjusted offset for earlier trigger
   });
 
   useEffect(() => {
@@ -50,12 +50,15 @@ const TextRevealByWord: FC<Props> = ({ paragraph, className, onComplete }) => {
   return (
     <div
       ref={targetRef}
-      className={cn("relative z-0 h-[50vh] md:h-[75vh] lg:h-[40vh]", className)}
+      className={cn(
+        "relative z-0 h-[30vh] sm:h-[50vh] md:h-[75vh] lg:h-[40vh]",
+        className,
+      )}
     >
-      <div className="sticky top-0 mx-auto flex h-[50vh] md:h-[75vh] lg:h-screen w-full items-start justify-center bg-transparent px-[1rem]">
+      <div className="sticky top-0 mx-auto flex h-[30vh] sm:h-[50vh] md:h-[75vh] lg:h-screen w-full items-start justify-center bg-transparent px-[1rem]">
         <p
           ref={targetRef}
-          className="flex flex-wrap justify-center items-center p-3 text-lg font-medium text-black/20 leading-[120%] tracking-[-0.025rem] dark:text-white/20 text-center md:p-6 md:text-2xl lg:p-10 lg:text-subheading-2"
+          className="flex flex-wrap justify-center items-center p-2 sm:p-3 text-lg font-medium text-black/20 leading-[120%] tracking-[-0.025rem] dark:text-white/20 text-center md:p-6 md:text-2xl lg:p-10 lg:text-subheading-2"
         >
           {words.map((word, i) => {
             const start = i / words.length;

@@ -12,8 +12,8 @@ function AboutUsSection() {
   const { isTextRevealed, setTextRevealed } = useScroll();
 
   return (
-    <div id="about" className=" pt-36 ">
-      <div className="flex sticky top-5  flex-col items-center justify-center font-neue">
+    <div id="about" className="pt-20 sm:pt-36">
+      <div className="flex sticky top-5 flex-col items-center justify-center font-neue">
         <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -31,7 +31,7 @@ function AboutUsSection() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="mt-10 z-10"
+          className="mt-12 sm:-mt-48 lg:mt-44 xl:mt-16 z-10"
         >
           <ButtonWithIcon
             className="w-full max-w-[21rem] font-medium text-lg mt-6"
