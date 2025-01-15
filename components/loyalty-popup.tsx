@@ -14,6 +14,7 @@ import { ArrowRight, ArrowUpRight, X } from "lucide-react";
 import Image from "next/image";
 import { MonetWorkLogo } from "./monet-work-logo";
 import ButtonWithIcon from "./ui/button-with-icon";
+import Link from "next/link";
 
 export default function LoyaltyPopup() {
   return (
@@ -73,6 +74,9 @@ export default function LoyaltyPopup() {
                 <ButtonWithIcon
                   className="max-w-sm py-4 sm:py-6 font-medium w-full text-sm sm:text-md mt-4 sm:mt-[2.5rem] lg:text-lg"
                   icon={<ArrowUpRight className="h-5 w-5 sm:h-6 sm:w-6" />}
+                  as={Link}
+                  openInNewTab
+                  href="https://loyalty-rewards.alpha.monet.work/"
                 >
                   Start Exploring
                 </ButtonWithIcon>

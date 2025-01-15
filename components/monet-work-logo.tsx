@@ -7,7 +7,7 @@ type Props = {
 export const MonetWorkLogo: React.FC<Props> = ({ className }) => {
   return (
     <svg
-      viewBox="0 0 174 35"
+      viewBox="-6 -2 188 39"
       xmlns="http://www.w3.org/2000/svg"
       className={cn(
         "text-[#ffd700] fill-current stroke-current w-64",

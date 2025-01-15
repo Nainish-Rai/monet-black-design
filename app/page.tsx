@@ -11,7 +11,13 @@ import Lenis from "@studio-freight/lenis";
 export default function Home() {
   const { scrollYProgress } = useScroll({});
   const containerRef = useRef(null);
-  const [showForm, setShowForm] = React.useState(true);
+  const [showForm, setShowForm] = React.useState(() => {
+    // Check if we're in the browser and if form was previously submitted
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("formSubmitted") !== "true";
+    }
+    return true;
+  });
   const lenisRef = useRef<Lenis | null>(null);
 
   // Initialize Lenis
@@ -35,9 +41,11 @@ export default function Home() {
   const startViewTransition = () => {
     if ((document as any).startViewTransition) {
       (document as any).startViewTransition(() => {
+        localStorage.setItem("formSubmitted", "true");
         setShowForm(false);
       });
     } else {
+      localStorage.setItem("formSubmitted", "true");
       setShowForm(false);
     }
   };
