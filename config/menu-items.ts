@@ -64,14 +64,26 @@ export const menuItems: MenuItem[] = [
         href: "/case-studies/starbucks",
         description: "A timely nudge before they expire",
       },
-      {
-        title: "Zomato",
-        href: "/case-studies/zomato",
-      },
       // {
-      //   title: "Swiggy",
-      //   href: "/case-studies/swiggy",
+      //   title: "Zomato",
+      //   href: "/case-studies/zomato",
       // },
+      {
+        title: "Banking Loyalty",
+        href: "/case-studies/banking-loyalty",
+      },
+      {
+        title: "Cloud Service",
+        href: "/case-studies/cloud-service",
+      },
+      {
+        title: "Retail Loyalty",
+        href: "/case-studies/retail-loyalty",
+      },
+      {
+        title: "Group Loyalty",
+        href: "/case-studies/group-loyalty",
+      },
     ],
   },
 ];

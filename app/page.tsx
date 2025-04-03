@@ -11,13 +11,16 @@ import Lenis from "@studio-freight/lenis";
 export default function Home() {
   const { scrollYProgress } = useScroll({});
   const containerRef = useRef(null);
-  const [showForm, setShowForm] = React.useState(() => {
-    // Check if we're in the browser and if form was previously submitted
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("formSubmitted") !== "true";
-    }
-    return true;
-  });
+  // const [showForm, setShowForm] = React.useState(() => {
+  //   // Check if we're in the browser and if form was previously submitted
+  //   if (typeof window !== "undefined") {
+  //     return localStorage.getItem("formSubmitted") !== "true";
+  //   }
+  //   return true;
+  // });
+
+  // remove below show form line to make form appear
+  const [showForm, setShowForm] = React.useState(false);
   const lenisRef = useRef<Lenis | null>(null);
 
   // Initialize Lenis

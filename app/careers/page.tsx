@@ -12,24 +12,6 @@ const jobs = [
     location: "Bengaluru",
     href: "careers/product-designer",
   },
-  {
-    title: "Product Designer",
-    experience: "0-2 years of experience",
-    location: "Bengaluru",
-    href: "careers/product-designer",
-  },
-  {
-    title: "Product Designer",
-    experience: "0-2 years of experience",
-    location: "Bengaluru",
-    href: "careers/product-designer",
-  },
-  {
-    title: "Product Designer",
-    experience: "0-2 years of experience",
-    location: "Bengaluru",
-    href: "careers/product-designer",
-  },
 ];
 
 const containerVariants = {
