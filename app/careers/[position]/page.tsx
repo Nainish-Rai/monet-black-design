@@ -81,17 +81,19 @@ const positions = {
   },
 };
 
-interface Params {
+type PageParams = {
   position: string;
-}
-
-type Props = {
-  params: Params;
-  searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export default async function CareerPositionPage({ params }: Props) {
-  const slug = params.position as keyof typeof positions;
+export default async function CareerPositionPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<PageParams>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const resolvedParams = await params;
+  const slug = resolvedParams.position as keyof typeof positions;
   const position = positions[slug];
 
   if (!position) {
@@ -122,7 +124,7 @@ export default async function CareerPositionPage({ params }: Props) {
                 <p>{position.details}</p>
 
                 <div>
-                  <h2 className="mb-4 text-xl font-semibold text-white">
+                  <h2 className="mt-4 mb-2 text-xl font-semibold text-white">
                     Key Responsibilities:
                   </h2>
                   <ul className="list-inside list-disc space-y-2">
@@ -133,7 +135,7 @@ export default async function CareerPositionPage({ params }: Props) {
                 </div>
 
                 <div>
-                  <h2 className="mb-4 text-xl font-semibold text-white">
+                  <h2 className="mb-2 mt-4 text-xl font-semibold text-white">
                     Skills and Qualifications:
                   </h2>
                   <ul className="list-inside list-disc space-y-2">

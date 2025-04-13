@@ -6,12 +6,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const jobs = [
-  // {
-  //   title: "Product Designer",
-  //   experience: "0-2 years of experience",
-  //   location: "Bengaluru",
-  //   href: "careers/product-designer",
-  // },
   {
     title: "Full Stack Software Developer",
     experience: "3+ years of experience",
