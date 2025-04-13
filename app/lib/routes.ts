@@ -8,6 +8,8 @@ export const ROUTES = {
   ABOUT: "/about",
   CONTACT: "/contact",
   CASE_STUDIES: "/case-studies",
+  FULL_STACK_SOFTWARE_DEVELOPER: "/careers/full-stack-software-developer",
+  INVESTOR_RELATIONS_MANAGER: "/careers/investor-relations-manager",
 };
 
 // Case study routes

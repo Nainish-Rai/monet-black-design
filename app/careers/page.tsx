@@ -6,11 +6,23 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const jobs = [
+  // {
+  //   title: "Product Designer",
+  //   experience: "0-2 years of experience",
+  //   location: "Bengaluru",
+  //   href: "careers/product-designer",
+  // },
   {
-    title: "Product Designer",
-    experience: "0-2 years of experience",
-    location: "Bengaluru",
-    href: "careers/product-designer",
+    title: "Full Stack Software Developer",
+    experience: "3+ years of experience",
+    location: "Remote",
+    href: "careers/full-stack-software-developer",
+  },
+  {
+    title: "Investor Relations Manager",
+    experience: "3-5+ years of experience",
+    location: "Remote",
+    href: "careers/investor-relations-manager",
   },
 ];
 
