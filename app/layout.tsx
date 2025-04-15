@@ -5,7 +5,7 @@ import { ViewTransitions } from "next-view-transitions";
 import { inter, neueMontreal } from "@/app/fonts";
 import LenisScrollProvider from "@/components/context/LenisProvider";
 import { PageTransition } from "@/components/page-transition";
-import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://monet.work"),
@@ -58,23 +58,7 @@ export default function RootLayout({
             <PageTransition>{children}</PageTransition>
           </LenisScrollProvider>
         </ViewTransitions>
-        {/* Google tag (gtag.js) */}
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-9CB7DP94RX"
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-9CB7DP94RX');
-            `,
-          }}
-        />
+        <GoogleAnalytics gaId="G-9CB7DP94RX" />
       </body>
     </html>
   );
