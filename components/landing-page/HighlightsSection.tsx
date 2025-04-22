@@ -1,9 +1,7 @@
 import { textVariant } from "@/lib/anims";
 import { motion } from "framer-motion";
 import React, { useEffect } from "react";
-import Image from "next/image";
-import GridArticleComponent from "./GridArticleComponent";
-import GridLargeComponent from "./GridLargeComponent";
+import HighlightCard, { HighlightCardProps } from "./HighlightCard";
 import {
   Carousel,
   CarouselContent,
@@ -13,6 +11,49 @@ import {
 } from "@/components/ui/carousel";
 
 type Props = {};
+
+// Sample highlight data
+const highlightsData: HighlightCardProps[] = [
+  {
+    title: "Monet's Product Launch",
+    date: "13 Nov",
+    place: "Bangalore",
+    description: "On November 13th, we launched Monet in Bangalore—a groundbreaking loyalty ecosystem redefining flexibility and transparency. The event featured two insightful panel discussions, followed by our report launch and finally culminating in the official product unveiling.",
+    gradient: "blue",
+    articleUrl: "/news/product-launch"
+  },
+  {
+    title: "Monet, India's First-Ever interoperable product on blockchain and AI promises a new era of rewards programs",
+    logo: "/images/assets/startupfyi.svg",
+    description: "StartupFYI covers Monet's innovative approach to loyalty programs using blockchain technology.",
+    gradient: "purple",
+    articleUrl: "https://startupfyi.com/monet-article"
+  },
+  {
+    title: "Forbes Features Monet's Revolutionary Approach",
+    logo: "/images/assets/forbes-logo.png",
+    image: "/images/assets/grid1.png",
+    description: "Forbes highlights how Monet is changing the loyalty landscape in India.",
+    date: "25 Oct",
+    gradient: "green",
+    articleUrl: "https://forbes.com/monet-feature"
+  },
+  {
+    title: "Monet, India's First-Ever Interoperable Product On Blockchain And AI Promises A New Era Of Reward programs",
+    logo: "/images/assets/outlook.svg",
+    description: "Outlook Business explores how Monet is revolutionizing customer loyalty.",
+    gradient: "yellow",
+    articleUrl: "https://outlook.com/monet-article"
+  },
+  {
+    title: "The Future of Loyalty Programs",
+    image: "/images/assets/grid2.png",
+    description: "How Monet is leading the charge in transforming traditional loyalty systems with blockchain technology.",
+    date: "18 Dec",
+    gradient: "red",
+    articleUrl: "/blog/future-of-loyalty"
+  }
+];
 
 function HighlightsSection({ }: Props) {
   const [api, setApi] = React.useState<any>();
@@ -62,94 +103,23 @@ function HighlightsSection({ }: Props) {
           }}
         >
           <CarouselContent className="-ml-4 gap-2">
-            {/* All items will have the same width for consistency */}
-            {/* Item 1: Product Launch */}
-            <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3 h-[500px] transition-opacity duration-300">
-              <motion.div
-                variants={textVariant(0.1)}
-                initial="hidden"
-                whileInView="show"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-                className="rounded-2xl overflow-hidden border border-neutral-800 h-full relative shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-black/30 transition-all duration-300"
+            {highlightsData.map((highlight, index) => (
+              <CarouselItem
+                key={index}
+                className="pl-4 md:basis-1/2 lg:basis-1/3 h-[500px] transition-opacity duration-300"
               >
-                <GridLargeComponent />
-              </motion.div>
-            </CarouselItem>
-
-            {/* Item 2: StartupFYI Article */}
-            <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3 h-[500px] transition-opacity duration-300">
-              <motion.div
-                variants={textVariant(0.2)}
-                initial="hidden"
-                whileInView="show"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-                className="rounded-2xl border border-neutral-800 h-full overflow-hidden relative shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-black/30 transition-all duration-300"
-              >
-                <GridArticleComponent
-                  gradient="purple"
-                  text="Monet, India's First-Ever interoperable product on blockchain and AI promises a new era of rewards programs"
-                  image="/images/assets/startupfyi.svg"
-                />
-              </motion.div>
-            </CarouselItem>
-
-            {/* Item 3: Grid Image 1 */}
-            <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3 h-[500px] transition-opacity duration-300">
-              <motion.div
-                variants={textVariant(0.2)}
-                initial="hidden"
-                whileInView="show"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-                className="rounded-2xl border border-neutral-800 h-full overflow-hidden relative shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-black/30 transition-all duration-300"
-              >
-                <Image
-                  src="/images/assets/grid1.png"
-                  alt="forbes"
-                  fill
-                  className="object-cover transition-transform duration-500 hover:scale-105"
-                />
-              </motion.div>
-            </CarouselItem>
-
-            {/* Item 4: Outlook Article */}
-            <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3 h-[500px] transition-opacity duration-300">
-              <motion.div
-                variants={textVariant(0.4)}
-                initial="hidden"
-                whileInView="show"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-                className="rounded-2xl border border-neutral-800 h-full overflow-hidden relative shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-black/30 transition-all duration-300"
-              >
-                <GridArticleComponent
-                  gradient="yellow"
-                  text="Monet, India's First-Ever Interoperable Product On Blockchain And AI Promises A New Era Of Rewards Programes"
-                  image="/images/assets/outlook.svg"
-                />
-              </motion.div>
-            </CarouselItem>
-
-            {/* Item 5: Grid Image 2 */}
-            <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3 h-[500px] transition-opacity duration-300">
-              <motion.div
-                variants={textVariant(0.2)}
-                initial="hidden"
-                whileInView="show"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-                className="rounded-2xl border border-neutral-800 h-full overflow-hidden relative shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-black/30 transition-all duration-300"
-              >
-                <Image
-                  src="/images/assets/grid2.png"
-                  alt="forbes"
-                  fill
-                  className="object-cover transition-transform duration-500 hover:scale-105"
-                />
-              </motion.div>
-            </CarouselItem>
+                <motion.div
+                  variants={textVariant(0.1 * (index + 1))}
+                  initial="hidden"
+                  whileInView="show"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                  className="rounded-2xl overflow-hidden border border-neutral-800 h-full relative shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-black/30 transition-all duration-300"
+                >
+                  <HighlightCard {...highlight} />
+                </motion.div>
+              </CarouselItem>
+            ))}
           </CarouselContent>
 
           <div className="absolute -bottom-16 left-0 right-0 flex items-center justify-center gap-4">
