@@ -112,7 +112,7 @@ function FeaturesContent() {
                 className="w-full self-end lg:w-fit font-medium text-lg"
                 icon={<ArrowUpRight className="h-6 w-6" />}
               >
-                Join the Waitlist
+                Join Now
               </ButtonWithIcon>
             </motion.div>
           </motion.div>
