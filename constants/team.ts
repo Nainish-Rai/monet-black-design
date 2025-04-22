@@ -44,7 +44,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Rishav Kumar",
     role: "UX Designer",
-    image: "/images/team/ritika-garud.png",
+    image: "/images/team/rishav.jpg",
   },
   {
     name: "Saumya Singh",

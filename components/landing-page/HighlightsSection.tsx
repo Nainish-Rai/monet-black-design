@@ -49,20 +49,22 @@ function HighlightsSection({ }: Props) {
         Monet in the spotlight
       </motion.h3>
 
-      <div className="w-full max-w-7xl mt-10 relative px-4 md:px-6 lg:px-0 pb-20">
+      <div className="w-full max-w-7xl mt-10 relative px-4 md:px-6 lg:px-8 pb-20">
         <div className="absolute inset-0 bg-gradient-radial-blue opacity-5 blur-3xl -z-10 rounded-full"></div>
         <Carousel
           setApi={setApi}
           className="w-full"
           opts={{
-            align: "start",
+            align: "center",
             loop: true,
             dragFree: true,
+            containScroll: "trimSnaps",
           }}
         >
-          <CarouselContent className="-ml-4">
+          <CarouselContent className="-ml-4 gap-2">
+            {/* All items will have the same width for consistency */}
             {/* Item 1: Product Launch */}
-            <CarouselItem className="pl-4 md:basis-full lg:basis-2/3 h-[500px] transition-opacity duration-300">
+            <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3 h-[500px] transition-opacity duration-300">
               <motion.div
                 variants={textVariant(0.1)}
                 initial="hidden"
