@@ -23,7 +23,7 @@ export function TeamMemberCard({ member }: TeamMemberCardProps) {
             alt={member.name}
             width={600}
             height={600}
-            className="h-full w-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+            className="h-full w-full object-cover grayscale transition-all duration-500"
           />
         </motion.div>
       </div>

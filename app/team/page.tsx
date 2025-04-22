@@ -74,7 +74,7 @@ export default function TeamPage() {
           initial="hidden"
           whileInView="show"
           // viewport={{ once: true }}
-          id="advisors"
+          id="investors"
           className="mb-20"
         >
           <motion.div className="mb-16 grid gap-8 md:grid-cols-2">
@@ -82,7 +82,7 @@ export default function TeamPage() {
               variants={textVariant(0.2)}
               className="text-5xl lg:text-6xl  font-medium text-white"
             >
-              Our Advisors
+              Backed by
             </motion.h2>
             <motion.p
               variants={textVariant(0.2)}
