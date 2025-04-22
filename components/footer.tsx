@@ -22,7 +22,7 @@ const footerLinks: Record<string, FooterLink[]> = {
   Company: [
     { name: "Our Vision", href: "/company/vision" },
     { name: "Meet the Team", href: "/team" },
-    { name: "Docs", href: "#" },
+    { name: "Docs", href: "https://monet-work.github.io/web3-points-docs/", target: "_blank" },
   ],
   Careers: [{ name: "Job Openings", href: "/careers" }],
   "Use Cases": [
