@@ -35,11 +35,11 @@ function JoinUsSection({}: Props) {
         <ButtonWithIcon
           as={Link}
           openInNewTab
-          href="https://loyalty.monet.work/"
+          href="https://loyalty-rewards.alpha.monet.work/"
           className="max-w-[21rem]  max-sm:py-3 py-6 font-medium w-full text-md  mt-[8rem] lg:mt-[2.5rem] lg:text-lg "
           icon={<ArrowUpRight className="h-6 w-6" />}
         >
-          Join The Loyalty Waitlist
+          Join Now
         </ButtonWithIcon>
       </div>
     </motion.div>
