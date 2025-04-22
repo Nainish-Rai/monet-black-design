@@ -16,7 +16,7 @@ type Props = {};
 const highlightsData: HighlightCardProps[] = [
   {
     title: "Monet's Product Launch",
-    date: "13 Nov",
+    date: "13 Nov 23",
     place: "Bangalore",
     description: "On November 13th, we launched Monet in Bangalore—a groundbreaking loyalty ecosystem redefining flexibility and transparency. The event featured two insightful panel discussions, followed by our report launch and finally culminating in the official product unveiling.",
     gradient: "blue",
@@ -34,7 +34,7 @@ const highlightsData: HighlightCardProps[] = [
     logo: "/images/assets/forbes-logo.png",
     image: "/images/assets/grid1.png",
     description: "Forbes highlights how Monet is changing the loyalty landscape in India.",
-    date: "25 Oct",
+    date: "25 Oct 23",
     gradient: "green",
     articleUrl: "https://forbes.com/monet-feature"
   },
@@ -49,7 +49,7 @@ const highlightsData: HighlightCardProps[] = [
     title: "The Future of Loyalty Programs",
     image: "/images/assets/grid2.png",
     description: "How Monet is leading the charge in transforming traditional loyalty systems with blockchain technology.",
-    date: "18 Dec",
+    date: "18 Dec 23",
     gradient: "red",
     articleUrl: "/blog/future-of-loyalty"
   }

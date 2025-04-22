@@ -59,12 +59,12 @@ function HighlightCard({
 
         {/* Middle section with title and date/place - flexible height but with constraints */}
         <div className="flex-1 flex flex-col min-h-0 mb-4">
-          <h3 className="text-2xl font-medium leading-tight mb-3 line-clamp-2">{title}</h3>
+          <h3 className="text-xl font-medium leading-tight mb-2 line-clamp-2">{title}</h3>
 
           {(date || place) && (
             <div className="flex items-center gap-3 text-sm font-medium mb-3 bg-black/20 inline-flex py-1 px-2 rounded-full">
               {date && (
-                <span className="flex items-center gap-1 text-[#FCD400]">
+                <span className="flex items-center gap-1 text-[#FCD400] font-medium">
                   <CalendarCheck className="h-4 w-4" /> {date}
                 </span>
               )}
@@ -79,20 +79,20 @@ function HighlightCard({
           {/* Description with fixed line clamp */}
           <div className="flex-1 min-h-0 overflow-hidden">
             {description ? (
-              <p className="text-base text-neutral-200 leading-relaxed line-clamp-2 opacity-80">
+              <p className="text-base text-neutral-200 leading-relaxed line-clamp-1 opacity-80">
                 {description}
               </p>
             ) : (
-              <div className="h-12"></div>
+              <div className="h-6"></div>
             )}
           </div>
         </div>
 
         {/* Bottom section with fixed height for consistent alignment */}
-        <div className="h-[120px] mt-auto">
-          {/* Image section with fixed height */}
+        <div className="h-[220px] mt-auto">
+          {/* Image section with fixed height - approximately half of card content */}
           {image ? (
-            <div className="relative h-[80px] w-full mb-4 rounded-lg overflow-hidden ring-1 ring-white/10">
+            <div className="relative h-[180px] w-full mb-4 rounded-lg overflow-hidden ring-1 ring-white/10">
               <Image
                 src={image}
                 alt={title}
@@ -101,7 +101,7 @@ function HighlightCard({
               />
             </div>
           ) : (
-            <div className="h-[80px] w-full mb-4 bg-gradient-to-r from-black/40 to-black/10 rounded-lg"></div>
+            <div className="h-[180px] w-full mb-4 bg-gradient-to-r from-black/40 to-black/10 rounded-lg"></div>
           )}
 
           {/* Link section with fixed position */}
