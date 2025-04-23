@@ -15,7 +15,7 @@ type Props = {};
 // Sample highlight data
 const highlightsData: HighlightCardProps[] = [
   {
-    title: "FMonet, India’s First-Ever Interoperable Product On Blockchain And AI",
+    title: "Monet, India’s First-Ever Interoperable Product On Blockchain And AI",
     logo: "/icons/Outlook.svg",
     articleUrl: "https://www.outlookindia.com/hub4business/monet-indias-first-ever-interoperable-product-on-blockchain-and-ai-promises-a-new-era-of-rewards-programes"
   },
