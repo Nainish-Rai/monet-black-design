@@ -17,25 +17,21 @@ const highlightsData: HighlightCardProps[] = [
   {
     title: "FMonet, India’s First-Ever Interoperable Product On Blockchain And AI",
     logo: "/icons/Outlook.svg",
-    description: "Monet, India’s First-Ever Interoperable Product On Blockchain And AI.",
     articleUrl: "https://www.outlookindia.com/hub4business/monet-indias-first-ever-interoperable-product-on-blockchain-and-ai-promises-a-new-era-of-rewards-programes"
   },
   {
     title: "This startup is making loyalty programs flexible",
     logo: "/icons/YourStory.svg",
-    description: "This startup is making loyalty programs flexible.",
     articleUrl: "https://yourstory.com/2024/07/how-bengaluru-based-monet-making-loyalty-programs-flexible"
   },
   {
     title: "RazorPay Rize on Linkedin",
     logo: "/icons/LinkedIn.png",
-    description: "RazorPay Rize on Linkedin.",
     articleUrl: "https://www.linkedin.com/posts/razorpayrize_razorpayrize-monetwork-d2c-activity-7262736502575501312-_Y1E/"
   },
   {
     title: "Dazeinfo Media & Research on Linkedin",
     logo: "/icons/LinkedIn.png",
-    description: "Dazeinfo Media & Research on Linkedin.",
     articleUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7267146286531796992/"
   }
 ];

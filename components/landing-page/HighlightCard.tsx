@@ -5,14 +5,12 @@ import Link from "next/link";
 
 export type HighlightCardProps = {
   title: string;
-  description?: string;
   articleUrl?: string;
   logo?: string;
 };
 
 function HighlightCard({
   title,
-  description,
   articleUrl,
   logo,
 }: HighlightCardProps) {
@@ -40,14 +38,8 @@ function HighlightCard({
 
         {/* Bottom section with title and link */}
         <div>
-          {/* Title/Description */}
+          {/* Title */}
           <h3 className="text-lg font-medium leading-tight mb-4 line-clamp-2">{title}</h3>
-
-          {description && (
-            <p className="text-sm text-neutral-400 leading-relaxed mb-4 line-clamp-2">
-              {description}
-            </p>
-          )}
 
           {/* Read More link */}
           {articleUrl && (
