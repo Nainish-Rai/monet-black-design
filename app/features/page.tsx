@@ -25,6 +25,7 @@ function FeaturesContent() {
     React.useState<number>(0);
   console.log(currentFeatureIndex);
   const features = featuresData[activeParam as keyof typeof featuresData];
+  const joinNowLinkBasedOnActiveParam = activeParam === "customers" ? "https://loyalty-rewards.alpha.monet.work/" : "https://loyalty-rewards.alpha.monet.work/brands";
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-black via-black to-blue-950">
@@ -108,11 +109,11 @@ function FeaturesContent() {
               <ButtonWithIcon
                 as={Link}
                 openInNewTab
-                href="https://loyalty.monet.work/"
+                href={joinNowLinkBasedOnActiveParam}
                 className="w-full self-end lg:w-fit font-medium text-lg"
                 icon={<ArrowUpRight className="h-6 w-6" />}
               >
-                Join the Waitlist
+                Join Now
               </ButtonWithIcon>
             </motion.div>
           </motion.div>

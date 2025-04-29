@@ -1,93 +1,90 @@
 import { textVariant } from "@/lib/anims";
 import { motion } from "framer-motion";
 import React from "react";
-import Image from "next/image";
-import GridArticleComponent from "./GridArticleComponent";
-import GridLargeComponent from "./GridLargeComponent";
+import HighlightCard, { HighlightCardProps } from "./HighlightCard";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 type Props = {};
 
-function HighlightsSection({}: Props) {
+// Sample highlight data
+const highlightsData: HighlightCardProps[] = [
+  {
+    title: "Monet, India’s First-Ever Interoperable Product On Blockchain And AI",
+    logo: "/icons/Outlook.svg",
+    articleUrl: "https://www.outlookindia.com/hub4business/monet-indias-first-ever-interoperable-product-on-blockchain-and-ai-promises-a-new-era-of-rewards-programes"
+  },
+  {
+    title: "This startup is making loyalty programs flexible",
+    logo: "/icons/YourStory.svg",
+    articleUrl: "https://yourstory.com/2024/07/how-bengaluru-based-monet-making-loyalty-programs-flexible"
+  },
+  {
+    title: "RazorPay Rize on Linkedin",
+    logo: "/icons/LinkedIn.png",
+    articleUrl: "https://www.linkedin.com/posts/razorpayrize_razorpayrize-monetwork-d2c-activity-7262736502575501312-_Y1E/"
+  },
+  {
+    title: "Dazeinfo Media & Research on Linkedin",
+    logo: "/icons/LinkedIn.png",
+    articleUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7267146286531796992/"
+  }
+];
+
+function HighlightsSection({ }: Props) {
+  // No need to track API state for this design
+
   return (
     <div className="w-full mt-24 flex flex-col items-center">
-      {" "}
       <motion.h2
         whileInView={{ opacity: 1 }}
         initial={{ opacity: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="text-center capitalize text-base font-medium tracking-[0.08rem] leading-[120%] "
-      >
-        HIGHLIGHTS
-      </motion.h2>
-      <motion.h3
-        whileInView={{ opacity: 1 }}
-        initial={{ opacity: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className=" mt-2 text-center text-2xl lg:text-5xl font-medium text-white lg:leading-[65px]  "
+        className="text-4xl lg:text-6xl font-medium text-white"
       >
         Monet in the spotlight
-      </motion.h3>
-      <div className="grid w-full md:grid-rows-12 h-[36rem] max-w-7xl md:grid-cols-3 grid-cols-1  mt-10 gap-4">
-        <motion.div
-          variants={textVariant(0.1)}
-          initial="hidden"
-          whileInView="show"
-          className="md:col-span-1 rounded-2xl  overflow-hidden  md:row-span-12 row-span-5 border  relative"
+      </motion.h2>
+
+      <div className="w-full max-w-7xl mt-16 relative px-4 md:px-6 lg:px-8 pb-20">
+        <Carousel
+          className="w-full"
+          opts={{
+            align: "start",
+            loop: true,
+            dragFree: true,
+            containScroll: "trimSnaps",
+          }}
         >
-          <GridLargeComponent />
-        </motion.div>
-        <motion.div
-          variants={textVariant(0.2)}
-          initial="hidden"
-          whileInView="show"
-          className="md:row-span-7 rounded-2xl md:col-start-2 border col-span-1  row-span-5 overflow-hidden   relative"
-        >
-          <GridArticleComponent
-            gradient="purple"
-            text="Monet, India's First-Ever interoperable product on blockchain and AI promises a new era of rewards programs"
-            image="/images/assets/startupfyi.svg"
-          />
-        </motion.div>
-        <motion.div
-          variants={textVariant(0.2)}
-          initial="hidden"
-          whileInView="show"
-          className="md:row-span-5 rounded-2xl  border col-span-1 row-span-5 overflow-hidden   relative"
-        >
-          <Image
-            src="/images/assets/grid1.png"
-            alt="forbes"
-            width={800}
-            height={800}
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
-        <motion.div
-          variants={textVariant(0.4)}
-          initial="hidden"
-          whileInView="show"
-          className="md:row-span-7  rounded-2xl  border col-span-1  row-span-5   overflow-hidden relative"
-        >
-          <GridArticleComponent
-            gradient="yellow"
-            text="Monet, India's First-Ever Interoperable Product On Blockchain And AI Promises A New Era Of Rewards Programes"
-            image="/images/assets/outlook.svg"
-          />
-        </motion.div>
-        <motion.div
-          variants={textVariant(0.2)}
-          initial="hidden"
-          whileInView="show"
-          className="md:row-span-5 rounded-2xl  border col-span-1  row-span-5 overflow-hidden   relative"
-        >
-          <Image
-            src="/images/assets/grid2.png"
-            alt="forbes"
-            width={800}
-            height={800}
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
+          <CarouselContent className="-ml-4 gap-4">
+            {highlightsData.map((highlight, index) => (
+              <CarouselItem
+                key={index}
+                className="pl-4 md:basis-1/2 lg:basis-1/3 h-[400px] transition-opacity duration-300"
+              >
+                <motion.div
+                  variants={textVariant(0.1 * (index + 1))}
+                  initial="hidden"
+                  whileInView="show"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                  className="h-full relative"
+                >
+                  <HighlightCard {...highlight} />
+                </motion.div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+
+          <div className="absolute -bottom-16 right-0 flex items-center justify-end gap-2">
+            <CarouselPrevious className="static h-12 w-12 translate-y-0 bg-neutral-900 border-neutral-800 hover:bg-neutral-800 transition-all duration-300 rounded-full" />
+            <CarouselNext className="static h-12 w-12 translate-y-0 bg-neutral-900 border-neutral-800 hover:bg-neutral-800 transition-all duration-300 rounded-full" />
+          </div>
+        </Carousel>
       </div>
     </div>
   );
