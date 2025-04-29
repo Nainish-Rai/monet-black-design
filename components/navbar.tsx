@@ -56,7 +56,7 @@ interface Navbar1Props {
   className?: string;
 }
 
-export const Navbar2 = ({
+export const Navbar = ({
   menu = menuItems, // Use the imported menuItems as default
   auth = {
     login: { title: "Launch Playground", url: "#" },

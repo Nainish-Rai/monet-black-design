@@ -8,7 +8,7 @@ import SponsorSection from "./SponsorSection";
 import HighlightsSection from "./HighlightsSection";
 import JoinUsSection from "./JoinUsSection";
 import FaqSection from "./FaqSection";
-import { Navbar2 } from "../navbar";
+import { Navbar } from "../navbar";
 import { Footer } from "../footer";
 import WhiteRectangleWrapper from "./WhiteRectangleWrapper";
 
@@ -22,8 +22,7 @@ function LandingPageRoot({}: Props) {
       transition={{ duration: 0.5 }}
       className="w-full h-full bg-black bg-cover bg-center overflow-hidden bg-no-repeat"
     >
-      {/* <Navbar /> */}
-      <Navbar2 />
+      <Navbar />
       <div className="flex px-4 flex-col pb-16 gap-16 w-full mx-auto ">
         <WhiteRectangleWrapper className="mt-32">
           <HeroSection />
