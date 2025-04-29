@@ -52,7 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark bg-black">
-      <body className={`${neueMontreal.variable} ${inter.variable}`}>
+      <body className={` ${inter.variable}`}>
         <ViewTransitions>
           <LenisScrollProvider>
             <PageTransition>{children}</PageTransition>

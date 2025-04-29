@@ -5,23 +5,24 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { textVariant } from "@/lib/anims";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 type Props = {};
 
 function HeroSection({}: Props) {
   return (
-    <section className="lg:h-screen max-sm:px-1 w-full lg:flex-row items-center lg:items-end justify-between flex-col flex pb-20 ">
+    <section className=" max-sm:px-1 w-full lg:flex-row items-center lg:items-end justify-between flex-col flex pb-[5.3rem]  ">
       {/* left */}
-      <div className=" max-w-[22rem]">
+      <div className=" ">
         <motion.h2
           id="text1"
           style={{ viewTransitionName: "text1" }}
           initial={{ opacity: 1, y: -50, x: 50, textAlign: "center" }}
           whileInView={{ opacity: 1, y: 0, x: 0, textAlign: "left" }}
           transition={{ duration: 0.3 }}
-          className="max-lg:mt-16 text-6xl lg:text-[4rem] font-medium leading-[120%] max-w-sm tracking-[-0.04rem] text-left"
+          className="max-lg:mt-16 text-6xl lg:text-[3rem] heading text-balance font-medium leading-[120%]  tracking-[-0.04rem] text-left"
         >
-          Loyalty Made Fluid
+          Reimagine Loyalty for the Blockchain Era
         </motion.h2>
         <motion.p
           id="text2"
@@ -29,21 +30,32 @@ function HeroSection({}: Props) {
           initial={{ opacity: 1, y: -50, x: 50, textAlign: "center" }}
           whileInView={{ opacity: 1, y: 0, x: 0, textAlign: "left" }}
           transition={{ duration: 0.3 }}
-          className="text-[1.125rem] mt-[0.5rem] font-medium leading-[120%] max-w-md text-left"
+          className="subheading mt-6"
         >
-          Stop Collecting, Start Converting
+          Build and manage custom loyalty programs with AI and blockchain —
+          secure, scalable, and future-ready.
         </motion.p>
-        <ButtonWithIcon
-          as={Link}
-          openInNewTab
-          href="https://loyalty-rewards.alpha.monet.work/"
-          className="max-w-[21rem] max-lg:hidden py-6 font-medium w-full text-md self-end mt-[2.5rem] lg:text-lg"
-          icon={<ArrowUpRight className="h-6 w-6" />}
-        >
-          Start Exploring
-        </ButtonWithIcon>
+        <div className=" mt-6  flex gap-4">
+          <ButtonWithIcon
+            as={Link}
+            openInNewTab
+            href="https://loyalty-rewards.alpha.monet.work/"
+            className=" max-lg:hidden px-3 py-1 font-medium w-fit self-end lg:text-[0.875rem]"
+            // icon={<ArrowUpRight className="h-6 w-6" />}
+          >
+            Explore Products
+          </ButtonWithIcon>
+
+          <Button
+            variant={"outline"}
+            className="px-3 py-1 h-fit rounded-full text-[0.875rem] text-[#A3A3A3] border border-[#A3A3A] self-end"
+            onClick={() => alert("Button clicked!")}
+          >
+            Contact Us
+          </Button>
+        </div>
       </div>
-      {/* middle */}
+      {/* right */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -52,37 +64,15 @@ function HeroSection({}: Props) {
         className="-mb-2 max-lg:mt-8 justify-self-end"
       >
         <Image
-          src="/images/assets/hero.svg"
+          src="/images/assets/hero.png"
           alt="hero"
           width={600}
           height={600}
           className="cursor-crosshair"
         />
       </motion.div>
-      {/* right */}
-      <div className="max-w-[19rem] max-lg:hidden">
-        <motion.div className="w-full   lg:max-w-[37rem] flex flex-col ">
-          <motion.h2
-            variants={textVariant(0.2)}
-            initial="hidden"
-            whileInView={"show"}
-            className="text-[#FBC926]   leading-normal lg:leading-[120%] text-5xl lg:text-[2.5rem] font-medium"
-          >
-            No limits. <br /> No expiry.
-            <br /> No nonsense.
-          </motion.h2>
-          <motion.p
-            variants={textVariant(0.3)}
-            initial="hidden"
-            whileInView={"show"}
-            className="lg:mt-[1.38rem]  text-3xl lg:text-lg font-regular leading-normal lg:leading-[120%]"
-          >
-            Fluid loyalty to take your shopping experience a notch above. Using
-            Monet - you can convert and spend loyalty points from Brand A to
-            Brand B as per your convenience.
-          </motion.p>
-        </motion.div>
-      </div>
+
+      {/* mobile */}
       <motion.div
         variants={textVariant(0.1)}
         initial="hidden"

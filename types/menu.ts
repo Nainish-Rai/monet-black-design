@@ -9,6 +9,7 @@ export interface SubMenuItem {
   description?: string;
   image?: string;
   cta?: MenuItemCTA;
+  icon?: React.ReactNode;
 }
 
 export interface MenuItem {

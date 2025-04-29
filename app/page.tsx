@@ -1,8 +1,8 @@
 "use client";
 import { ScrollProvider } from "@/components/context/ScrollContext";
 import LandingPageRoot from "@/components/landing-page/LandingPageRoot";
-import LandingScreenForm from "@/components/landing-page/LandingScreenForm";
-import SplashScreen from "@/components/landing-page/SplashScreen";
+// import LandingScreenForm from "@/components/landing-page/LandingScreenForm";
+// import SplashScreen from "@/components/landing-page/SplashScreen";
 import { useScroll } from "framer-motion";
 import React from "react";
 import { useRef, useEffect } from "react";
@@ -65,22 +65,7 @@ export default function Home() {
   return (
     <ScrollProvider>
       <main ref={containerRef}>
-        {showForm ? (
-          <div className="relative h-[200vh]">
-            <div className="z-10">
-              <LandingScreenForm
-                setShowForm={startViewTransition}
-                scrollYProgress={scrollYProgress}
-                lenis={lenisRef.current}
-              />
-            </div>
-            <div className="z-20">
-              <SplashScreen scrollYProgress={scrollYProgress} />
-            </div>
-          </div>
-        ) : (
-          <LandingPageRoot />
-        )}
+        <LandingPageRoot />
       </main>
     </ScrollProvider>
   );

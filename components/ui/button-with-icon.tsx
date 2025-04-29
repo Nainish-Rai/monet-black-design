@@ -34,9 +34,9 @@ const ButtonWithIcon = forwardRef<
       whileTap={{ scale: 0.98 }}
       transition={{ type: "spring", stiffness: 400, damping: 17 }}
       className={clsx(
-        "group p-4 px-8 flex items-center text-black gap-2 justify-center rounded-[1rem]",
-        "bg-gradient-to-r from-[#FFEA7E] to-[#FFDB1A]",
-        className,
+        "group p-4 px-8 flex items-center text-black gap-2 justify-center rounded-full text-[0.875rem]",
+        "bg-gradient-to-l from-[#FFE55C] to-[#FDF2CD]",
+        className
       )}
     >
       {children}
