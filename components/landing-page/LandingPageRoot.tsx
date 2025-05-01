@@ -12,6 +12,8 @@ import { Navbar } from "../navbar";
 import { Footer } from "../footer";
 import WhiteRectangleWrapper from "./WhiteRectangleWrapper";
 import CTA from "./CTA";
+import ProductSectionOne from "./ProductSectionOne";
+import FeaturesSectionOne from "./FeaturesSectionOne";
 
 type Props = {};
 
@@ -32,12 +34,16 @@ function LandingPageRoot({}: Props) {
           <CTA />
         </WhiteRectangleWrapper>
         <WhiteRectangleWrapper className="border-t-0">
-          <CTA />
+          <ProductSectionOne />
         </WhiteRectangleWrapper>
-        <AboutUsSection />
+        <WhiteRectangleWrapper className="border-t-0">
+          <FeaturesSectionOne />
+        </WhiteRectangleWrapper>
+        <WhiteRectangleWrapper className="border-t-0 px-0 p-0 py-0">
+          <HighlightsSection />
+        </WhiteRectangleWrapper>
         <SponsorSection />
-        <HighlightsSection />
-        <JoinUsSection />
+
         <FaqSection />
       </div>
       <Footer />

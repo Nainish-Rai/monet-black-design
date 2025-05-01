@@ -9,25 +9,16 @@ export type HighlightCardProps = {
   logo?: string;
 };
 
-function HighlightCard({
-  title,
-  articleUrl,
-  logo,
-}: HighlightCardProps) {
+function HighlightCard({ title, articleUrl, logo }: HighlightCardProps) {
   return (
-    <div className="p-6 w-full h-full bg-black/20 border border-neutral-800 flex flex-col overflow-hidden rounded-xl hover:border-neutral-700 transition-all duration-300">
+    <div className="p-6 w-full h-full bg-black/20 border border-neutral-800 flex flex-col overflow-hidden  hover:border-neutral-700 transition-all duration-300">
       {/* Card with fixed structure for consistent alignment */}
       <div className="flex flex-col h-full justify-between">
         {/* Top section with logo - centered */}
         <div className="flex-1 flex items-center justify-center mb-8">
           {logo ? (
             <div className="relative h-16 w-40">
-              <Image
-                src={logo}
-                alt={title}
-                fill
-                className="object-contain"
-              />
+              <Image src={logo} alt={title} fill className="object-contain" />
             </div>
           ) : (
             <div className="h-16 w-16 rounded-full bg-white/5 flex items-center justify-center">
@@ -39,7 +30,9 @@ function HighlightCard({
         {/* Bottom section with title and link */}
         <div>
           {/* Title */}
-          <h3 className="text-lg font-medium leading-tight mb-4 line-clamp-2">{title}</h3>
+          <h3 className="text-lg font-medium leading-tight mb-4 line-clamp-2">
+            {title}
+          </h3>
 
           {/* Read More link */}
           {articleUrl && (

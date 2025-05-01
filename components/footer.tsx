@@ -9,7 +9,7 @@ type FooterLink = {
 };
 
 const footerLinks: Record<string, FooterLink[]> = {
-  "Our Product": [
+  Products: [
     { name: "Loyalty", href: "https://loyalty.monet.work", target: "_blank" },
     {
       name: "Points Marketplace",
@@ -19,15 +19,31 @@ const footerLinks: Record<string, FooterLink[]> = {
     { name: "Roadmap", href: "/roadmap" },
     // { name: "Shopify App", href: "https://apps.shopify.com", target: "_blank" },
   ],
+  "Case Studies": [
+    { name: "Starbucks", href: "/case-studies/starbucks" },
+    { name: "Zomato", href: "/case-studies/zomato" },
+  ],
   Company: [
     { name: "Our Vision", href: "/company/vision" },
     { name: "Meet the Team", href: "/team" },
-    { name: "Docs", href: "https://monet-work.github.io/web3-points-docs/", target: "_blank" },
+    {
+      name: "Docs",
+      href: "https://monet-work.github.io/web3-points-docs/",
+      target: "_blank",
+    },
   ],
-  Careers: [{ name: "Job Openings", href: "/careers" }],
-  "Use Cases": [
-    { name: "Starbucks", href: "/case-studies/starbucks" },
-    { name: "Zomato", href: "/case-studies/zomato" },
+
+  Social: [
+    {
+      name: "Linkedin",
+      href: "https://www.linkedin.com/company/monetdotwork",
+      target: "_blank",
+    },
+    {
+      name: "Twitter/ X",
+      href: "https://x.com/monet_work",
+      target: "_blank",
+    },
   ],
 };
 

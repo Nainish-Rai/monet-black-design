@@ -2,6 +2,7 @@ import React from "react";
 import ButtonWithIcon from "../ui/button-with-icon";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+import { Button } from "../ui/button";
 
 type Props = {};
 
@@ -23,12 +24,29 @@ function CTA({}: Props) {
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <ButtonWithIcon
-          className="bg-white hover:bg-gray-100 text-[#0A0A0A]"
-          icon={<ChevronRight />}
-        >
-          Explore our playground
-        </ButtonWithIcon>
+        <Button className="bg-white text-black hover:bg-gray-100 font-medium text-sm py-3 mt-2 px-6 rounded-full transition-colors">
+          Explore Our Playground
+          <svg
+            className="ml-2 w-4 h-4"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.33333 8H12.6667"
+              stroke="#0A0A0A"
+              strokeWidth="1.333"
+              strokeLinecap="round"
+            />
+            <path
+              d="M8 3.33333L12.6667 8L8 12.6667"
+              stroke="#0A0A0A"
+              strokeWidth="1.333"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </Button>
       </motion.div>
     </div>
   );

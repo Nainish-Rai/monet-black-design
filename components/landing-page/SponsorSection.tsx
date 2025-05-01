@@ -8,14 +8,6 @@ type Props = {};
 function SponsorSection({}: Props) {
   return (
     <div className="w-full mt-24  lg:mt-48 flex-col items-center mx-auto max-w-7xl">
-      <motion.h2
-        whileInView={{ opacity: 1 }}
-        initial={{ opacity: 0 }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-        className="text-center capitalize text-base font-medium tracking-[0.08rem] leading-[120%] "
-      >
-        WORKING WITH
-      </motion.h2>
       <motion.h3
         whileInView={{ opacity: 1 }}
         initial={{ opacity: 0 }}
