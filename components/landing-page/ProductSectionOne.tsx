@@ -9,7 +9,7 @@ interface ProductSectionProps {
   description?: string;
   buttonText?: string;
   imageAlt?: string;
-  flexDirection?: "row" | "col";
+  flexDirection?: string;
 }
 
 const ProductBadge = ({ text = "Loyalty Studio" }: { text?: string }) => (
@@ -90,13 +90,13 @@ function ProductSectionOne({
   description,
   buttonText,
   imageAlt,
-  flexDirection = "row",
+  flexDirection = "left",
 }: ProductSectionProps) {
   return (
     <section className="w-full py-16 md:py-24 bg-black">
       <div className="container mx-auto px-4 max-w-7xl">
         <div
-          className={`flex ${flexDirection === "row" ? "flex-row" : "flex-col"} items-center gap-12`}
+          className={`flex flex-col lg:flex-row ${flexDirection === "left" ? "flex-row-reverse" : "flex-row-reverse"} items-center gap-12`}
         >
           {/* Text Content Section */}
           <div className="md:w-1/2 space-y-6">

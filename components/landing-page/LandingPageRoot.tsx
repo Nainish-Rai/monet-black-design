@@ -65,6 +65,18 @@ function LandingPageRoot({}: Props) {
         <WhiteRectangleWrapper className="border-t-0 p-0 pb-0">
           <FeaturesSectionOne features={features} />
         </WhiteRectangleWrapper>
+        <WhiteRectangleWrapper className="border-t-0">
+          <ProductSectionOne flexDirection="right" />
+        </WhiteRectangleWrapper>
+        <WhiteRectangleWrapper className="border-t-0 p-0 pb-0">
+          <FeaturesSectionOne features={features} />
+        </WhiteRectangleWrapper>
+        <WhiteRectangleWrapper className="border-t-0">
+          <ProductSectionOne />
+        </WhiteRectangleWrapper>
+        <WhiteRectangleWrapper className="border-t-0 p-0 pb-0">
+          <FeaturesSectionOne features={features} />
+        </WhiteRectangleWrapper>
         <WhiteRectangleWrapper className="border-t-0 px-0 p-0 py-0">
           <HighlightsSection />
         </WhiteRectangleWrapper>
