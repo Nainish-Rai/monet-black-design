@@ -9,6 +9,7 @@ interface ProductSectionProps {
   description?: string;
   buttonText?: string;
   imageAlt?: string;
+  flexDirection?: "row" | "col";
 }
 
 const ProductBadge = ({ text = "Loyalty Studio" }: { text?: string }) => (
@@ -83,22 +84,31 @@ const ProductImagePlaceholder = ({
   </Card>
 );
 
-function ProductSectionOne({}: ProductSectionProps) {
+function ProductSectionOne({
+  badgeText,
+  title,
+  description,
+  buttonText,
+  imageAlt,
+  flexDirection = "row",
+}: ProductSectionProps) {
   return (
     <section className="w-full py-16 md:py-24 bg-black">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="flex flex-col md:flex-row items-center gap-12">
+        <div
+          className={`flex ${flexDirection === "row" ? "flex-row" : "flex-col"} items-center gap-12`}
+        >
           {/* Text Content Section */}
-          <div className="md:w-1/2 space-y-6 order-2 md:order-1">
-            <ProductBadge text="Loyalty Studio" />
-            <ProductTitle title="Design your loyalty program, no code required" />
-            <ProductDescription description="From rule-setting to analytics, launch and manage your loyalty program in one place. Tailored for business teams who want control without dev dependency." />
-            <ProductButton text="Launch with Loyalty Studio" />
+          <div className="md:w-1/2 space-y-6">
+            <ProductBadge text={badgeText} />
+            <ProductTitle title={title} />
+            <ProductDescription description={description} />
+            <ProductButton text={buttonText} />
           </div>
 
           {/* Image Section */}
-          <div className="md:w-1/2 w-full order-1 md:order-2">
-            <ProductImagePlaceholder alt="Blockchain-powered loyalty studio product" />
+          <div className="md:w-1/2 w-full">
+            <ProductImagePlaceholder alt={imageAlt} />
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@
 import { textVariant } from "@/lib/anims";
 import { motion } from "framer-motion";
 import React from "react";
+import { Settings, BarChart, Users, RefreshCw } from "lucide-react";
 import HeroSection from "./HeroSection";
 import AboutUsSection from "./AboutUsSection";
 import SponsorSection from "./SponsorSection";
@@ -18,6 +19,31 @@ import FeaturesSectionOne from "./FeaturesSectionOne";
 type Props = {};
 
 function LandingPageRoot({}: Props) {
+  const features = [
+    {
+      icon: <Settings className="w-6 h-6 mb-4 text-white" />,
+      title: "Drag-and-Drop Layout",
+      description:
+        "Set rules, rewards, and workflows with simple visual tools.",
+    },
+    {
+      icon: <BarChart className="w-6 h-6 mb-4 text-white" />,
+      title: "Real-Time Analytics",
+      description: "Track user behavior and loyalty performance instantly.",
+    },
+    {
+      icon: <Users className="w-6 h-6 mb-4 text-white" />,
+      title: "Multi-User Dashboard",
+      description: "Give admins and operators custom access and controls.",
+    },
+    {
+      icon: <RefreshCw className="w-6 h-6 mb-4 text-white" />,
+      title: "Instant Updates",
+      description:
+        "Make live edits to your program without redeploys or downtime.",
+    },
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -36,8 +62,8 @@ function LandingPageRoot({}: Props) {
         <WhiteRectangleWrapper className="border-t-0">
           <ProductSectionOne />
         </WhiteRectangleWrapper>
-        <WhiteRectangleWrapper className="border-t-0">
-          <FeaturesSectionOne />
+        <WhiteRectangleWrapper className="border-t-0 p-0 pb-0">
+          <FeaturesSectionOne features={features} />
         </WhiteRectangleWrapper>
         <WhiteRectangleWrapper className="border-t-0 px-0 p-0 py-0">
           <HighlightsSection />
