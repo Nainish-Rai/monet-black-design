@@ -11,6 +11,7 @@ import FaqSection from "./FaqSection";
 import { Navbar } from "../navbar";
 import { Footer } from "../footer";
 import WhiteRectangleWrapper from "./WhiteRectangleWrapper";
+import CTA from "./CTA";
 
 type Props = {};
 
@@ -23,9 +24,15 @@ function LandingPageRoot({}: Props) {
       className="w-full h-full bg-black bg-cover bg-center overflow-hidden bg-no-repeat"
     >
       <Navbar />
-      <div className="flex px-4 flex-col pb-16 gap-16 w-full mx-auto ">
+      <div className="flex px-4 flex-col pb-16  w-full mx-auto ">
         <WhiteRectangleWrapper className="mt-32">
           <HeroSection />
+        </WhiteRectangleWrapper>
+        <WhiteRectangleWrapper className="border-t-0">
+          <CTA />
+        </WhiteRectangleWrapper>
+        <WhiteRectangleWrapper className="border-t-0">
+          <CTA />
         </WhiteRectangleWrapper>
         <AboutUsSection />
         <SponsorSection />
