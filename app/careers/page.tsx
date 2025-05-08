@@ -58,7 +58,7 @@ export default function CareersPage() {
               variants={textVariant(0.2)}
               initial="hidden"
               whileInView="show"
-              className="text-4xl font-medium text-white sm:text-5xl lg:text-6xl"
+              className="heading text-4xl font-medium text-white sm:text-5xl lg:text-6xl"
             >
               Join Our Team to <br /> Shape the Future of Loyalty
             </motion.h1>

@@ -13,7 +13,7 @@ export function TeamMemberCard({ member }: TeamMemberCardProps) {
       whileHover={{ y: -10 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
     >
-      <div className="aspect-square overflow-hidden rounded-2xl bg-zinc-900">
+      <div className="aspect-square overflow-hidden bg-white">
         <motion.div
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.4, ease: "easeOut" }}

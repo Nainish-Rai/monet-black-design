@@ -1,6 +1,7 @@
 "use client";
 import { AdvisorCard } from "@/components/advisor-card";
 import { Footer } from "@/components/footer";
+import WhiteRectangleWrapper from "@/components/landing-page/WhiteRectangleWrapper";
 import { Navbar } from "@/components/navbar";
 import { TeamMemberCard } from "@/components/team-member-card";
 import { advisors, teamMembers } from "@/constants/team";
@@ -39,34 +40,33 @@ export default function TeamPage() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <motion.div className="mb-16 grid gap-8 md:grid-cols-2">
-            <motion.h1
-              variants={textVariant(0.2)}
-              className="text-5xl lg:text-6xl font-medium text-white"
-            >
+          <motion.div className="mb-16 w-full items-center mx-auto flex flex-col text-center">
+            <motion.h1 variants={textVariant(0.2)} className="heading">
               Our Team
             </motion.h1>
             <motion.p
               variants={textVariant(0.2)}
-              className="text-2xl lg:text-4xl leading-[120%] text-[#C3C3C3]"
+              className="subheading mt-4 w-full max-w-5xl text-center"
             >
               Our diverse team combines expertise in loyalty programs,
               blockchain technology, and AI to revolutionize rewards systems.
             </motion.p>
           </motion.div>
-          <motion.div
-            variants={containerVariants}
-            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
-          >
-            {teamMembers.map((member) => (
-              <motion.div
-                key={member.name}
-                variants={textVariantStaggerChild()}
-              >
-                <TeamMemberCard member={member} />
-              </motion.div>
-            ))}
-          </motion.div>
+          <WhiteRectangleWrapper>
+            <motion.div
+              variants={containerVariants}
+              className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+            >
+              {teamMembers.map((member) => (
+                <motion.div
+                  key={member.name}
+                  variants={textVariantStaggerChild()}
+                >
+                  <TeamMemberCard member={member} />
+                </motion.div>
+              ))}
+            </motion.div>
+          </WhiteRectangleWrapper>
         </motion.section>
 
         <motion.section
@@ -77,34 +77,33 @@ export default function TeamPage() {
           id="investors"
           className="mb-20"
         >
-          <motion.div className="mb-16 grid gap-8 md:grid-cols-2">
-            <motion.h2
-              variants={textVariant(0.2)}
-              className="text-5xl lg:text-6xl  font-medium text-white"
-            >
-              Backed by
-            </motion.h2>
+          <motion.div className="mb-16 w-full items-center mx-auto flex flex-col text-center">
+            <motion.h1 variants={textVariant(0.2)} className="heading">
+              Our Advisors
+            </motion.h1>
             <motion.p
               variants={textVariant(0.2)}
-              className="text-2xl lg:text-4xl leading-[120%] text-[#C3C3C3]"
+              className="subheading mt-4 w-full max-w-5xl text-center"
             >
               The team has a cumulative experience of more than 50 years. More
-              than 50 projects on AI and Blockchain executed.
+              than 20 projects on AI and Blockchain executed.
             </motion.p>
           </motion.div>
-          <motion.div
-            variants={containerVariants}
-            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
-          >
-            {advisors.map((advisor) => (
-              <motion.div
-                key={advisor.name}
-                variants={textVariantStaggerChild(0.2, 0)}
-              >
-                <AdvisorCard advisor={advisor} />
-              </motion.div>
-            ))}
-          </motion.div>
+          <WhiteRectangleWrapper>
+            <motion.div
+              variants={containerVariants}
+              className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+            >
+              {advisors.map((advisor) => (
+                <motion.div
+                  key={advisor.name}
+                  variants={textVariantStaggerChild(0.2, 0)}
+                >
+                  <AdvisorCard advisor={advisor} />
+                </motion.div>
+              ))}
+            </motion.div>
+          </WhiteRectangleWrapper>
         </motion.section>
       </main>
       <Footer />

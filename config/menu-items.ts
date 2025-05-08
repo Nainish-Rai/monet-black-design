@@ -122,7 +122,7 @@ export const menuItems: MenuItem[] = [
     ],
   },
   {
-    title: "Careers",
+    title: "Docs",
     name: "careers",
     items: [
       {

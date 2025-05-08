@@ -8,7 +8,7 @@ interface AdvisorCardProps {
 export function AdvisorCard({ advisor }: AdvisorCardProps) {
   return (
     <div className="group cursor-crosshair ">
-      <div className="aspect-square overflow-hidden rounded-2xl bg-zinc-900">
+      <div className="aspect-square overflow-hidden  bg-white">
         <Image
           src={advisor.image}
           alt={advisor.name}

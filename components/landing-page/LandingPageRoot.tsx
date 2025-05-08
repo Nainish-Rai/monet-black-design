@@ -84,7 +84,7 @@ function LandingPageRoot({}: Props) {
 
         <FaqSection />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </motion.div>
   );
 }

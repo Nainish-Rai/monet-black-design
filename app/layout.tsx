@@ -6,6 +6,8 @@ import { inter, neueMontreal } from "@/app/fonts";
 import LenisScrollProvider from "@/components/context/LenisProvider";
 import { PageTransition } from "@/components/page-transition";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://monet.work"),
@@ -55,7 +57,11 @@ export default function RootLayout({
       <body className={` ${inter.variable}`}>
         <ViewTransitions>
           <LenisScrollProvider>
-            <PageTransition>{children}</PageTransition>
+            <PageTransition>
+              <Navbar />
+              {children}
+              <Footer />
+            </PageTransition>
           </LenisScrollProvider>
         </ViewTransitions>
         <GoogleAnalytics gaId="G-9CB7DP94RX" />
