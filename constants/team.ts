@@ -37,9 +37,15 @@ export const teamMembers: TeamMember[] = [
   //   image: "/images/team/tanuj-malhotra.png",
   // },
   {
-    name: "Ritika Garud",
-    role: "UX Designer",
-    image: "/images/team/ritika-garud.png",
+    name: "Nainish Rai",
+    role: "Development",
+    image: "/images/team/nainish-rai.png",
+  },
+
+  {
+    name: "Haederah Ali",
+    role: "Development",
+    image: "/images/team/haederah-ali.png",
   },
   {
     name: "Rishav Kumar",
@@ -52,14 +58,9 @@ export const teamMembers: TeamMember[] = [
     image: "/images/team/saumya-singh.png",
   },
   {
-    name: "Haederah Ali",
-    role: "Development",
-    image: "/images/team/haederah-ali.png",
-  },
-  {
-    name: "Nainish Rai",
-    role: "Development",
-    image: "/images/team/nainish-rai.png",
+    name: "Ritika Garud",
+    role: "UX Designer",
+    image: "/images/team/ritika-garud.png",
   },
 ];
 

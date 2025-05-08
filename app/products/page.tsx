@@ -1,9 +1,14 @@
+import ProductsSection from "@/components/products/ProductsSection";
 import React from "react";
 
-type Props = {};
+// type Props = {}; // No longer needed if not used
 
-function Products({}: Props) {
-  return <div>Products</div>;
+function ProductsPage(/*{}: Props*/) {
+  return (
+    <main className="min-h-screen pt-28 bg-black text-foreground">
+      <ProductsSection />
+    </main>
+  );
 }
 
-export default Products;
+export default ProductsPage;

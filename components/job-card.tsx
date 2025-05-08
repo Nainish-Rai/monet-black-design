@@ -12,7 +12,7 @@ export function JobCard({ title, experience, location, href }: JobCardProps) {
   return (
     <Link
       href={href}
-      className="group relative flex flex-col justify-between rounded-2xl bg-[#1C1C1C] p-6 backdrop-blur-sm transition-all duration-300 hover:bg-neutral-900/50"
+      className="group relative flex flex-col justify-between  bg-black border p-6 backdrop-blur-sm transition-all duration-300 hover:bg-neutral-900/50"
     >
       <div className="space-y-2">
         <h3 className="text-3xl font-medium text-white">{title}</h3>

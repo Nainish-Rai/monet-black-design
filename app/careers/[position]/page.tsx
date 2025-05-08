@@ -101,8 +101,8 @@ export default async function CareerPositionPage({
   }
 
   return (
-    <div className="min-h-screen bg-[url('/images/background/careers-bg.webp')] bg-cover bg-center bg-no-repeat pt-16 lg:pt-32">
-      <div className="container mx-auto px-4 py-0">
+    <div className="min-h-screen bg-black bg-cover bg-center bg-no-repeat pt-16 lg:pt-32">
+      <div className="container max-w-7xl mx-auto px-4 py-0">
         <div className="mb-16">
           <div className="mb-8 flex items-start justify-between">
             <div>
@@ -123,7 +123,7 @@ export default async function CareerPositionPage({
                 <p>{position.description}</p>
                 <p>{position.details}</p>
 
-                <div>
+                <div className="py-4">
                   <h2 className="mt-4 mb-2 text-xl font-semibold text-white">
                     Key Responsibilities:
                   </h2>
@@ -134,7 +134,7 @@ export default async function CareerPositionPage({
                   </ul>
                 </div>
 
-                <div>
+                <div className="py-3">
                   <h2 className="mb-2 mt-4 text-xl font-semibold text-white">
                     Skills and Qualifications:
                   </h2>
@@ -145,7 +145,7 @@ export default async function CareerPositionPage({
                   </ul>
                 </div>
               </div>
-              <Card className="p-6 min-w-[300px] lg:min-w-[500px]">
+              <Card className="p-6 h-fit min-w-[300px] lg:min-w-[500px]">
                 <JobApplicationForm position={position.title} />
               </Card>
             </div>

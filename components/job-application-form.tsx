@@ -75,7 +75,7 @@ export function JobApplicationForm({ position }: { position: string }) {
         form.setValue("resume", e.dataTransfer.files[0]);
       }
     },
-    [form],
+    [form]
   );
 
   const handleChange = useCallback(
@@ -85,7 +85,7 @@ export function JobApplicationForm({ position }: { position: string }) {
         form.setValue("resume", e.target.files[0]);
       }
     },
-    [form],
+    [form]
   );
 
   return (
@@ -170,7 +170,7 @@ export function JobApplicationForm({ position }: { position: string }) {
           )}
         />
 
-        <Button type="submit" size="lg" className="w-full gap-2">
+        <Button type="submit" size="lg" className="w-full text-black gap-2">
           Submit Application
           <ArrowUpRight className="h-4 w-4" />
         </Button>
