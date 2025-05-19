@@ -2,6 +2,8 @@ import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import Spline from "@splinetool/react-spline";
+import Image from "next/image";
 
 interface ProductSectionProps {
   badgeText?: string;
@@ -10,6 +12,8 @@ interface ProductSectionProps {
   buttonText?: string;
   imageAlt?: string;
   flexDirection?: string;
+  buttonLink?: string;
+  image?: string;
 }
 
 const ProductBadge = ({ text = "Loyalty Studio" }: { text?: string }) => (
@@ -24,7 +28,7 @@ const ProductTitle = ({
 }: {
   title?: string;
 }) => (
-  <h2 className="text-[#E5E5E5] text-4xl md:text-5xl font-semibold leading-[120%] mb-4 max-w-3xl">
+  <h2 className="text-[#E5E5E5] heading font-semibold  mb-4 max-w-3xl">
     {title}
   </h2>
 );
@@ -41,10 +45,15 @@ const ProductDescription = ({
 
 const ProductButton = ({
   text = "Launch with Loyalty Studio",
+  buttonLink,
 }: {
   text?: string;
+  buttonLink?: string;
 }) => (
-  <Button className="bg-white text-black hover:bg-gray-100 font-medium text-sm py-3 px-6 rounded-full transition-colors">
+  <Button
+    className="bg-white text-black hover:bg-gray-100 font-medium text-sm py-3 px-6 rounded-full transition-colors"
+    onClick={() => buttonLink && window.open(buttonLink)}
+  >
     {text}
     <svg
       className="ml-2 w-4 h-4"
@@ -71,17 +80,23 @@ const ProductButton = ({
 
 const ProductImagePlaceholder = ({
   alt = "Product preview",
+  image,
 }: {
   alt?: string;
+  image?: string;
 }) => (
-  <Card className="bg-[#1F1F1F] rounded-2xl w-full h-[400px] md:h-[500px] flex items-center justify-center">
-    <div className="text-center p-6">
-      <p className="text-white text-lg">Product Preview</p>
-      <p className="text-gray-400 text-sm mt-2">
-        Image placeholder for blockchain-powered loyalty studio product
-      </p>
-    </div>
-  </Card>
+  <div className="flex justify-center items-center">
+    {/* <Spline
+      scene="https://prod.spline.design/aX5OkbT6ZDe4V8Sd/scene.splinecode"
+      className="bg-black"
+    /> */}
+    <Image
+      src={image || "/images/landing/sphere.gif"}
+      alt={alt}
+      width={500}
+      height={500}
+    />
+  </div>
 );
 
 function ProductSectionOne({
@@ -89,7 +104,9 @@ function ProductSectionOne({
   title,
   description,
   buttonText,
+  buttonLink,
   imageAlt,
+  image,
   flexDirection = "left",
 }: ProductSectionProps) {
   return (
@@ -103,12 +120,12 @@ function ProductSectionOne({
             <ProductBadge text={badgeText} />
             <ProductTitle title={title} />
             <ProductDescription description={description} />
-            <ProductButton text={buttonText} />
+            <ProductButton buttonLink={buttonLink} text={buttonText} />
           </div>
 
           {/* Image Section */}
           <div className="md:w-1/2 w-full">
-            <ProductImagePlaceholder alt={imageAlt} />
+            <ProductImagePlaceholder image={image} alt={imageAlt} />
           </div>
         </div>
       </div>

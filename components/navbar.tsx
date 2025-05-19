@@ -38,6 +38,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { Badge } from "./ui/badge";
 
 interface Navbar1Props {
   logo?: {
@@ -99,12 +100,15 @@ export const Navbar = ({
           </div>
           <div className="flex items-center">
             <NavigationMenu>
-              <NavigationMenuList>
+              <NavigationMenuList className="">
                 {menu.map((item) => renderMenuItem(item))}
               </NavigationMenuList>
             </NavigationMenu>
           </div>
-          <div className="flex gap-2">
+          <div className="flex relative gap-2">
+            <Badge className="absolute -bottom-3 text-gray-100 border border-red-500 right-[30%] bg-red-500/100 hover:bg-red-500 text-[0.5rem]">
+              Coming Soon
+            </Badge>
             <Button
               asChild
               variant="outline"
@@ -138,7 +142,10 @@ export const Navbar = ({
                     {menu.map((item) => renderMobileMenuItem(item))}
                   </Accordion>
 
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col relative gap-3">
+                    <Badge className="absolute top-0 right-0">
+                      Coming Soon
+                    </Badge>
                     <Button asChild variant="outline">
                       <a href={auth.login.url}>{auth.login.title}</a>
                     </Button>
@@ -160,8 +167,8 @@ const renderMenuItem = (item: MenuItem) => {
         <NavigationMenuTrigger className="bg-transparent rounded-full">
           {item.title}
         </NavigationMenuTrigger>
-        <NavigationMenuContent>
-          <ul className="grid w-[400px] sm:rounded-lg gap-3 p-4 md:w-[500px] lg:w-[600px] md:grid-cols-2">
+        <NavigationMenuContent className="">
+          <ul className="grid w-[400px] bg-black/50! sm:rounded-lg gap-3 p-4 md:w-[500px] lg:w-[600px] md:grid-cols-2">
             {item.items.map((subItem) => (
               <ListItem
                 icon={subItem.icon ? subItem.icon : null}

@@ -22,7 +22,7 @@ function HeroSection({}: Props) {
           transition={{ duration: 0.3 }}
           className="max-lg:mt-16 text-6xl lg:text-[3rem] heading text-balance font-medium leading-[120%]  tracking-[-0.04rem] text-left"
         >
-          Reimagine Loyalty for the Blockchain Era
+          Loyalty Solutions for Companies of All Sizes
         </motion.h2>
         <motion.p
           id="text2"
@@ -32,14 +32,13 @@ function HeroSection({}: Props) {
           transition={{ duration: 0.3 }}
           className="subheading mt-6"
         >
-          Build and manage custom loyalty programs with AI and blockchain —
-          secure, scalable, and future-ready.
+          Build your own or onboard with ours. Secure, Blockchain-based,
+          scalable, AI-powered loyalty solutions.
         </motion.p>
         <div className=" mt-6  flex gap-4">
           <ButtonWithIcon
             as={Link}
-            openInNewTab
-            href="https://loyalty-rewards.alpha.monet.work/"
+            href="/products"
             className=" max-lg:hidden px-3 py-1 font-medium w-fit self-end lg:text-[0.875rem]"
             // icon={<ArrowUpRight className="h-6 w-6" />}
           >
@@ -59,16 +58,17 @@ function HeroSection({}: Props) {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
+        whileHover={{ rotate: 50 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, delay: 0.7 }}
-        className="-mb-2 max-lg:mt-8 justify-self-end"
+        className="-mb-2 max-lg:mt-6 mt-8  justify-self-end"
       >
         <Image
-          src="/images/assets/hero.png"
+          src="/images/landing/hero.png"
           alt="hero"
-          width={600}
-          height={600}
-          className="cursor-crosshair"
+          width={700}
+          height={700}
+          className="cursor-crosshair hover:scale-105 transition-all duration-500 -mb-10"
         />
       </motion.div>
 

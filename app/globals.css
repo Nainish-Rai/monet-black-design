@@ -95,7 +95,7 @@
   }
 
   .heading {
-    @apply text-[3rem] font-semibold leading-[120%] tracking-[-0.06rem] text-balance text-[#E5E5E5];
+    @apply text-[1rem] sm:text-[3rem] font-semibold leading-[120%] tracking-[-0.06rem] text-balance text-[#E5E5E5];
   }
   .subheading {
     @apply text-[1.25rem] font-medium leading-[160%] tracking-[-0.025rem] text-balance text-[#A3A3A3];

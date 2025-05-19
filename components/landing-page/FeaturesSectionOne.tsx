@@ -15,11 +15,11 @@ export default function FeaturesSectionOne({ features }: FeaturesSectionProps) {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="flex justify-center items-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        <div className="flex items-center justify-between gap-6 w-full">
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`flex flex-col p-6 pl-7  ${index < 3 ? "border-r border-gray-800" : ""}`}
+              className={`flex flex-col flex-1 p-6 pl-7  ${index < 3 ? "border-r border-gray-800" : ""}`}
             >
               {feature.icon}
               <h3 className="text-lg font-medium text-white mb-2">

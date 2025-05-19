@@ -14,6 +14,9 @@ import {
   Landmark,
   Map,
   BookMarked,
+  Pickaxe,
+  CircleDollarSign,
+  Waypoints,
 } from "lucide-react";
 import React from "react";
 
@@ -23,12 +26,36 @@ export const menuItems: MenuItem[] = [
     name: "product",
     items: [
       {
-        title: "Loyalty Made Fluid",
-        href: "/product/loyalty",
+        title: "Monet Points",
+        href: "/product/monet-points",
         description:
-          "Discover our innovative loyalty solutions that adapt to your business needs",
+          "A blockchain-based loyalty token you can start using immediately.  ",
         image: "/placeholder.svg?height=400&width=800",
-        icon: React.createElement(Gift),
+        icon: React.createElement(CircleDollarSign),
+        cta: {
+          primary: "For Consumers",
+          secondary: "For Business",
+        },
+      },
+      {
+        title: "Loyalty Studio",
+        href: "/product/loyalty-studio",
+        description:
+          "Create and manage your loyalty program in a no-code environment. ",
+        image: "/placeholder.svg?height=400&width=800",
+        icon: React.createElement(Pickaxe),
+        cta: {
+          primary: "For Consumers",
+          secondary: "For Business",
+        },
+      },
+      {
+        title: "Loyalty API",
+        href: "/product/loyalty-api",
+        description: "Coming Soon ",
+        image: "/placeholder.svg?height=400&width=800",
+        icon: React.createElement(Waypoints),
+
         cta: {
           primary: "For Consumers",
           secondary: "For Business",
@@ -123,15 +150,6 @@ export const menuItems: MenuItem[] = [
   },
   {
     title: "Docs",
-    name: "careers",
-    items: [
-      {
-        title: "Current Openings",
-        href: "/careers",
-        description:
-          "Explore available positions and become part of our growing team",
-        icon: React.createElement(BookMarked),
-      },
-    ],
+    name: "/https://docs.monet.work",
   },
 ];
