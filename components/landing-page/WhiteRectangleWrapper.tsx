@@ -10,7 +10,7 @@ function WhiteRectangleWrapper({ children, className }: Props) {
   return (
     <div
       className={cn(
-        `border mx-auto border-[#1F1F1F] w-full lg:max-w-7xl py-[2.5rem] px-[5.9rem]` +
+        `border mx-auto border-[#1F1F1F] w-full lg:max-w-7xl py-6 lg:py-[2.5rem] px-4 lg:px-[5.9rem]` +
           (className ? ` ${className}` : "")
       )}
     >

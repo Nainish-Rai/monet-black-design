@@ -25,9 +25,9 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
   return (
     <WhiteRectangleWrapper className="p-6">
       <Link href={href} className="group block">
-        <div className="flex ">
+        <div className="flex flex-col lg:flex-row ">
           {/* Image container with fixed aspect ratio */}
-          <div className="relative w-1/3  aspect-[16/9]">
+          <div className="relative lg:w-1/3  aspect-[16/9]">
             <Image
               src={imageUrl}
               alt={title}
@@ -37,7 +37,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
           </div>
 
           {/* Content section */}
-          <div className="flex w-2/3 flex-col justify-between flex-grow p-6">
+          <div className="flex  lg:w-2/3 flex-col justify-between flex-grow p-2 max-sm:py-4 lg:p-6">
             <div>
               <h3 className="text-xl font-medium leading-tight mb-2 text-[#F5F3EF] line-clamp-2 group-hover:text-white transition-colors">
                 {title}

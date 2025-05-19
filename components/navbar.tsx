@@ -13,7 +13,7 @@ import { motion } from "motion/react";
 import { menuItems } from "@/config/menu-items";
 import { MenuItem, SubMenuItem } from "@/types/menu";
 
-import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
+import { Book, ChevronDown, Menu, Sunset, Trees, Zap } from "lucide-react";
 
 import {
   Accordion,
@@ -123,15 +123,16 @@ export const Navbar = ({
         {/* Mobile Menu */}
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
+            <Link href={"/"}>
+              <MonetWorkLogo className="w-24 h-12" />
+            </Link>
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="outline" size="icon">
-                  <Menu className="size-4" />
-                </Button>
+                <ChevronDown className="size-4" />
               </SheetTrigger>
-              <SheetContent className="overflow-y-auto">
+              <SheetContent side={"top"} className="overflow-y-auto">
                 <SheetHeader>
-                  <div className="flex items-center gap-2">hero logo</div>
+                  <MonetWorkLogo className="w-24 h-12" />
                 </SheetHeader>
                 <div className="flex flex-col gap-6 p-4">
                   <Accordion
@@ -143,7 +144,7 @@ export const Navbar = ({
                   </Accordion>
 
                   <div className="flex flex-col relative gap-3">
-                    <Badge className="absolute top-0 right-0">
+                    <Badge className="absolute -bottom-3 text-gray-100 border border-red-500 right-[36%] bg-red-500/100 hover:bg-red-500 text-[0.5rem]">
                       Coming Soon
                     </Badge>
                     <Button asChild variant="outline">
@@ -200,7 +201,7 @@ const renderMobileMenuItem = (item: MenuItem) => {
   if (item.items) {
     return (
       <AccordionItem key={item.title} value={item.title} className="border-b-0">
-        <AccordionTrigger className="text-md py-0 font-semibold hover:no-underline">
+        <AccordionTrigger className="text-lg py-0 font-semibold hover:no-underline">
           {item.title}
         </AccordionTrigger>
         <AccordionContent className="mt-2">
@@ -265,17 +266,7 @@ const SubMenuLink = ({ item }: { item: SubMenuItem }) => {
       className="flex flex-row gap-4 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none hover:bg-muted hover:text-accent-foreground"
       href={item.href}
     >
-      {item.image && (
-        <div className="h-6 w-6 overflow-hidden rounded-md">
-          <Image
-            src={item.image}
-            alt={item.title}
-            width={24}
-            height={24}
-            className="h-full w-full object-cover"
-          />
-        </div>
-      )}
+      {item.icon && <div className="text-foreground">{item.icon}</div>}
       <div>
         <div className="text-sm font-semibold">{item.title}</div>
         {item.description && (

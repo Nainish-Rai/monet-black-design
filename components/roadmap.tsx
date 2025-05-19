@@ -36,9 +36,13 @@ const items = [
   },
 ];
 
-export default function TimelineComponent() {
+export default function TimelineComponent({
+  direction = "horizontal",
+}: {
+  direction?: "horizontal" | "vertical";
+}) {
   return (
-    <Timeline defaultValue={3} orientation="horizontal">
+    <Timeline defaultValue={3} className="px-0" orientation={direction}>
       {items.map((item) => (
         <TimelineItem key={item.id} step={item.id}>
           <TimelineHeader>

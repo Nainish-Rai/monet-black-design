@@ -28,7 +28,7 @@ const ProductTitle = ({
 }: {
   title?: string;
 }) => (
-  <h2 className="text-[#E5E5E5] heading font-semibold  mb-4 max-w-3xl">
+  <h2 className="text-[#E5E5E5] max-sm:text-4xl heading font-semibold  mb-4 max-w-3xl">
     {title}
   </h2>
 );

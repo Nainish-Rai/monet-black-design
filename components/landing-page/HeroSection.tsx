@@ -20,7 +20,7 @@ function HeroSection({}: Props) {
           initial={{ opacity: 1, y: -50, x: 50, textAlign: "center" }}
           whileInView={{ opacity: 1, y: 0, x: 0, textAlign: "left" }}
           transition={{ duration: 0.3 }}
-          className="max-lg:mt-16 text-6xl lg:text-[3rem] heading text-balance font-medium leading-[120%]  tracking-[-0.04rem] text-left"
+          className="max-lg:mt-16 max-md:text-4xl text-6xl lg:text-[3rem] heading text-balance font-medium leading-[120%]  tracking-[-0.04rem] text-left"
         >
           Loyalty Solutions for Companies of All Sizes
         </motion.h2>
@@ -78,15 +78,14 @@ function HeroSection({}: Props) {
         initial="hidden"
         whileInView={"show"}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="lg:hidden  w-full"
+        className="lg:hidden mt-16 w-full"
       >
         <ButtonWithIcon
           as={Link}
-          openInNewTab
-          href="https://loyalty-rewards.alpha.monet.work/"
+          href="/products"
           icon={<ArrowUpRight className="h-6 w-6" />}
         >
-          Start Exploring
+          Explore Products
         </ButtonWithIcon>
       </motion.div>
     </section>

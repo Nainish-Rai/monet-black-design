@@ -24,6 +24,7 @@ import WhiteRectangleWrapper from "./WhiteRectangleWrapper";
 import CTA from "./CTA";
 import ProductSectionOne from "./ProductSectionOne";
 import FeaturesSectionOne from "./FeaturesSectionOne";
+import WaitlistSection from "./WaitlistSection";
 
 type Props = {};
 
@@ -95,8 +96,9 @@ function LandingPageRoot({}: Props) {
         <WhiteRectangleWrapper className="border-t-0">
           <ProductSectionOne
             badgeText="Monet Points"
-            title="Traditional loyalty is broken,{make gold} Monet Points fix it"
+            title="Traditional loyalty is broken, Monet Points fix it"
             description="Businesses can distribute and accept Monet Points on-chain with easy conversions. Users earn Monet Points by shopping and can use them as currency across many partner brands."
+            // try to make monet points gold
             buttonText="Explore More"
             buttonLink="/product/monet-points"
           />
@@ -121,12 +123,15 @@ function LandingPageRoot({}: Props) {
         <WhiteRectangleWrapper className="border-t-0 p-0 pb-0">
           <FeaturesSectionOne features={features} />
         </WhiteRectangleWrapper> */}
-        <WhiteRectangleWrapper className="border-t-0 px-0 p-0 py-0">
+        <WhiteRectangleWrapper className="border-t-0 px-6 lg:px-0 lg:p-0 lg:py-0">
           <HighlightsSection />
         </WhiteRectangleWrapper>
         <SponsorSection />
 
         <FaqSection />
+        <WhiteRectangleWrapper className="">
+          <WaitlistSection />
+        </WhiteRectangleWrapper>
       </div>
       {/* <Footer /> */}
     </motion.div>

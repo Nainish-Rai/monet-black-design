@@ -30,7 +30,7 @@ export const menuItems: MenuItem[] = [
         href: "/product/monet-points",
         description:
           "A blockchain-based loyalty token you can start using immediately.  ",
-        image: "/placeholder.svg?height=400&width=800",
+        // image: "/placeholder.svg?height=400&width=800",
         icon: React.createElement(CircleDollarSign),
         cta: {
           primary: "For Consumers",
@@ -42,7 +42,7 @@ export const menuItems: MenuItem[] = [
         href: "/product/loyalty-studio",
         description:
           "Create and manage your loyalty program in a no-code environment. ",
-        image: "/placeholder.svg?height=400&width=800",
+        // image: "/placeholder.svg?height=400&width=800",
         icon: React.createElement(Pickaxe),
         cta: {
           primary: "For Consumers",
@@ -53,7 +53,7 @@ export const menuItems: MenuItem[] = [
         title: "Loyalty API",
         href: "/product/loyalty-api",
         description: "Coming Soon ",
-        image: "/placeholder.svg?height=400&width=800",
+        // image: "/placeholder.svg?height=400&width=800",
         icon: React.createElement(Waypoints),
 
         cta: {
@@ -136,14 +136,14 @@ export const menuItems: MenuItem[] = [
         title: "Our Roadmap",
         href: "/roadmap",
         description: "See where we're headed and our plans for the future",
-        image: "/placeholder.svg?height=200&width=400",
+        // image: "/placeholder.svg?height=200&width=400",
         icon: React.createElement(Map),
       },
       {
         title: "Work with Us",
         href: "/careers",
         description: "Join our team and help shape the future of loyalty",
-        image: "/placeholder.svg?height=200&width=400",
+        // image: "/placeholder.svg?height=200&width=400",
         icon: React.createElement(Briefcase),
       },
     ],
