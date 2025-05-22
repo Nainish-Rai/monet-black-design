@@ -52,7 +52,7 @@ export default function CareersPage() {
       transition={{ duration: 0.6 }}
       className="bg-black bg-cover bg-center  bg-no-repeat pt-32 pb-32"
     >
-      <WhiteRectangleWrapper className="px-0 pb-0">
+      <WhiteRectangleWrapper className="px-0 pb-0 lg:px-0 lg:py-0 lg:pt-12">
         <div className="container mx-auto px-0 mt-4 pb-0">
           <div className="relative ">
             <div className="w-full">

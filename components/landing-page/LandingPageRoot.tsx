@@ -93,7 +93,7 @@ function LandingPageRoot({}: Props) {
         {/* <WhiteRectangleWrapper className="border-t-0">
           <CTA />
         </WhiteRectangleWrapper> */}
-        <WhiteRectangleWrapper className="border-t-0">
+        <WhiteRectangleWrapper className="border-t-0 py-0">
           <ProductSectionOne
             badgeText="Monet Points"
             title="Traditional loyalty is broken, Monet Points fix it"
@@ -103,7 +103,7 @@ function LandingPageRoot({}: Props) {
             buttonLink="/product/monet-points"
           />
         </WhiteRectangleWrapper>
-        <WhiteRectangleWrapper className="border-t-0 p-0 pb-0">
+        <WhiteRectangleWrapper className="border-t-0 p-0 pb-0 lg:px-0 lg:py-0">
           <FeaturesSectionOne features={featuresMonetPoints} />
         </WhiteRectangleWrapper>
         <WhiteRectangleWrapper className="border-t-0">
@@ -114,7 +114,7 @@ function LandingPageRoot({}: Props) {
             image={"/images/landing/cube.gif"}
           />
         </WhiteRectangleWrapper>
-        <WhiteRectangleWrapper className="border-t-0 p-0 pb-0">
+        <WhiteRectangleWrapper className="border-t-0 p-0 pb-0 lg:px-0 lg:py-0">
           <FeaturesSectionOne features={features} />
         </WhiteRectangleWrapper>
         {/* <WhiteRectangleWrapper className="border-t-0">
@@ -128,8 +128,8 @@ function LandingPageRoot({}: Props) {
         </WhiteRectangleWrapper>
         <SponsorSection />
 
-        <FaqSection />
-        <WhiteRectangleWrapper className="">
+        {/* <FaqSection /> */}
+        <WhiteRectangleWrapper className="mt-16">
           <WaitlistSection />
         </WhiteRectangleWrapper>
       </div>

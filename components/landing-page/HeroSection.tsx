@@ -44,14 +44,14 @@ function HeroSection({}: Props) {
           >
             Explore Products
           </ButtonWithIcon>
-
-          <Button
-            variant={"outline"}
-            className="px-3 py-1 h-fit rounded-full text-[0.875rem] text-[#A3A3A3] border border-[#A3A3A] self-end"
-            onClick={() => alert("Button clicked!")}
-          >
-            Contact Us
-          </Button>
+          <Link href="https://calendly.com/haedarah-ali-monet" target="_blank">
+            <Button
+              variant={"outline"}
+              className="px-3 py-1 h-fit rounded-full text-[0.875rem] text-[#A3A3A3] border border-[#A3A3A] self-end"
+            >
+              Contact Us
+            </Button>
+          </Link>
         </div>
       </div>
       {/* right */}

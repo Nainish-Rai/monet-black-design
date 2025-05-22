@@ -1,10 +1,16 @@
-"use client";
 import React from "react";
 import WhiteRectangleWrapper from "@/components/landing-page/WhiteRectangleWrapper";
 import Image from "next/image";
-import { ChevronRight, OrbitIcon } from "lucide-react"; // Using Lucide for a generic arrow icon
+import {
+  ChevronRight,
+  CircleDollarSignIcon,
+  OrbitIcon,
+  PickaxeIcon,
+} from "lucide-react"; // Using Lucide for a generic arrow icon
 import ButtonWithIcon from "@/components/ui/button-with-icon";
 import { Button } from "@/components/ui/button";
+import { productData } from "@/config/product-data";
+import WaitlistSection from "@/components/landing-page/WaitlistSection";
 import Link from "next/link";
 
 // Placeholder for Nebula icon - assuming it's a component or direct SVG usage
@@ -24,6 +30,7 @@ type ButtonProps = {
 };
 
 type FeatureCardProps = {
+  icon?: React.ReactNode;
   imageSrc: string;
   imageAlt: string;
   title: string;
@@ -34,29 +41,40 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   imageSrc,
   imageAlt,
   title,
+  icon,
   description,
 }) => {
   return (
-    <WhiteRectangleWrapper className="p-6">
-      <div className=" rounded-lg p-6 flex flex-col">
-        <div className="relative w-full h-48 mb-6 rounded-md overflow-hidden">
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            layout="fill"
-            objectFit="cover"
-          />
-        </div>
-        <h3 className="subheading text-2xl font-medium text-zinc-100 mb-2">
+    <WhiteRectangleWrapper className=" w-1/2 min-h-72  m-0 lg:p-8 ">
+      <div className=" rounded-lg w-full items-center  flex flex-col">
+        {imageSrc ? (
+          <Image src={imageSrc} alt={imageAlt} width={120} height={120} />
+        ) : (
+          icon
+        )}
+
+        <h3 className="subheading text-2xl font-medium text-zinc-100 mt-2 mb-2">
           {title}
         </h3>
-        <p className="text-zinc-400 text-base leading-relaxed">{description}</p>
+        <p className="text-zinc-400 text-center text-base leading-relaxed max-w-md">
+          {description}
+        </p>
       </div>
     </WhiteRectangleWrapper>
   );
 };
 
-function ProductPage() {
+async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const {
+    title,
+    subheading,
+    name,
+    features,
+    featureHeading,
+    appflow,
+    appflowTitle,
+  } = productData.find((item: any) => item.id === id) || {};
   return (
     <div className="min-h-screen  bg-black py-32 text-zinc-300">
       {/* Hero Section */}
@@ -64,23 +82,21 @@ function ProductPage() {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* Left Content */}
           <div className="lg:w-1/2 text-center lg:text-left">
-            <div className="inline-block mb-6">
-              <NebulaIcon />
+            <div className=" mb-6 flex gap-2">
+              {id == "monet-points" && <CircleDollarSignIcon />}
+              {id == "loyalty-studio" && <PickaxeIcon />}
+              <span className="font-md"> {name}</span>
             </div>
-            <h1 className="heading mb-4">
-              Build seamless, cross-brand loyalty with Monet Token
-            </h1>
-            <p className="subheading  mb-6">
-              Reward, redeem and track loyalty across a decentralized network.
-            </p>
+            <h1 className="heading mb-4">{title}</h1>
+            <p className="subheading  mb-6">{subheading}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-              <Button
+              {/* <Button
                 variant={"default"}
                 className="bg-gradient-to-r to-[#FFE55C] from-[#FDF2CD] text-black hover:bg-gray-100 font-medium text-sm py-3 mt-2 px-6 rounded-full transition-colors"
               >
                 Explore Our Playground
                 <ChevronRight className="w-4 h-4" />
-              </Button>
+              </Button> */}
               <Link
                 href="https://calendly.com/haedarah-ali-monet"
                 target="_blank"
@@ -94,9 +110,13 @@ function ProductPage() {
 
           {/* Right Content - Image */}
           <div className="lg:w-1/2 mt-10 lg:mt-0">
-            <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden border border-[#1F1F1F]">
+            <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden ">
               <Image
-                src="/images/product/hero-image.png"
+                src={
+                  id == "loyalty-studio"
+                    ? "/images/landing/cube.gif"
+                    : "/images/landing/sphere.gif"
+                }
                 alt="Monet Token loyalty platform illustration"
                 layout="fill"
                 objectFit="cover"
@@ -107,32 +127,21 @@ function ProductPage() {
       </WhiteRectangleWrapper>
 
       {/* Designed for web3 developers Section */}
-      <WhiteRectangleWrapper className="py-16 px-0 pb-0 md:py-24 md:pb-0">
+      <WhiteRectangleWrapper className="py-16 lg:px-0   px-0 pb-0 md:py-24 md:pb-0 lg:py-0 lg:pt-16 ">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="heading ">
-            Designed for web3 developers <br className="hidden md:block" />
-            at any level
-          </h2>
+          <h2 className="heading max-w-3xl mx-auto">{featureHeading}</h2>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 ">
-          <FeatureCard
-            imageSrc="/images/product/cross-brand-interoperability.png"
-            imageAlt="Cross-Brand Interoperability illustration"
-            title="Cross-Brand Interoperability"
-            description="Users earn tokens in one place and spend them in another."
-          />
-          <FeatureCard
-            imageSrc="/images/product/on-chain-transparency.png"
-            imageAlt="On-Chain Transparency illustration"
-            title="On-Chain Transparency"
-            description="All token actions are recorded publicly for full auditability."
-          />
-          <FeatureCard
-            imageSrc="/images/product/email-based-wallets.png"
-            imageAlt="Email-Based Wallets illustration"
-            title="Email-Based Wallets"
-            description="Users onboard instantly with just their email - no crypto needed."
-          />
+        <div className="flex  flex-col flex-wrap w-full lg:flex-row gap-0 items-center justify-center">
+          {features?.map((feature: any, index: number) => (
+            <FeatureCard
+              key={index}
+              imageSrc={feature.image || ""}
+              icon={feature.icon}
+              imageAlt={""}
+              title={feature.title}
+              description={feature.description}
+            />
+          ))}
         </div>
       </WhiteRectangleWrapper>
 
@@ -140,17 +149,25 @@ function ProductPage() {
       <WhiteRectangleWrapper className="py-16 md:py-24">
         {/* Left Content */}
         <div className=" text-center flex items-center justify-center flex-col  w-full lg:text-left">
-          <h2 className="heading mb-4">
-            An AI model built for the <br className="hidden md:block" />
-            blockchain ecosystem
-          </h2>
-          <p className="subheading text-center mb-6">
-            Nebula is designed to understand and interact with the web3
-            ecosystem. It far outperforms generic LLMs for both basic and
-            sophisticated queries.
-          </p>
-          <div className="flex justify-center lg:justify-start">
-            <Button className="bg-white text-black hover:bg-gray-100 font-medium text-sm py-3 mt-2 px-6 rounded-full transition-colors">
+          {appflowTitle ? (
+            <h2 className="heading max-w-4xl text-6xl text-slate-200 mb-4 text-center ">
+              {appflowTitle}
+            </h2>
+          ) : (
+            <>
+              <h2 className="heading mb-4">
+                An AI model built for the <br className="hidden md:block" />
+                blockchain ecosystem
+              </h2>
+              <p className="subheading text-center mb-6">
+                Nebula is designed to understand and interact with the web3
+                ecosystem. It far outperforms generic LLMs for both basic and
+                sophisticated queries.
+              </p>
+            </>
+          )}
+          <div className="flex justify-center mt-8 flex-wrap lg:justify-start">
+            {/* <Button className="bg-white text-black hover:bg-gray-100 font-medium text-sm py-3 mt-2 px-6 rounded-full transition-colors">
               Explore Our Playground
               <svg
                 className="ml-2 w-4 h-4"
@@ -172,13 +189,36 @@ function ProductPage() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </Button>
+            </Button> */}
+            {appflow &&
+              appflow.map((item: any, index: number) => (
+                <div
+                  key={index}
+                  className={`flex flex-col gap-4 w-full ${item.direction == "right" ? "lg:flex-row-reverse" : "lg:flex-row"} items-center`}
+                >
+                  <Image
+                    src={item.image}
+                    alt="Monet Token loyalty platform illustration"
+                    width={500}
+                    className="hover:scale-105 duration-300 transition-all"
+                    height={500}
+                  />
+                  <div className="w-full">
+                    <h3 className="heading pl-16  font-medium text-zinc-100 mt-2 mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="subheading pl-16 mt-4 text-zinc-400">
+                      {item.description}{" "}
+                    </p>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
       </WhiteRectangleWrapper>
 
       {/* Placeholder for "Sign up for early access" Section */}
-      <WhiteRectangleWrapper className="py-16 flex flex-col items-center justify-center md:py-24 text-center">
+      {/* <WhiteRectangleWrapper className="py-16 flex flex-col items-center justify-center md:py-24 text-center">
         <h2 className="heading text-3xl md:text-4xl lg:text-5xl font-semibold text-zinc-50 mb-4">
           Sign up for early access.
         </h2>
@@ -208,6 +248,10 @@ function ProductPage() {
             />
           </svg>
         </Button>
+      </WhiteRectangleWrapper> */}
+
+      <WhiteRectangleWrapper className="">
+        <WaitlistSection />
       </WhiteRectangleWrapper>
     </div>
   );

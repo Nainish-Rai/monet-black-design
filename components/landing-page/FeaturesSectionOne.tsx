@@ -13,13 +13,13 @@ interface FeaturesSectionProps {
 
 export default function FeaturesSectionOne({ features }: FeaturesSectionProps) {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center ">
       <div className="flex justify-center items-center">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 w-full">
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`flex flex-col max-sm:border-b max-sm:border-r-0 flex-1 p-6 pl-7  ${index < 3 ? "border-r border-gray-800" : ""}`}
+              className={`flex flex-col max-sm:border-b max-sm:border-r-0 flex-1 p-6 py-10 pl-7  ${index < 3 ? "border-r border-border" : ""}`}
             >
               {feature.icon}
               <h3 className="text-lg font-medium text-white mb-2">

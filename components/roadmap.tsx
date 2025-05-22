@@ -9,49 +9,45 @@ import {
   TimelineTitle,
 } from "@/components/ui/timeline";
 
-const items = [
-  {
-    id: 1,
-    date: "Mar 15, 2024",
-    title: "Project Kickoff",
-    description: "Initial team meeting.",
-  },
-  {
-    id: 2,
-    date: "Mar 22, 2024",
-    title: "Design Phase",
-    description: "Completed wireframes.",
-  },
-  {
-    id: 3,
-    date: "Apr 5, 2024",
-    title: "Development Sprint",
-    description: "Backend development.",
-  },
-  {
-    id: 4,
-    date: "Apr 19, 2024",
-    title: "Testing & Deployment",
-    description: "Performance optimization.",
-  },
-];
-
 export default function TimelineComponent({
   direction = "horizontal",
+  items,
+  title,
 }: {
   direction?: "horizontal" | "vertical";
+  items: {
+    id: number;
+    date: string;
+    title: string;
+    description: string;
+    done?: boolean;
+  }[];
+  title?: string;
 }) {
   return (
     <Timeline defaultValue={3} className="px-0" orientation={direction}>
+      <h2 className="text-2xl lg:text-xl text-white pr-4 -mt-2">{title}</h2>
       {items.map((item) => (
         <TimelineItem key={item.id} step={item.id}>
           <TimelineHeader>
-            <TimelineSeparator />
-            <TimelineDate>{item.date}</TimelineDate>
-            <TimelineTitle>{item.title}</TimelineTitle>
-            <TimelineIndicator />
+            <TimelineSeparator
+              className={
+                item.done ? "bg-yellow-500 border-yellow-500" : "bg-white "
+              }
+            />
+            {/* <TimelineDate>{item.date}</TimelineDate> */}
+            <TimelineTitle className="pr-4 max-sm:max-w-xs">
+              {item.title}
+            </TimelineTitle>
+            <TimelineIndicator
+              className={
+                item.done
+                  ? "bg-yellow-500 border-yellow-500"
+                  : "bg-transparent "
+              }
+            />
           </TimelineHeader>
-          <TimelineContent>{item.description}</TimelineContent>
+          <TimelineContent className="pr-4">{item.description}</TimelineContent>
         </TimelineItem>
       ))}
     </Timeline>

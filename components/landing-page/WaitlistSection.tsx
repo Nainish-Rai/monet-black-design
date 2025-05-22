@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import ButtonWithIcon from "../ui/button-with-icon";
 import { motion } from "framer-motion";
@@ -26,7 +27,8 @@ function WaitlistSection({}: Props) {
         transition={{ duration: 0.5 }}
         className=" subheading text-balance max-w-2xl mt-4 text-center"
       >
-        Join our waitlist to stay updated with the latest news and offers.
+        Subscribe to our newsletter to stay updated with the latest news and
+        offers.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 20 }}

@@ -10,27 +10,23 @@ type FooterLink = {
 
 const footerLinks: Record<string, FooterLink[]> = {
   Products: [
-    { name: "Loyalty", href: "https://loyalty.monet.work", target: "_blank" },
-    {
-      name: "Points Marketplace",
-      href: "https://web3-points.stage.monet.work/",
-      target: "_blank",
-    },
-    { name: "Roadmap", href: "/roadmap" },
-    // { name: "Shopify App", href: "https://apps.shopify.com", target: "_blank" },
+    { name: "Monet Points", href: "/product/monet-points" },
+    { name: "Loyalty Studio", href: "/product/loyalty-studio" },
+    { name: "Loyalty API", href: "/product/loyalty-api" },
   ],
   "Case Studies": [
     { name: "Starbucks", href: "/case-studies/starbucks" },
-    { name: "Zomato", href: "/case-studies/zomato" },
+    { name: "Banking Loyalty", href: "/case-studies/banking-loyalty" },
+    { name: "Cloud Service", href: "/case-studies/cloud-service" },
+    { name: "Retail Loyalty", href: "/case-studies/retail-loyalty" },
+    { name: "Group Loyalty", href: "/case-studies/group-loyalty" },
   ],
   Company: [
     { name: "Our Vision", href: "/company/vision" },
     { name: "Meet the Team", href: "/team" },
-    {
-      name: "Docs",
-      href: "https://monet-work.github.io/web3-points-docs/",
-      target: "_blank",
-    },
+    { name: "Backed By", href: "/team#investors" },
+    { name: "Our Roadmap", href: "/roadmap" },
+    { name: "Work with Us", href: "/careers" },
   ],
 
   Social: [

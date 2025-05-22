@@ -31,7 +31,7 @@ export default function TeamPage() {
       transition={{ duration: 0.6 }}
       className="min-h-screen bg-black mb-32  pt-32"
     >
-      <WhiteRectangleWrapper className="px-0  pb-0">
+      <WhiteRectangleWrapper className="px-0  pb-0 lg:p-0 lg:px-0">
         <main className="container pt-8 px-0 ">
           <motion.section
             variants={containerVariants}
@@ -52,7 +52,7 @@ export default function TeamPage() {
                 blockchain technology, and AI to revolutionize rewards systems.
               </motion.p>
             </motion.div>
-            <WhiteRectangleWrapper className="px-0 py-0">
+            <WhiteRectangleWrapper className="px-0 py-0 lg:px-0 lg:py-0">
               <motion.div
                 variants={containerVariants}
                 className="grid  sm:grid-cols-2 lg:grid-cols-4"
@@ -63,7 +63,7 @@ export default function TeamPage() {
                     variants={textVariantStaggerChild()}
                   >
                     {" "}
-                    <WhiteRectangleWrapper className="w-full h-full p-6">
+                    <WhiteRectangleWrapper className="w-full h-full p-6 lg:p-6">
                       <TeamMemberCard member={member} />
                     </WhiteRectangleWrapper>
                   </motion.div>
@@ -92,7 +92,7 @@ export default function TeamPage() {
                 than 20 projects on AI and Blockchain executed.
               </motion.p>
             </motion.div>
-            <WhiteRectangleWrapper className="px-0 py-0">
+            <WhiteRectangleWrapper className="px-0 py-0 lg:px-0 lg:py-0">
               <motion.div
                 variants={containerVariants}
                 className="grid sm:grid-cols-2 lg:grid-cols-4"
@@ -102,7 +102,7 @@ export default function TeamPage() {
                     key={advisor.name}
                     variants={textVariantStaggerChild(0.2, 0)}
                   >
-                    <WhiteRectangleWrapper className="w-full h-full p-6">
+                    <WhiteRectangleWrapper className="w-full h-full p-6 lg:p-5">
                       <AdvisorCard advisor={advisor} />
                     </WhiteRectangleWrapper>
                   </motion.div>

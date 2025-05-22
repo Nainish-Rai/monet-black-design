@@ -65,11 +65,11 @@ function HighlightsSection({}: Props) {
             containScroll: "trimSnaps",
           }}
         >
-          <CarouselContent className=" pl-4">
+          <CarouselContent className=" lg:pl-4">
             {highlightsData.map((highlight, index) => (
               <CarouselItem
                 key={index}
-                className="md:basis-1/2 pl-0 lg:basis-1/3 h-[400px] transition-opacity duration-300"
+                className=" pl-0 lg:basis-1/3 h-[400px] transition-opacity duration-300"
               >
                 <motion.div
                   variants={textVariant(0.1 * (index + 1))}

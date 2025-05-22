@@ -110,7 +110,7 @@ function ProductSectionOne({
   flexDirection = "left",
 }: ProductSectionProps) {
   return (
-    <section className="w-full py-16 md:py-24 bg-black">
+    <section className="w-full py-16 md:py-0 bg-black">
       <div className="container mx-auto px-4 max-w-7xl">
         <div
           className={`flex flex-col  ${flexDirection === "left" ? "lg:flex-row" : "lg:flex-row-reverse"}  items-center gap-12`}
